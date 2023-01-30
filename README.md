@@ -1,5 +1,5 @@
 # grupo_3_conunapizcadesal
-Con una Pisca de Sal =
+Con una Pizca de Sal =
 
 Emprendimiento gastronómico enfocado en la venta de productos
 congelados, delivery de picadas, pruducción para eventos y
