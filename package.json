@@ -1,0 +1,23 @@
+{
+  "name": "grupo_3_conunapizcadesal",
+  "version": "1.0.0",
+  "description": "Con una Pisca de Sal =",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielbocchio/grupo_3_conunapizcadesal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielbocchio/grupo_3_conunapizcadesal/issues"
+  },
+  "homepage": "https://github.com/gabrielbocchio/grupo_3_conunapizcadesal#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
