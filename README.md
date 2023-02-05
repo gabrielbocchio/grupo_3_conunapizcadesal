@@ -50,4 +50,7 @@ Equipo=
 6) Gabriel Bocchio
     Hola! Soy Gabriel Bocchio, tengo 34 años y soy de Rosario, Argentina.
     Éste curso es la primera experiencia con la programación que tengo y espero que sea el comienzo de una futura carrera.
+<<<<<<< HEAD
+=======
     Como paginas que usé para basar mi wireframe es macdonalds por la facilidad y la simpleza en su uso y https://www.ristoranteadhoc.com/en/ por el buen gusto y uso de colores y matices.
+>>>>>>> d32d129b648958252b8a639e86033acad781097b
