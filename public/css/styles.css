@@ -18,9 +18,12 @@ Monserrat: textos secundarios. */
     --grismedio: #575756;
     --grisclaro: #706F6F;
     --blanco: #FFFFFF;
+    --verdenav: #2E8780; 
+    --verdefooter1: #77bda3;
+    --verdefooter2: #263D42;
 }
 .main-header{
-    background-color: var(--negro);
+    background-color: var(--verdefooter2);
     padding: 20px;
 }
 .main-logo{
@@ -31,7 +34,6 @@ Monserrat: textos secundarios. */
 
 .logo{
     width: 70px;
-    border: solid var(--negro) 10px;
     border-radius: 50%;
 }
 .logo:hover {
@@ -81,14 +83,12 @@ Monserrat: textos secundarios. */
     background: var(--gradiente);
 }
 .footer{
-    background-color: var(--grisclaro);
+    background-color: var(--verdenav);
+}
+.footer-main-1{
     display: flex;
     justify-content: space-around;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-
-
 }
 .footer-nav ul{
     list-style: none;
@@ -109,6 +109,16 @@ Monserrat: textos secundarios. */
 .footer-info iframe {
     display: none;
 }
+.footer-social {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 28px;
+    padding: 20px;
+    color: #fefefe;
+    background-color:var(--verdefooter2);
+}
 /* BOTONCITO DEL WHATSAP */
 .float{
 	position:fixed;
@@ -127,20 +137,6 @@ Monserrat: textos secundarios. */
 .my-float{
 	margin-top:8px;
 }
-.bottom-footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 28px;
-    padding: 20px;
-    color: #fefefe;
-    background-color: rgb(16,32,34);
-    position: absolute;
-    bottom: 0;
-
-}
-
 @media(min-width: 576px){
     .logo{
         width: 80px;
