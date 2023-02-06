@@ -1,0 +1,223 @@
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+/* Bebas neue regular: nombre logo. Titulos/secciones principales.
+Monserrat: textos secundarios. */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --negro: rgb(16,32,34);  
+    --gradiente : linear-gradient(180deg, rgba(16,32,34,1) 0%, rgba(83, 83, 83,0.914)99%);
+    --grisoscuro: #3c3c3b;
+    --grismedio: #575756;
+    --grisclaro: #706F6F;
+    --blanco: #FFFFFF;
+}
+.main-header{
+    background-color: var(--negro);
+    padding: 20px;
+}
+.main-logo{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;    
+}
+
+.logo{
+    width: 70px;
+    border: solid var(--negro) 10px;
+    border-radius: 50%;
+}
+.logo:hover {
+    transform: rotate(70deg);
+    transition-duration:1.3s;
+}
+.logo-title1{
+    font-family: 'Bebas Neue', cursive;
+    color:var(--blanco);
+    font-size: 18px;
+    padding-left: 20px;
+}
+.logo-title2{
+    font-family: 'Bebas Neue', cursive;
+    color:var(--blanco);
+    font-size: 22px;
+}
+.nav-iconos{
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.nav-iconos a {
+    color:  var(--blanco);
+    padding-inline-start: 5px;
+}
+.burger-button{
+    color: var(--blanco);
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.main-nav{
+    display: none;
+    transition: 0.2s;
+    
+}
+.main-nav ul li a:hover {
+    color: #11101b;
+    background: #fefefe;
+    padding: 8px;
+    border-radius: 5px;
+
+}
+.main-body{
+    background: var(--negro);
+    background: var(--gradiente);
+}
+.footer{
+    background-color: var(--grisclaro);
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+
+}
+.footer-nav ul{
+    list-style: none;
+}
+.footer-title{
+    font-size: 12px;
+    color: var(--negro);
+}
+.footer-nav a, .footer-texto{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 10px;
+    font-weight: normal;
+}
+.footer-icono i{
+    color: var(--grisoscuro);
+}
+.footer-info iframe {
+    display: none;
+}
+/* BOTONCITO DEL WHATSAP */
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:80px;
+	right:50px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:45px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+.my-float{
+	margin-top:8px;
+}
+.bottom-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 28px;
+    padding: 20px;
+    color: #fefefe;
+    background-color: rgb(16,32,34);
+    position: absolute;
+    bottom: 0;
+
+}
+
+@media(min-width: 576px){
+    .logo{
+        width: 80px;
+    }
+    .burger-button{
+        color: var(--blanco);
+        padding: 10px;
+        text-align: center;
+        font-size: 30px;
+    }
+    .logo-title1{
+        font-size: 26px;
+    }
+    .logo-title2{
+        font-family: 'Bebas Neue', cursive;
+        color:var(--blanco);
+        font-size: 30px;
+    }
+    .nav-iconos{
+        padding: 10px;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+@media(min-width: 768px){
+    .main-header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:flex-start;
+    }
+    .burger-button{
+        display: none;
+    }
+    .main-logo{
+        justify-content: space-between;
+        width: 100%;
+    }
+    .logo{
+        width: 100px;
+    }
+    .logo-title1 ,.logo-title2{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .logo-title1{
+        font-size: 46px;
+    }
+    .logo-title2{
+        font-size:50px ;
+    }
+    .main-nav{
+        width: 100%;
+        display: flex;
+    }
+    .navbar{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        margin-top: 10px;
+    }
+    .navbar a{
+        color:var( --blanco);
+        text-decoration:none;
+        font-size: 14px;
+    } 
+    .nav-iconos{
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .footer-info iframe {
+        display: flex;
+    }
+    
+}
+
+>>>>>>> 86a4c1555b2008d15550c61df2abc806517d8df6
