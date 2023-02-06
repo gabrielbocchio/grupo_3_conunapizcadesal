@@ -1,11 +1,10 @@
-<<<<<<< HEAD
-=======
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
 
 /* Bebas neue regular: nombre logo. Titulos/secciones principales.
 Monserrat: textos secundarios. */
 
+/* --- CONFIGURACIONES INICIALES --- */
 * {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
@@ -21,6 +20,9 @@ Monserrat: textos secundarios. */
     --grisclaro: #706F6F;
     --blanco: #FFFFFF;
 }
+
+/* --- HEADER --- */
+
 .main-header{
     background-color: var(--negro);
     padding: 20px;
@@ -52,17 +54,27 @@ Monserrat: textos secundarios. */
     font-size: 22px;
 }
 .nav-iconos{
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     text-align: center;
     font-size: 20px;
+
 }
 .nav-iconos a {
     color:  var(--blanco);
     padding-inline-start: 5px;
+    
 }
+.usuario {
+    padding: 10px 0 10px 10px;
+    text-align: center;
+    font-size: 20px;
+    color:  var(--blanco);
+    margin-right: 5px;
+}
+
 .burger-button{
     color: var(--blanco);
-    padding: 10px;
+    padding: 10px 10px 10px 0;
     text-align: center;
     font-size: 20px;
 }
@@ -82,6 +94,10 @@ Monserrat: textos secundarios. */
     background: var(--negro);
     background: var(--gradiente);
 }
+/* --- MAIN --- */
+
+
+/* --- FOOTER PRINCIPAL --- */
 .footer{
     background-color: var(--grisclaro);
     display: flex;
@@ -89,7 +105,6 @@ Monserrat: textos secundarios. */
     position: absolute;
     bottom: 0;
     width: 100%;
-
 
 }
 .footer-nav ul{
@@ -111,6 +126,21 @@ Monserrat: textos secundarios. */
 .footer-info iframe {
     display: none;
 }
+
+/* --- FOOTER SECUNDARIO --- */
+.bottom-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 28px;
+    padding: 20px;
+    color: #fefefe;
+    background-color: rgb(16,32,34);
+    position: absolute;
+    bottom: 0;
+
+}
 /* BOTONCITO DEL WHATSAP */
 .float{
 	position:fixed;
@@ -129,24 +159,16 @@ Monserrat: textos secundarios. */
 .my-float{
 	margin-top:8px;
 }
-.bottom-footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 28px;
-    padding: 20px;
-    color: #fefefe;
-    background-color: rgb(16,32,34);
-    position: absolute;
-    bottom: 0;
-
-}
 
 @media(min-width: 576px){
     .logo{
         width: 80px;
     }
+    .usuario {
+        font-size: 30px;
+        margin-right: 5px;
+    }
+    
     .burger-button{
         color: var(--blanco);
         padding: 10px;
@@ -164,7 +186,7 @@ Monserrat: textos secundarios. */
     .nav-iconos{
         padding: 10px;
         text-align: center;
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 @media(min-width: 768px){
@@ -176,12 +198,15 @@ Monserrat: textos secundarios. */
     .burger-button{
         display: none;
     }
+    .nav-iconos{
+        font-size: 35px;
+    }
     .main-logo{
         justify-content: space-between;
         width: 100%;
     }
     .logo{
-        width: 100px;
+        width: 130px;
     }
     .logo-title1 ,.logo-title2{
         margin-left: auto;
@@ -219,5 +244,8 @@ Monserrat: textos secundarios. */
     }
     
 }
-
->>>>>>> 86a4c1555b2008d15550c61df2abc806517d8df6
+@media(min-width: 1200px) {
+    .logo{
+        width: 180px;
+    }
+}
