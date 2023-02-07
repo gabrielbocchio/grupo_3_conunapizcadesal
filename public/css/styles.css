@@ -13,12 +13,37 @@ Monserrat: textos secundarios. */
 }
 
 :root{
+    /* IMPORTANTE LOS VALORES SE MODIFICA EN LOS VAR Y DESPUES
+    HAY QUE AGREGAR VAR(Y EL NOMBRE) */
+    /* COLORES */
     --blanco: #FFFFFF;
     --verde-footer1: #2E8780; 
     --verde: #77bda3;
     --verde-nav-footer: #263D42;
+    --mostaza : #FAA916;
+    --rojo: #96031A;
+    /* FIRST MOVIL */
+    --title-nav-MF: 18px;
+    --title2-nav-MF: 22px;
+    --title-footer-MF: 16px;
+    --texto-footer-texto-MF: 12px;
+    --button-nav-MF: 20px;
+    /* MIN-WIDTH: 576px */
+    --title-nav-576px: 26px;
+    --title2-nav-576px: 30px;
+    --title-footer-576px: 12px;
+    --texto-footer-texto-576px: 12px;
+    /* MIN-WIDTH: 768px */
+    --title-nav-768px: 46px;
+    --title2-nav-768px: 50px;
+    --title-footer-768px: 12px;
+    --texto-footer-texto-768px: 12px;
+    /* MIN-WIDTH: 1200px */
+    --title-nav-1200px: 46px;
+    --title2-nav-1200px: 50px;
+    --title-footer-1200px: 12px;
+    --texto-footer-texto-1200px:12px;
 }
-
 /* --- HEADER --- */
 
 .main-header{
@@ -42,19 +67,19 @@ Monserrat: textos secundarios. */
 .logo-title1{
     font-family: 'Bebas Neue', cursive;
     color:var(--blanco);
-    font-size: 18px;
+    font-size: var(--title-nav-MF);
     padding-left: 20px;
 }
 .logo-title2{
     font-family: 'Bebas Neue', cursive;
     color:var(--blanco);
-    font-size: 22px;
+    font-size: var(--title2-nav-MF);
 }
 .nav-iconos{
     display: none;
     padding: 10px 0 10px 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: var(--button-nav-MF);
 
 }
 .nav-iconos a {
@@ -64,7 +89,7 @@ Monserrat: textos secundarios. */
 .usuario {
     padding: 10px 0 10px 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: var(--button-nav-MF);
     color:  var(--blanco);
     margin-right: 5px;
 }
@@ -73,7 +98,7 @@ Monserrat: textos secundarios. */
     color: var(--blanco);
     padding: 10px 10px 10px 0;
     text-align: center;
-    font-size: 20px;
+    font-size: var(--button-nav-MF);
 }
 .main-nav{
     display: none;
@@ -208,13 +233,13 @@ body {
     list-style: none;
 }
 .footer-title{
-    font-size: 12px;
+    font-size: var(--title-footer-MF);
     color: var(--negro);
 }
-.footer-nav a, .footer-texto{
+.footer-nav a, .footer-info h5{
     text-decoration: none;
     color: var(--blanco);
-    font-size: 10px;
+    font-size: var(--texto-footer-texto-MF);
     font-weight: normal;
 }
 .footer-icono i{
@@ -228,7 +253,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 20px;
+    font-size: var(--button-nav-MF);
     padding: 20px;
     color: var(--blanco);
     background-color:var(--verde-nav-footer);
@@ -267,12 +292,12 @@ body {
         font-size: 30px;
     }
     .logo-title1{
-        font-size: 26px;
+        font-size: var(--title-nav-576px);
     }
     .logo-title2{
         font-family: 'Bebas Neue', cursive;
         color:var(--blanco);
-        font-size: 30px;
+        font-size: var(--title2-nav-576px);
     }
     .nav-iconos{
         padding: 10px;
@@ -307,10 +332,10 @@ body {
         margin-right: auto;
     }
     .logo-title1{
-        font-size: 46px;
+        font-size: var(--title-nav-768px);
     }
     .logo-title2{
-        font-size:50px ;
+        font-size:var(--title2-nav-768px) ;
     }
     .main-nav{
         width: 100%;
