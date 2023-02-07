@@ -48,27 +48,46 @@ Monserrat: textos secundarios. */
 
 .main-header{
     background-color: var(--verde-nav-footer);
-    padding: 20px;
+    padding: 10px;
 }
 .main-logo{
     display: flex;
     align-items: center;
-    justify-content:space-between;    
+    justify-content:space-around;    
 }
 
 .logo{
-    width: 70px;
+    width: 90px;
     border-radius: 50%;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all;
+    -webkit-transition: transform 1300ms ease-in-out;
+    -moz-transition:transform 1300ms ease-in-out;
+    -ms-transition:transform 1300ms ease-in-out;
 }
 .logo:hover {
-    transform: rotate(70deg);
-    transition-duration:1.3s;
+/*      transform:rotate(70deg); 
+    transition-duration:1.3s; */
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transition:all;
+     -webkit-transition: transform 1300ms ease-in-out;
+    -moz-transition:transform 1300ms ease-in-out;
+    -ms-transition:transform 1300ms ease-in-out;
+
 }
 .logo-title1{
     font-family: 'Bebas Neue', cursive;
     color:var(--blanco);
     font-size: var(--title-nav-MF);
-    padding-left: 20px;
+/*     padding-left: 20px; */
 }
 .logo-title2{
     font-family: 'Bebas Neue', cursive;
@@ -303,7 +322,7 @@ body {
 }
 @media(min-width: 576px){
     .logo{
-        width: 80px;
+        width: 90px;
     }
     .usuario {
         font-size: 30px;
@@ -335,6 +354,7 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content:flex-start;
+        padding: 20px;
     }
     .burger-button{
         display: none;
