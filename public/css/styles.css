@@ -23,24 +23,24 @@ Monserrat: textos secundarios. */
     --mostaza : #FAA916;
     --rojo: #96031A;
     /* FIRST MOVIL */
-    --title-nav-MF: 18px;
-    --title2-nav-MF: 22px;
+    --title-nav-MF: 24px;
+    --title2-nav-MF: 26px;
     --title-footer-MF: 16px;
     --texto-footer-texto-MF: 12px;
     --button-nav-MF: 20px;
     /* MIN-WIDTH: 576px */
-    --title-nav-576px: 26px;
-    --title2-nav-576px: 30px;
+    --title-nav-576px: 32px;
+    --title2-nav-576px: 36px;
     --title-footer-576px: 12px;
     --texto-footer-texto-576px: 12px;
     /* MIN-WIDTH: 768px */
-    --title-nav-768px: 46px;
-    --title2-nav-768px: 50px;
+    --title-nav-768px: 48px;
+    --title2-nav-768px: 52px;
     --title-footer-768px: 12px;
     --texto-footer-texto-768px: 12px;
     /* MIN-WIDTH: 1200px */
-    --title-nav-1200px: 46px;
-    --title2-nav-1200px: 50px;
+    --title-nav-1200px: 48px;
+    --title2-nav-1200px: 52px;
     --title-footer-1200px: 12px;
     --texto-footer-texto-1200px:12px;
 }
@@ -85,9 +85,10 @@ Monserrat: textos secundarios. */
 .nav-iconos a {
     color:  var(--blanco);
     padding-inline-start: 5px;
+    margin: 4px;
 }
 .usuario {
-    padding: 10px 0 10px 10px;
+    padding: 10px 0 10px 0px;
     text-align: center;
     font-size: var(--button-nav-MF);
     color:  var(--blanco);
@@ -264,6 +265,14 @@ body {
 .footer-info iframe {
     display: none;
 }
+
+.footer-copyright{
+    text-align: left;
+   padding: 10px 10px;
+    font-size: 7px;
+    color: var(--blanco);
+
+}
 .footer-social {
     width: 100%;
     display: flex;
@@ -403,6 +412,14 @@ body {
     .footer-pay {
         line-height: 2.5rem;
         font-size: 1.4rem;
+    }
+
+    .footer-copyright{
+        text-align: left;
+       padding: 10px 10px;
+        font-size: 10px;
+        color: var(--blanco);
+    
     }
 
 }
