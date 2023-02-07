@@ -221,13 +221,16 @@ body {
 /* ACA TERMINO EL MAIN, HASTA AHI SE PUEDE BORRAR */
 /* --- FOOTER PRINCIPAL --- */
 .footer{
+    z-index:1600;
+    position: relative;
     background-color: var(--verde-footer1);
-
 }
 .footer-main-1{
     display: flex;
     justify-content: space-around;
     width: 100%;
+    padding: 10px;
+    text-align: center;
 }
 .footer-nav ul{
     list-style: none;
@@ -235,11 +238,24 @@ body {
 .footer-title{
     font-size: var(--title-footer-MF);
     color: var(--negro);
+    font-size: 11px;
+    
+}
+.footer-info h5{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 1.3rem;
+    
+}
+.footer-pay {
+    line-height: 1.3rem;
 }
 .footer-nav a, .footer-info h5{
     text-decoration: none;
     color: var(--blanco);
-    font-size: var(--texto-footer-texto-MF);
+    font-size: 10px;
     font-weight: normal;
 }
 .footer-icono i{
@@ -254,7 +270,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
     font-size: var(--button-nav-MF);
-    padding: 20px;
+    padding: 15px;
     color: var(--blanco);
     background-color:var(--verde-nav-footer);
 }
@@ -263,8 +279,8 @@ body {
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:80px;
-	right:50px;
+	bottom:70px;
+	right:40px;
 	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
@@ -363,8 +379,32 @@ body {
         display: flex;
         width: 250px;
         height: 250px;
-        margin: 20px 0;
-    }    
+        margin: 5px 0;
+    }
+    .footer-title{
+        font-size: var(--title-footer-MF);
+        color: var(--negro);
+        font-size: 16px; 
+    }
+    .footer-info h5{
+        text-decoration: none;
+        color: var(--blanco);
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.3rem; 
+    }
+    .footer-nav a, .footer-info h5{
+        font-size: 14px;
+ 
+    }
+    .footer-nav a{
+        line-height: 2rem
+    }
+    .footer-pay {
+        line-height: 2.5rem;
+        font-size: 1.4rem;
+    }
+
 }
 @media(min-width: 1200px) {
     .logo{
