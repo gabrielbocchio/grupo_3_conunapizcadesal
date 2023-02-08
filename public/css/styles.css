@@ -139,8 +139,7 @@ Monserrat: textos secundarios. */
 /* --- MAIN --- */
 /* ESTE MAIN ES DE PRUEBA, SE DEBE BORRAR */
 body {
-    background: rgb(16,32,34);
-    background: linear-gradient(180deg, rgba(16,32,34,1) 0%, rgba(83, 83, 83, 0.914) 99%);
+    background: var(--blanco);git
 
 }
 .container{
