@@ -133,22 +133,60 @@ Monserrat: textos secundarios. */
     border-radius: 5px;
 
 }
-.main-body{
-    background: var(--negro);
-    background: var(--gradiente);
+
+main{
+    background: rgb(20,20,20,1);
+    background: linear-gradient(10deg, rgba(20,20,20,1) 42%, rgba(38,61,66) 99%);
+
 }
 /* --- MAIN --- */
 /* ESTE MAIN ES DE PRUEBA, SE DEBE BORRAR */
-.main-body {
-    background: var(--blanco);
-    height: 500px;
-}
+.main-general {
+	font-size: 16px;
+    height: 100%;
+    width: 100%;
+	color: white;
+	background: linear-gradient(rgba(0,0,0,.30) 0%, rgba(0,0,0,.10) 100%), url(../images/Picada\ XL.JPG);
+	background-position: center;
+	background-repeat: repeat;
+	background-size:100%;
+/* 	margin-bottom: 3.12em; */
+	display:flex;
+	align-items: flex-end;
+    min-height: 600px;
+	}
+
+	.main-general .contenedor {
+		margin: auto;
+		margin-bottom: 6.25em;
+	}
+
+
+	.main-general .boton {
+		background-color: rgba(0,0,0, .5);
+		border: none;
+		border-radius: 0.31em;
+		padding: 0.7em 1em;
+		color: #FFF;
+		margin-right: 1.25em;
+		cursor: pointer;
+		transition: .3s ease all;
+		font-size: 1.12em;
+	}
+	.main-general .boton i {
+		margin-right: 1.25em;
+	}
+	.main-general .boton:hover {
+		background: #FFF;
+		color: #000;
+	}
+
 
 /* ACA TERMINO EL MAIN, HASTA AHI SE PUEDE BORRAR */
 /* --- FOOTER PRINCIPAL --- */
 .footer{
-    position: fixed;
-    bottom: 0;
+/*     position: fixed;
+    bottom: 0; */
     width: 100%;
     background-color: var(--verde-footer1);
 
@@ -224,7 +262,7 @@ Monserrat: textos secundarios. */
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:33%;
+	bottom:7%;
 	right:30px;
 	background-color:#25d366;
 	color:#FFF;
