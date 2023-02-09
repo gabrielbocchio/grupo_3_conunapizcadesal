@@ -107,6 +107,7 @@ Monserrat: textos secundarios. */
     margin: 4px;
 }
 .usuario {
+    display: none;
     padding: 10px 0 10px 0px;
     text-align: center;
     font-size: var(--button-nav-MF);
@@ -276,6 +277,11 @@ Monserrat: textos secundarios. */
     .logo-title2{
         font-size:var(--title2-nav-768px) ;
     }
+
+    .usuario{
+        display: flex;
+    }
+    
     .burger-button{
         display: none;
     }
