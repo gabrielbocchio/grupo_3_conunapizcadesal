@@ -24,5 +24,6 @@ app.get('/productDetail', (req,res)=>{
 app.get('/productCart', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./view/productCart.html'))
 })
+//modificacion checkeo de branch//
 
 
