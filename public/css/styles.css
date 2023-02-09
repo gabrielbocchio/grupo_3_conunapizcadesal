@@ -151,6 +151,7 @@ Monserrat: textos secundarios. */
     bottom: 0;
     width: 100%;
     background-color: var(--verde-footer1);
+
     
 }
 .footer-main{
@@ -159,32 +160,43 @@ Monserrat: textos secundarios. */
     width: 100%;
     padding: 10px;
     text-align: center;
+    
 }
 
 .footer-nav ul{
     list-style: none;
 }
-.footer-title{
+.footer-title , .footer-texto{
     font-size: var(--title-footer-MF);
     color: var(--negro);
     font-size: 11px;
-    
+  
 }
+
 .footer-pay {
     line-height: 1.3rem;
 }
 .footer-nav a, .footer-info h5 , .footer-icono h4{
     text-decoration: none;
     color: var(--blanco);
-    font-size: 12px;
+    font-size: 10px;
     font-weight: normal;
-    line-height: 1.3rem;  
+    line-height: 1.3rem;
+
+
 }
 .footer-icono i{
     color: var(--grisoscuro);
 }
-.footer-info iframe {
+.footer-entrega iframe {
     display: none;
+}
+.footer-texto-entrega{
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 1.3rem; 
 }
 
 .footer-copyright{
@@ -311,19 +323,23 @@ Monserrat: textos secundarios. */
         font-size: 14px;
     } 
   
-    .footer-title{
+    .footer-title , .footer-texto{
         font-size: var(--title-footer-MF);
         color: var(--negro);
         font-size: 16px; 
     }
     .footer-nav a, .footer-info h5{
         font-size: 14px;
+        line-height: 2.2rem;
     }
-    .footer-info  iframe {
+    .footer-texto-entrega {
+        display: none;
+    }
+    .footer-entrega  iframe {
         display: flex;
-        width: 250px;
-        height: 250px;
-        margin: 5px 0;
+        width: 220px;
+        height: 200px;
+        margin: 10px 0 0 0;
     }
     .footer-pay {
         line-height: 2.5rem;
