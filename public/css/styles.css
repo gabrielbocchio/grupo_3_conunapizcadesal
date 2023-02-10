@@ -56,34 +56,19 @@ Monserrat: textos secundarios. */
     align-items: center;
     justify-content:space-around;    
 }
-
+@keyframes rotar {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 90deg;
+    }
+}
 .logo{
     width: 80px;
-    border-radius: 50%;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    transition: all;
-    -webkit-transition: transform 1300ms ease-in-out;
-    -moz-transition:transform 1300ms ease-in-out;
-    -ms-transition:transform 1300ms ease-in-out;
+    animation: rotar 2s 2 alternate;
 }
-.logo:hover {
-/*      transform:rotate(70deg); 
-    transition-duration:1.3s; */
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    transition:all;
-     -webkit-transition: transform 1300ms ease-in-out;
-    -moz-transition:transform 1300ms ease-in-out;
-    -ms-transition:transform 1300ms ease-in-out;
 
-}
 .logo-title1{
     font-family: 'Bebas Neue', cursive;
     color:var(--blanco);
@@ -138,13 +123,14 @@ Monserrat: textos secundarios. */
     background: var(--negro);
     background: var(--gradiente);
 }
+
 /* --- MAIN --- */
 /* ESTE MAIN ES DE PRUEBA, SE DEBE BORRAR */
 .main-body {
     background: var(--blanco);
 }
 .photo img{
-    width: 100vw;
+    width: 100%;
 }
 .litle-photo{
     width: 100%;
@@ -307,9 +293,31 @@ Monserrat: textos secundarios. */
         justify-content: space-between;
         width: 100%;
     }
+
     .logo{
-        width: 130px;
-    }
+    width: 130px;
+    border-radius: 50%;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all;
+    -webkit-transition: transform 1300ms ease-in-out;
+    -moz-transition:transform 1300ms ease-in-out;
+    -ms-transition:transform 1300ms ease-in-out;
+}
+.logo:hover {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transition:all;
+     -webkit-transition: transform 1300ms ease-in-out;
+    -moz-transition:transform 1300ms ease-in-out;
+    -ms-transition:transform 1300ms ease-in-out;
+}
     .logo-title1 ,.logo-title2{
         margin-left: auto;
         margin-right: auto;
