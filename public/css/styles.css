@@ -136,19 +136,84 @@ Monserrat: textos secundarios. */
 
 main{
     background: rgb(20,20,20,1);
-    background: linear-gradient(10deg, rgba(20,20,20,1) 42%, rgba(38,61,66) 30%);
+    background: linear-gradient(180deg, rgba(38,61,66) 42%, rgba(38,61,66) 30%);
 
 }
 /* --- MAIN --- */
-/* ESTE MAIN ES DE PRUEBA, SE DEBE BORRAR */
+/* ESTE MAIN ES DE PRUEBA */
+
+ .banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border:3px dotted red;
+    color: #fefefe;
+    font-size: 14px;
+}
+
+  
 .picadeta{
     width: 100%;
-    max-height: 500px;
+
 }
-.pedido{
-    color: white
+.main-center{
+    display: flex;
+    justify-content: center;
 }
-/* la idea x hoy es hacer un lindo boton de hace tu pedido, dps poner una grill con 4 fotos... que en tamaño grande se pasan a carrusa... y dps un baner que pase todo el tiempo */
+.pedido i{
+    margin-right: 1rem;
+}
+.main-center .pedido{
+    background-color: rgba(0,0,0, .5);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.31em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1rem;
+}
+.main-center .pedido:hover{
+    background: #FFF;
+    color: #000;
+}
+/* ACA EMPIEZA LOS PRODUCTOS */
+.titular{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+}
+.main-productos{
+    background: var(--grisclaro);
+    display: flex;
+    justify-content: center;
+    padding: 20px;  
+}
+.main.productos img {
+    margin-top: 10px;
+    max-width: 90vw;
+
+    
+}
+.art1, .art2, .art3, .art4 {
+    border: 1px solid #ebebeb;
+    padding: 15px;
+    background: white;
+    margin-top: 10px;
+    position: relative;
+    
+}
+.art1 img, .art2 img, .art3 img, .art4 img{
+    width: 100%;
+    box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.1);
+}
+ .descripcion {
+    display: flex;
+    justify-content: center;
+} 
+/* -- */
+
 /* ACA TERMINO EL MAIN, HASTA AHI SE PUEDE BORRAR */
 /* --- FOOTER PRINCIPAL --- */
 .footer{
@@ -157,7 +222,6 @@ main{
     width: 100%;
     background-color: var(--verde-footer1);
 
-    overflow-y: scroll;
 }
 .footer-main{
     display: flex;
@@ -278,6 +342,20 @@ main{
         color: var(--blanco);
     
     }
+    /* -- MAIN -- */
+    .titular{
+        padding-bottom: 20px;
+    }
+    .descripcion {
+        display: flex;
+    }
+
+    .art1, .art2, .art3, .art4  {
+        box-shadow: 0px 0px 3px rgb(100, 100, 100);
+        display: inline-block;
+        width: 35%;
+        margin-left: 10%
+    }
 }
 
 @media(min-width: 768px){
@@ -337,7 +415,14 @@ main{
         text-decoration:none;
         font-size: 14px;
     } 
-  
+
+    /*  -- MAIN -- */
+    .art1, .art2, .art3, .art4{
+        width: 21%;
+        margin-left: 3%;
+
+    }
+  /* -- FOOTER -- */
     .footer-title , .footer-texto{
         font-size: var(--title-footer-MF);
         color: var(--negro);
