@@ -44,6 +44,7 @@ Monserrat: textos secundarios. */
     --title-footer-1200px: 12px;
     --texto-footer-texto-1200px:12px;
 }
+
 /* --- HEADER --- */
 
 .main-header{
@@ -57,7 +58,7 @@ Monserrat: textos secundarios. */
 }
 
 .logo{
-    width: 90px;
+    width: 80px;
     border-radius: 50%;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -141,14 +142,34 @@ Monserrat: textos secundarios. */
 /* ESTE MAIN ES DE PRUEBA, SE DEBE BORRAR */
 .main-body {
     background: var(--blanco);
-    height: 500px;
 }
+.photo img{
+    width: 100vw;
+}
+.litle-photo{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.litle-photo {
+    width: 80%;
+    margin: auto;
+    /* background-color: var(--verde) */
+}
+.litle-photo img{
+    width: 50%;
+    padding: 10px 10px;
+    border-radius: 10%;
+}
+
+
 
 /* ACA TERMINO EL MAIN, HASTA AHI SE PUEDE BORRAR */
 /* --- FOOTER PRINCIPAL --- */
 .footer{
-    position: fixed;
-    bottom: 0;
+    /* position: fixed; */
+    /* bottom: 0; */
     width: 100%;
     background-color: var(--verde-footer1);
 
