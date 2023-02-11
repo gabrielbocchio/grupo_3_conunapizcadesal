@@ -139,10 +139,28 @@ Monserrat: textos secundarios. */
 }
 /* --- MAIN --- */
 /* ESTE MAIN ES DE PRUEBA, SE DEBE BORRAR */
-.main-body {
-    background: var(--blanco);
-    height: 500px;
+.banner{
+    width: 400px;
+    height: 230px;
+    border: 2px solid black;
+    background-size: 100% 100%;
+    animation: banner 10s infinite;
+    box-sizing: border-box
 }
+@keyframes banner {
+    0%, 30% {
+        background-image: url(../images/Goulash.jpg);
+        background-size: 100% 100%
+    }
+    35%, 65% {
+        background-image: url(../images/BondiolaBraseada.jpg);
+        background-size: 100% 100%
+    }
+    70%, 100%{
+        background-image:  url(../images/PicadaCloseup.jpg);
+        background-size: 100% 100%
+    }    
+};
 
 /* ACA TERMINO EL MAIN, HASTA AHI SE PUEDE BORRAR */
 /* --- FOOTER PRINCIPAL --- */
