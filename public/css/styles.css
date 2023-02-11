@@ -20,14 +20,18 @@ Monserrat: textos secundarios. */
     --verde-footer1: #2E8780; 
     --verde: #77bda3;
     --verde-nav-footer: #263D42;
-    --mostaza : #FAA916;
+    --mostaza: #FAA916;
+    --mostaza-tralucido : #faaa16ab;
     --rojo: #96031A;
+    
     /* FIRST MOVIL */
-    --title-nav-MF: 24px;
-    --title2-nav-MF: 26px;
-    --title-footer-MF: 16px;
-    --texto-footer-texto-MF: 12px;
-    --button-nav-MF: 20px;
+    --MF-title-nav: 24px;
+    --MF-title2-nav: 26px;
+    --MF-main-photo-title: 14px;
+    --MF-main-button: 16px;
+    --MF-title-footer: 16px;
+    --MF-texto-footer-texto: 12px;
+    --MF-button-nav: 20px;
     /* MIN-WIDTH: 576px */
     --title-nav-576px: 32px;
     --title2-nav-576px: 36px;
@@ -45,7 +49,9 @@ Monserrat: textos secundarios. */
     --texto-footer-texto-1200px:12px;
 }
 
-/* --- HEADER --- */
+/* ------------------------------------ */
+                /*HEADER/
+/* ------------------------------------ */
 
 .main-header{
     background-color: var(--verde-nav-footer);
@@ -66,25 +72,25 @@ Monserrat: textos secundarios. */
 }
 .logo{
     width: 80px;
-    animation: rotar 2s 2 alternate;
+    animation: rotar 1400ms 2 alternate;
 }
 
 .logo-title1{
     font-family: 'Bebas Neue', cursive;
     color:var(--blanco);
-    font-size: var(--title-nav-MF);
+    font-size: var(--MF-title-nav);
 /*     padding-left: 20px; */
 }
 .logo-title2{
     font-family: 'Bebas Neue', cursive;
     color:var(--blanco);
-    font-size: var(--title2-nav-MF);
+    font-size: var(--MF-title2-nav);
 }
 .nav-iconos{
     display: none;
     padding: 10px 0 10px 0;
     text-align: center;
-    font-size: var(--button-nav-MF);
+    font-size: var(-MF-button-nav);
 
 }
 .nav-iconos a {
@@ -96,7 +102,7 @@ Monserrat: textos secundarios. */
     display: none;
     padding: 10px 0 10px 0px;
     text-align: center;
-    font-size: var(--button-nav-MF);
+    font-size: var(--MF-button-nav);
     color:  var(--blanco);
     margin-right: 5px;
 }
@@ -105,7 +111,7 @@ Monserrat: textos secundarios. */
     color: var(--blanco);
     padding: 10px 10px 10px 0;
     text-align: center;
-    font-size: var(--button-nav-MF);
+    font-size: var(--MF-button-nav);
 }
 .main-nav{
     display: none;
@@ -124,62 +130,99 @@ Monserrat: textos secundarios. */
     background: var(--gradiente);
 }
 
-/* --- MAIN --- */
-/* ESTE MAIN ES DE PRUEBA, SE DEBE BORRAR */
+/* ------------------------------------ */
+                /*MAIN*/
+/* ------------------------------------ */
+
 .main-body {
     background: var(--blanco);
 }
-.photo img{
+.main-areas img{
     width: 100%;
 }
-.litle-photo{
+.button-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.area-texto{
     width: 100%;
+    background-color: var(--mostaza);
+    box-shadow: 0 0 8px var(--verde-nav-footer);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: var(--MF-main-button);
+    padding: 10px 20px;
+}
+.button-pedido{
+    width: 60%;
+    margin: auto;
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    font-size: var(--MF-main-button);
+}
+
+.photo-area{
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-.litle-photo {
-    width: 80%;
+.litle-photo{
+    width:90%;
+    position: relative;
     margin: auto;
-    /* background-color: var(--verde) */
+    margin: 5px;
 }
 .litle-photo img{
-    width: 50%;
-    padding: 10px 10px;
-    border-radius: 10%;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 8px var(--verde-nav-footer);
 }
 
+.title-photo{
+    text-align: center;
+    font-size: var(--MF-main-photo-title);
+    position: absolute;
+    background-color: var(--mostaza-tralucido);
+    bottom:5px;
+    border-radius: 0 0 15px 15px ;
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+}
 
+/* ------------------------------------ */
+                /*FOOTER*/
+/* ------------------------------------ */
 
-/* ACA TERMINO EL MAIN, HASTA AHI SE PUEDE BORRAR */
-/* --- FOOTER PRINCIPAL --- */
 .footer{
     /* position: fixed; */
     /* bottom: 0; */
     width: 100%;
     background-color: var(--verde-footer1);
-
-    
 }
 .footer-main{
     display: flex;
     justify-content: space-around;
     width: 100%;
     padding: 10px;
-    text-align: center;
-    
+    text-align: center; 
 }
-
 .footer-nav ul{
     list-style: none;
 }
 .footer-title , .footer-texto{
-    font-size: var(--title-footer-MF);
+    font-size: var(--MF-title-footer);
     color: var(--negro);
-    font-size: 11px;
-  
+    font-size: 11px; 
 }
-
 .footer-pay {
     line-height: 1.3rem;
 }
@@ -189,8 +232,6 @@ Monserrat: textos secundarios. */
     font-size: 10px;
     font-weight: normal;
     line-height: 1.3rem;
-
-
 }
 .footer-icono i{
     color: var(--grisoscuro);
@@ -208,20 +249,18 @@ Monserrat: textos secundarios. */
     font-weight: normal;
     line-height: 1.3rem; 
 }
-
 .footer-copyright{
     text-align: left;
     padding: 10px 10px;
     font-size: 9px;
     color: var(--blanco);
-
 }
 .footer-social {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: var(--button-nav-MF);
+    font-size: var(--MF-button-nav);
     padding: 15px;
     color: var(--blanco);
     background-color:var(--verde-nav-footer);
@@ -230,8 +269,7 @@ Monserrat: textos secundarios. */
 .float{
 	position:fixed;
 	width:60px;
-	height:60px;
-	bottom:33%;
+	bottom:25%;
 	right:30px;
 	background-color:#25d366;
 	color:#FFF;
@@ -245,6 +283,9 @@ Monserrat: textos secundarios. */
 	margin-top:8px;
 }
 @media(min-width: 576px){
+/* ------------------------------------ */
+                /*HEADER*/
+/* ------------------------------------ */
     .logo{
         width: 90px;
     }
@@ -252,7 +293,6 @@ Monserrat: textos secundarios. */
         font-size: 30px;
         margin-right: 5px;
     }
-    
     .burger-button{
         color: var(--blanco);
         padding: 10px;
@@ -273,16 +313,27 @@ Monserrat: textos secundarios. */
         text-align: center;
         font-size: 25px;
     }
+/* ------------------------------------ */
+                /* MAIN */
+/* ------------------------------------ */
+    .litle-photo{
+        width: 48%;
+    }
+/* ------------------------------------ */
+                /*FOOTER*/
+/* ------------------------------------ */
     .footer-copyright{
         text-align: left;
         padding: 10px 10px;
         font-size: var(--title-footer-576px);
         color: var(--blanco);
-    
     }
 }
 
 @media(min-width: 768px){
+/* ------------------------------------ */
+                /*HEADER*/
+/* ------------------------------------ */
     .main-header{
         display: flex;
         flex-wrap: wrap;
@@ -294,30 +345,6 @@ Monserrat: textos secundarios. */
         width: 100%;
     }
 
-    .logo{
-    width: 130px;
-    border-radius: 50%;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    transition: all;
-    -webkit-transition: transform 1300ms ease-in-out;
-    -moz-transition:transform 1300ms ease-in-out;
-    -ms-transition:transform 1300ms ease-in-out;
-}
-.logo:hover {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    transition:all;
-     -webkit-transition: transform 1300ms ease-in-out;
-    -moz-transition:transform 1300ms ease-in-out;
-    -ms-transition:transform 1300ms ease-in-out;
-}
     .logo-title1 ,.logo-title2{
         margin-left: auto;
         margin-right: auto;
@@ -361,7 +388,9 @@ Monserrat: textos secundarios. */
         text-decoration:none;
         font-size: 14px;
     } 
-  
+/* ------------------------------------ */
+                /*FOOTER*/
+/* ------------------------------------ */
     .footer-title , .footer-texto{
         font-size: var(--title-footer-MF);
         color: var(--negro);
@@ -398,8 +427,89 @@ Monserrat: textos secundarios. */
         color: var(--blanco);
     }
 }
+@media(min-width:992px){
+/* ------------------------------------ */
+                /*HEADER*/
+/* ------------------------------------ */
+.main-header{
+    background-color: transparent;
+    position: relative;
+    z-index: 100;
+}
+
+/* ------------------------------------ */
+                /*MAIN*/
+/* ------------------------------------ */
+
+    .main-areas{
+    position: relative;
+    bottom: 249px;
+}
+.photo-area{
+    width: 100%;
+    justify-content: space-around;
+}
+
+}
 @media(min-width: 1200px) {
-    .logo{
-        width: 180px;
-    }
+/* ------------------------------------ */
+                /*HEADER*/
+/* ------------------------------------ */
+.logo{
+    animation: none;
+    width: 180px;
+    border-radius: 50%;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: all;
+    -webkit-transition: transform 1300ms ease-in-out;
+    -moz-transition:transform 1300ms ease-in-out;
+    -ms-transition:transform 1300ms ease-in-out;
+}
+.logo:hover {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transition:all;
+     -webkit-transition: transform 1300ms ease-in-out;
+    -moz-transition:transform 1300ms ease-in-out;
+    -ms-transition:transform 1300ms ease-in-out;
+}
+
+/* ------------------------------------ */
+                /*MAIN*/
+/* ------------------------------------ */
+
+.litle-photo{
+    width: 30%;
+    position: relative;
+    background-color: var(--blanco);
+    margin: 0;
+}
+.litle-photo img{
+    width: 100%;
+    padding:0;
+    border-radius: 0%;
+    margin: 0px;
+}
+.litle-photo:hover h3{
+    height: 100%;
+}
+.title-photo{
+    text-align: center;
+    background-color: var(--mostaza-tralucido);
+    color: var(--blanco);
+    font-size: var(--MV-main-photo-title);
+    padding: 15px  30px;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+}
 }
