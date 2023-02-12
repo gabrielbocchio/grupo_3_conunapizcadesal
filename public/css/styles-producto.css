@@ -139,7 +139,9 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
-
+main {
+    height: 800px;
+}
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -370,7 +372,7 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
     .main-header{
         width: 100%;
-        background-color: transparent;
+        /* background-color: transparent; */
         position: absolute;
         top: 0;
         z-index: 100;
