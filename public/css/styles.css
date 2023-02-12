@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 /* Bebas neue regular: nombre logo. Titulos/secciones principales.
 Monserrat: textos secundarios. */
@@ -17,17 +18,23 @@ Monserrat: textos secundarios. */
     HAY QUE AGREGAR VAR(Y EL NOMBRE) */
     /* COLORES */
     --blanco: #FFFFFF;
+    --negro: #000000; 
     --verde-footer1: #2E8780; 
     --verde: #77bda3;
     --verde-nav-footer: #263D42;
-    --mostaza : #FAA916;
+    --mostaza: #FAA916;
+    --mostaza-tralucido : #faaa16ab;
     --rojo: #96031A;
+    
     /* FIRST MOVIL */
-    --title-nav-MF: 24px;
-    --title2-nav-MF: 26px;
-    --title-footer-MF: 16px;
-    --texto-footer-texto-MF: 12px;
-    --button-nav-MF: 20px;
+    --MF-title-nav: 24px;
+    --MF-title2-nav: 26px;
+    --MF-main-photo-title: 14px;
+    --MF-main-area-texto: 14px;
+    --MF-main-button: 14px;
+    --MF-title-footer: 16px;
+    --MF-texto-footer-texto: 12px;
+    --MF-button-nav: 20px;
     /* MIN-WIDTH: 576px */
     --title-nav-576px: 32px;
     --title2-nav-576px: 36px;
@@ -38,13 +45,20 @@ Monserrat: textos secundarios. */
     --title2-nav-768px: 52px;
     --title-footer-768px: 12px;
     --texto-footer-texto-768px: 12px;
+    /* MIN-WIDTH: 992px */
+    --text-nave-992px: 20px;
     /* MIN-WIDTH: 1200px */
     --title-nav-1200px: 48px;
     --title2-nav-1200px: 52px;
+    --title-main-photo-1200px: 26px;
+    --texto-main-button-1200px: 20px;
     --title-footer-1200px: 12px;
     --texto-footer-texto-1200px:12px;
 }
-/* --- HEADER --- */
+
+/* ------------------------------------ */
+                /*HEADER/
+/* ------------------------------------ */
 
 .main-header{
     background-color: var(--verde-nav-footer);
@@ -55,50 +69,35 @@ Monserrat: textos secundarios. */
     align-items: center;
     justify-content:space-around;    
 }
-
+@keyframes rotar {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: 90deg;
+    }
+}
 .logo{
-    width: 90px;
-    border-radius: 50%;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-    transition: all;
-    -webkit-transition: transform 1300ms ease-in-out;
-    -moz-transition:transform 1300ms ease-in-out;
-    -ms-transition:transform 1300ms ease-in-out;
+    width: 80px;
+    animation: rotar 1400ms 2 alternate;
 }
-.logo:hover {
-/*      transform:rotate(70deg); 
-    transition-duration:1.3s; */
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-    transition:all;
-     -webkit-transition: transform 1300ms ease-in-out;
-    -moz-transition:transform 1300ms ease-in-out;
-    -ms-transition:transform 1300ms ease-in-out;
 
-}
 .logo-title1{
     font-family: 'Bebas Neue', cursive;
     color:var(--blanco);
-    font-size: var(--title-nav-MF);
+    font-size: var(--MF-title-nav);
 /*     padding-left: 20px; */
 }
 .logo-title2{
     font-family: 'Bebas Neue', cursive;
     color:var(--blanco);
-    font-size: var(--title2-nav-MF);
+    font-size: var(--MF-title2-nav);
 }
 .nav-iconos{
     display: none;
     padding: 10px 0 10px 0;
     text-align: center;
-    font-size: var(--button-nav-MF);
+    font-size: var(-MF-button-nav);
 
 }
 .nav-iconos a {
@@ -110,7 +109,7 @@ Monserrat: textos secundarios. */
     display: none;
     padding: 10px 0 10px 0px;
     text-align: center;
-    font-size: var(--button-nav-MF);
+    font-size: var(--MF-button-nav);
     color:  var(--blanco);
     margin-right: 5px;
 }
@@ -119,16 +118,15 @@ Monserrat: textos secundarios. */
     color: var(--blanco);
     padding: 10px 10px 10px 0;
     text-align: center;
-    font-size: var(--button-nav-MF);
+    font-size: var(--MF-button-nav);
 }
 .main-nav{
     display: none;
     transition: 0.2s;
     
 }
-.main-nav ul li a:hover {
+.main-nav ul li a {
     color: var(--blanco);
-    background: var(--verde);
     padding: 8px;
     border-radius: 5px;
 
@@ -139,117 +137,37 @@ main{
 
 }
 /* --- MAIN --- */
-/* ESTE MAIN ES DE PRUEBA */
-
- .banner {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: var(--mostaza);
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px;
-}
-  
-.picadeta{
-    width: 100%;
-    box-shadow: 0 0 10px var(--verde-nav-footer);
-
-}
-.main-center{
-    display: flex;
-    justify-content: center;
+/* ESTE MAIN ES DE PRUEBA, SE DEBE BORRAR */
+.main-body {
+    background: var(--blanco);
+    height: 500px;
 }
 
-.pedido{
-    margin-top: 1rem;
-}
-.pedido i{
-    margin-right: 1rem;
-
-}
-.main-center .pedido{
-    background-color: rgba(0,0,0, .5);
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 0.31em;
-    cursor: pointer;
-    transition: .2s ease all;
-    font-size: 1rem;
-}
-.main-center .pedido:hover{
-    background: #FFF;
-    color: #000;
-    font-weight: 600;
-}
-/* ACA EMPIEZA LOS PRODUCTOS */
-.titular{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    color: var(--rojo);
-    font-weight: 700;
-    font-size: 18px;
-    flex-wrap:unset;
-}
-
-.main-productos{
-    background: var(--grisclaro);
-    display: flex;
-    justify-content: center;
-    padding: 20px;  
-}
-
-.producto {
-    border: none;
-    padding: 15px;
-    background: var(--verde-footer1);
-    margin-top: 10px;
-    position: relative;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 8px var(--verde-nav-footer);
-}
-.producto img{
-    width: 100%;
-}
- .descripcion {
-    display: flex;
-    justify-content: center;
-    font-weight: 600;
-    font-size: 20px;
-    color: var(--mostaza)
-} 
-
+/* ACA TERMINO EL MAIN, HASTA AHI SE PUEDE BORRAR */
+/* --- FOOTER PRINCIPAL --- */
 .footer{
-/*     position: fixed;
-    bottom: 0; */
+    position: fixed;
+    bottom: 0;
     width: 100%;
     background-color: var(--verde-footer1);
 
+    
 }
 .footer-main{
     display: flex;
     justify-content: space-around;
     width: 100%;
     padding: 10px;
-    text-align: center;
-    
+    text-align: center; 
 }
-
 .footer-nav ul{
     list-style: none;
 }
 .footer-title , .footer-texto{
-    font-size: var(--title-footer-MF);
+    font-size: var(--MF-title-footer);
     color: var(--negro);
-    font-size: 11px;
-  
+    font-size: 11px; 
 }
-
 .footer-pay {
     line-height: 1.3rem;
 }
@@ -260,8 +178,6 @@ main{
     font-size: 10px;
     font-weight: normal;
     line-height: 1.3rem;
-
-
 }
 
 .footer-icono i{
@@ -282,13 +198,11 @@ main{
     font-weight: normal;
     line-height: 1.3rem; 
 }
-
 .footer-copyright{
     text-align: left;
     padding: 10px 10px;
     font-size: 9px;
     color: var(--blanco);
-
 }
 
 .footer-social {
@@ -296,7 +210,7 @@ main{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: var(--button-nav-MF);
+    font-size: var(--MF-button-nav);
     padding: 15px;
     color: var(--blanco);
     background-color:var(--verde-nav-footer);
@@ -307,7 +221,7 @@ main{
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:7%;
+	bottom:33%;
 	right:30px;
 	background-color:#25d366;
 	color:#FFF;
@@ -321,6 +235,9 @@ main{
 	margin-top:8px;
 }
 @media(min-width: 576px){
+/* ------------------------------------ */
+                /*HEADER*/
+/* ------------------------------------ */
     .logo{
         width: 90px;
     }
@@ -328,7 +245,6 @@ main{
         font-size: 30px;
         margin-right: 5px;
     }
-    
     .burger-button{
         color: var(--blanco);
         padding: 10px;
@@ -349,12 +265,14 @@ main{
         text-align: center;
         font-size: 25px;
     }
+/* ------------------------------------ */
+                /*FOOTER*/
+/* ------------------------------------ */
     .footer-copyright{
         text-align: left;
         padding: 10px 10px;
         font-size: var(--title-footer-576px);
         color: var(--blanco);
-    
     }
     /* -- MAIN -- */
     .titular{
@@ -371,8 +289,10 @@ main{
         margin-left: 10%
     }
 }
-
 @media(min-width: 768px){
+/* ------------------------------------ */
+                /*HEADER*/
+/* ------------------------------------ */
     .main-header{
         display: flex;
         flex-wrap: wrap;
@@ -382,9 +302,6 @@ main{
     .main-logo{
         justify-content: space-between;
         width: 100%;
-    }
-    .logo{
-        width: 130px;
     }
     .logo-title1 ,.logo-title2{
         margin-left: auto;
@@ -429,49 +346,7 @@ main{
         text-decoration:none;
         font-size: 14px;
     } 
-
-    /*  -- MAIN -- */
-    .banner {
-        font-size: 15px;
-    }
-
-    .producto{
-        width: 21%;
-        margin-left: 3%;
-        position: relative;
-        
-    }
-    .descripcion{
-        margin: 0;
-        padding: 15px;
-        position: absolute;
-        bottom: 0; left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: all 450ms;
-    }
-    .producto img {
-        width: 100%;
-
-    }
-    .descripcion:hover{
-        opacity: 1;
-        background-color: rgba(245, 234, 90, 0.6);
-        padding: 0;
-        color: var(--rojo)
-        
-    }
-    .producto:hover{
-        padding: 0;
-        box-shadow: 0 0 8px var(--verde-nav-footer);
-        
-    }
-    /* AAAAAAAERDRRRRRRRRRRRRRRRRR */
-  /* -- FOOTER -- */
+  
     .footer-title , .footer-texto{
         font-size: var(--title-footer-MF);
         color: var(--negro);
@@ -494,7 +369,6 @@ main{
         line-height: 2.5rem;
         font-size: 1.4rem;
     }
-
     .footer-icono i{
         color: var(--grisoscuro);
         font-size: 25px;
@@ -508,9 +382,112 @@ main{
         color: var(--blanco);
     }
 }
-@media(min-width: 1200px) {
+@media(min-width:992px){
+/* ------------------------------------ */
+                /*HEADER*/
+/* ------------------------------------ */
+    .main-header{
+        width: 100%;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+    }  
     .logo{
-        width: 180px;
+            width: 100px;
+        }
+    .navbar a{
+        font-size:var(--text-nave-992px);
+        font-weight: 600;
+        color: var(--blanco);
+        /* background-color: var(--verde-footer1); */
+    }
+    /* ------------------------------------ */
+                    /*MAIN*/
+    /* ------------------------------------ */
+    .area-texto{
+        display: none;
+    }
+    .main-areas{
+        position:relative;
+        top: 0;
+    }
+    .main-img{
+        display: none;
+    }
+    .main-img-1{
+        display: flex;
+    }
+
+}
+@media(min-width: 1200px) {
+/* ------------------------------------ */
+                /*HEADER*/
+/* ------------------------------------ */
+    .logo{
+        border-radius: 50%;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+        transition: all;
+        -webkit-transition: transform 1300ms ease-in-out;
+        -moz-transition:transform 1300ms ease-in-out;
+        -ms-transition:transform 1300ms ease-in-out;
+    }
+    .logo:hover {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+        transition:all;
+        -webkit-transition: transform 1300ms ease-in-out;
+        -moz-transition:transform 1300ms ease-in-out;
+        -ms-transition:transform 1300ms ease-in-out;
+    }
+
+/* ------------------------------------ */
+                /*MAIN*/
+/* ------------------------------------ */
+    .main-img-2{
+        display: flex;
+    }
+    .main-img-1{
+        display: none;
+    }
+    .button{
+        font-size: var(--texto-main-button-1200px);
+    }
+    .litle-photo{
+        width: 26%;
+        position: relative;
+        background-color: var(--blanco);
+        margin: 20px 10px;
+    }
+    .litle-photo img{
+        width: 100%;
+    }
+    .litle-photo:hover h3{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        font-size: var(--title-main-photo-1200px);
+    }
+    .title-photo{
+        text-align: center;
+        background-color: var(--mostaza-tralucido);
+        color: var(--blanco);
+        font-size: var(--MV-main-photo-title);
+        padding: 15px  30px;
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        transition: 500ms;
     }
     .descripcion{
         font-size: 20px;
