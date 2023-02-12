@@ -136,24 +136,26 @@ Monserrat: textos secundarios. */
 .main-body{
     background: var(--negro);
     background: var(--gradiente);
+    background-color: rgb(185, 190, 187);
 }
 /* --- MAIN --- */
 /* ESTE MAIN ES DE PRUEBA, SE DEBE BORRAR */
 .banner{
-    width: 400px;
-    height: 230px;
+    width: 99%;
+    height: 140px;
     border: 2px solid black;
     background-size: 100% 100%;
     animation: banner 10s infinite;
-    box-sizing: border-box
+    box-sizing: border-box;
+    margin-bottom: 2px;
 }
 @keyframes banner {
     0%, 30% {
-        background-image: url(../images/Goulash.jpg);
+        background-image: url(../images/Picada_XL.JPG);
         background-size: 100% 100%
     }
     35%, 65% {
-        background-image: url(../images/BondiolaBraseada.jpg);
+        background-image: url(../images/Picada\ Clasica.JPG);
         background-size: 100% 100%
     }
     70%, 100%{
@@ -162,12 +164,32 @@ Monserrat: textos secundarios. */
     }    
 };
 
+.contenedor-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.texto-foto{
+    font-size: 20px;
+    font-weight: 200;
+    font-style: normal;
+    display: flex;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: 3px;
+}
+
+.imagen{
+    width: 35%;
+}
+
+
 /* ACA TERMINO EL MAIN, HASTA AHI SE PUEDE BORRAR */
 /* --- FOOTER PRINCIPAL --- */
 .footer{
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 10%;
     background-color: var(--verde-footer1);
 
     
@@ -256,6 +278,12 @@ Monserrat: textos secundarios. */
 	margin-top:8px;
 }
 @media(min-width: 576px){
+    .banner{
+        display: flex;
+        padding: 20px;
+        width: 99%;
+        height: 260px
+    }
     .logo{
         width: 90px;
     }
@@ -294,6 +322,16 @@ Monserrat: textos secundarios. */
 }
 
 @media(min-width: 768px){
+    .banner{
+        padding: 20px;
+        width: 99%;
+        height: 300px
+    }
+    .imgmain{
+        height: 1px;
+        width: 1px;
+        font-size: 25px;
+    }
     .main-header{
         display: flex;
         flex-wrap: wrap;
@@ -388,6 +426,15 @@ Monserrat: textos secundarios. */
     }
 }
 @media(min-width: 1200px) {
+    .banner{
+        width: 99%;
+        height: 315;
+    }
+    .imgmain{
+        height: 1px;
+        width: 1px;
+        font-size: 25px;
+    }
     .logo{
         width: 180px;
     }
