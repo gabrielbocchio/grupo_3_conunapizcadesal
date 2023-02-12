@@ -51,6 +51,7 @@ Monserrat: textos secundarios. */
     --title-nav-1200px: 48px;
     --title2-nav-1200px: 52px;
     --title-main-photo-1200px: 26px;
+    --texto-main-button-1200px: 20px;
     --title-footer-1200px: 12px;
     --texto-footer-texto-1200px:12px;
 }
@@ -160,6 +161,9 @@ Monserrat: textos secundarios. */
 .main-areas img{
     width: 100%;
 }
+.main-img-1{
+    display: none;
+}
 .main-img-2{
     display: none;
 }
@@ -202,6 +206,7 @@ Monserrat: textos secundarios. */
     font-size: var(--MF-main-photo-title);
     position: absolute;
     background-color: var(--mostaza-tralucido);
+    color: var(--blanco);
     bottom:5px;
     border-radius: 0 0 15px 15px ;
     width: 100%;
@@ -468,6 +473,12 @@ Monserrat: textos secundarios. */
         position:relative;
         top: 0;
     }
+    .main-img{
+        display: none;
+    }
+    .main-img-1{
+        display: flex;
+    }
 
 }
 @media(min-width: 1200px) {
@@ -475,7 +486,6 @@ Monserrat: textos secundarios. */
                 /*HEADER*/
 /* ------------------------------------ */
     .logo{
-        animation: none;
         border-radius: 50%;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -502,6 +512,15 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
+    .main-img-2{
+        display: flex;
+    }
+    .main-img-1{
+        display: none;
+    }
+    .button{
+        font-size: var(--texto-main-button-1200px);
+    }
     .litle-photo{
         width: 26%;
         position: relative;
@@ -510,15 +529,13 @@ Monserrat: textos secundarios. */
     }
     .litle-photo img{
         width: 100%;
-        padding:0;
-        border-radius: 0%;
-        margin: 0px;
     }
     .litle-photo:hover h3{
         height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 15px;
         font-size: var(--title-main-photo-1200px);
     }
     .title-photo{
@@ -528,7 +545,6 @@ Monserrat: textos secundarios. */
         font-size: var(--MV-main-photo-title);
         padding: 15px  30px;
         width: 100%;
-        margin: 0;
         position: absolute;
         bottom: 5px;
         left: 0;
