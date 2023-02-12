@@ -151,8 +151,6 @@ Monserrat: textos secundarios. */
     bottom: 0;
     width: 100%;
     background-color: var(--verde-footer1);
-
-    
 }
 .footer-main{
     display: flex;
