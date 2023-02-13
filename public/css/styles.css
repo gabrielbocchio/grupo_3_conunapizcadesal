@@ -136,18 +136,92 @@ main{
     background: #fefefe
 
 }
-/* --- MAIN --- */
-/* ESTE MAIN ES DE PRUEBA, SE DEBE BORRAR */
+
+/* ------------------------------------ */
+                /*MAIN*/
+/* ------------------------------------ */
+
 .main-body {
     background: var(--blanco);
-    height: 500px;
+}
+.main-areas{
+    position: relative;
+}
+.area-texto{
+    width: 100%;
+    background-color: var(--mostaza);
+    box-shadow: 0 0 8px var(--verde-nav-footer);
+    text-align: center;
+    font-size: var(--MF-main-area-texto);
+    color: var(--blanco);
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+
+}
+.main-areas img{
+    width: 100%;
+}
+.main-img-1{
+    display: none;
+}
+.main-img-2{
+    display: none;
+}
+.main-button{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.button{
+    width: 100%;
+    background-color: var(--mostaza);
+    font-size: var(--MF-main-button);
+    color: var(--blanco);
+    padding: 10px 0;
+    border: 0;
+    box-shadow: 2px 2px 8px var(--verde-nav-footer);
+}
+.photo-area{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.litle-photo{
+    width:90%;
+    position: relative;
+    margin: auto;
+    margin: 5px;
+}
+.litle-photo img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 8px var(--verde-nav-footer);
 }
 
-/* ACA TERMINO EL MAIN, HASTA AHI SE PUEDE BORRAR */
-/* --- FOOTER PRINCIPAL --- */
+.title-photo{
+    text-align: center;
+    font-size: var(--MF-main-photo-title);
+    position: absolute;
+    background-color: var(--mostaza-tralucido);
+    color: var(--blanco);
+    bottom:5px;
+    border-radius: 0 0 15px 15px ;
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+/* ------------------------------------ */
+                /*FOOTER*/
+/* ------------------------------------ */
+
 .footer{
-    position: fixed;
-    bottom: 0;
+    /* position: fixed; */
+    /* bottom: 0; */
     width: 100%;
     background-color: var(--verde-footer1);
 
@@ -171,7 +245,6 @@ main{
 .footer-pay {
     line-height: 1.3rem;
 }
-
 .footer-nav a, .footer-info h5 , .footer-icono h4{
     text-decoration: none;
     color: var(--blanco);
@@ -186,11 +259,9 @@ main{
     padding-top: 5px;
     margin: auto;
 }
-
 .footer-entrega iframe {
     display: none;
 }
-
 .footer-texto-entrega{
     text-decoration: none;
     color: var(--blanco);
@@ -204,7 +275,6 @@ main{
     font-size: 9px;
     color: var(--blanco);
 }
-
 .footer-social {
     width: 100%;
     display: flex;
@@ -220,8 +290,7 @@ main{
 .float{
 	position:fixed;
 	width:60px;
-	height:60px;
-	bottom:33%;
+	bottom:25%;
 	right:30px;
 	background-color:#25d366;
 	color:#FFF;
@@ -273,20 +342,6 @@ main{
         padding: 10px 10px;
         font-size: var(--title-footer-576px);
         color: var(--blanco);
-    }
-    /* -- MAIN -- */
-    .titular{
-        padding-bottom: 20px;
-    }
-    .descripcion {
-        display: flex;
-    }
-
-    .producto  {
-        box-shadow: 0px 0px 3px rgb(100, 100, 100);
-        display: inline-block;
-        width: 35%;
-        margin-left: 10%
     }
 }
 @media(min-width: 768px){
@@ -346,7 +401,18 @@ main{
         text-decoration:none;
         font-size: 14px;
     } 
-  
+/* ------------------------------------ */
+                /*MAIN*/
+/* ------------------------------------ */
+    .photo-area{
+        width: 100%;
+    }
+    .litle-photo{
+        width:40%;
+    }
+/* ------------------------------------ */
+                /*FOOTER*/
+/* ------------------------------------ */
     .footer-title , .footer-texto{
         font-size: var(--title-footer-MF);
         color: var(--negro);
@@ -488,8 +554,5 @@ main{
         bottom: 5px;
         left: 0;
         transition: 500ms;
-    }
-    .descripcion{
-        font-size: 20px;
     }
 }
