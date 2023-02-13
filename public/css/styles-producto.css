@@ -140,9 +140,6 @@ Monserrat: textos secundarios. */
                 /*MAIN*/
 /* ------------------------------------ */
 
-.main-body {
-    background: var(--blanco);
-}
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -328,7 +325,6 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
- 
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -371,6 +367,13 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*HEADER*/
 /* ------------------------------------ */
+    .main-header{
+        width: 100%;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+    }  
     .logo{
             width: 100px;
         }
@@ -378,6 +381,7 @@ Monserrat: textos secundarios. */
         font-size:var(--text-nave-992px);
         font-weight: 600;
         color: var(--blanco);
+        /* background-color: var(--verde-footer1); */
     }
     /* ------------------------------------ */
                     /*MAIN*/
@@ -409,8 +413,8 @@ Monserrat: textos secundarios. */
         -webkit-transition: transform 1300ms ease-in-out;
         -moz-transition:transform 1300ms ease-in-out;
         -ms-transition:transform 1300ms ease-in-out;
+    /* ------------------------------------ */
+                    /*MAIN*/
+    /* ------------------------------------ */
     }
 }
-/* ------------------------------------ */
-                /*MAIN*/
-/* ------------------------------------ */
