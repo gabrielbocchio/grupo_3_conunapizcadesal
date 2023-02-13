@@ -21,9 +21,6 @@ app.get('/login', (req,res)=>{
 app.get('/register', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./view/register.html'))
 })
-app.get('/productDetail', (req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./view/product.html'))
-})
 
 
 
