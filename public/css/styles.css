@@ -173,13 +173,14 @@ Monserrat: textos secundarios. */
     bottom: 0;
 }
 .button{
-    width: 100%;
+    width:100%;
     background-color: var(--mostaza);
     font-size: var(--MF-main-button);
     color: var(--blanco);
-    padding: 10px 0;
+    padding: 5px 0;
     border: 0;
     box-shadow: 2px 2px 8px var(--verde-nav-footer);
+
 }
 .photo-area{
     width: 80%;
@@ -285,7 +286,7 @@ Monserrat: textos secundarios. */
 .float{
 	position:fixed;
 	width:60px;
-	bottom:25%;
+	bottom:10%;
 	right:30px;
 	background-color:#25d366;
 	color:#FFF;
@@ -338,10 +339,13 @@ Monserrat: textos secundarios. */
         font-size: var(--title-footer-576px);
         color: var(--blanco);
     }
+        .litle-photo{
+        width:40%;
+    }
 }
 @media(min-width: 768px){
 /* ------------------------------------ */
-                /*HEADER*/
+                /*HEADER*//* asdasd */
 /* ------------------------------------ */
     .main-header{
         display: flex;
@@ -403,7 +407,13 @@ Monserrat: textos secundarios. */
         width: 100%;
     }
     .litle-photo{
-        width:40%;
+        width: 26%;
+        position: relative;
+        background-color: var(--blanco);
+        margin: 20px 10px;
+    }
+    .litle-photo img{
+        width: 100%;
     }
 /* ------------------------------------ */
                 /*FOOTER*/
