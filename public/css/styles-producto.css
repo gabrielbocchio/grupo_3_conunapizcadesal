@@ -142,7 +142,80 @@ Monserrat: textos secundarios. */
 
 .main-body {
     background: var(--blanco);
+    
 }
+.main-areas{
+    position: relative;
+}
+.area-texto{
+    width: 100%;
+    background-color: var(--mostaza);
+    box-shadow: 0 0 8px var(--verde-nav-footer);
+    text-align: center;
+    font-size: var(--MF-main-area-texto);
+    color: var(--blanco);
+    padding: 5px 0;
+    position: absolute;
+    top: 0;
+
+}
+.main-areas img{
+    width: 100%;
+}
+.main-img-1{
+    display: none;
+}
+.main-img-2{
+    display: none;
+}
+.main-button{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.button{
+    width:100%;
+    background-color: var(--mostaza);
+    font-size: var(--MF-main-button);
+    color: var(--blanco);
+    padding: 5px 0;
+    border: 0;
+    box-shadow: 2px 2px 8px var(--verde-nav-footer);
+
+}
+.photo-area{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.litle-photo{
+    width:90%;
+    position: relative;
+    margin: auto;
+    margin: 5px;
+}
+.litle-photo img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 8px var(--verde-nav-footer);
+}
+
+.title-photo{
+    text-align: center;
+    font-size: var(--MF-main-photo-title);
+    position: absolute;
+    background-color: var(--mostaza-tralucido);
+    color: var(--blanco);
+    bottom:5px;
+    border-radius: 0 0 15px 15px ;
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+}
+
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -214,7 +287,7 @@ Monserrat: textos secundarios. */
 .float{
 	position:fixed;
 	width:60px;
-	bottom:25%;
+	bottom:10%;
 	right:30px;
 	background-color:#25d366;
 	color:#FFF;
@@ -267,10 +340,13 @@ Monserrat: textos secundarios. */
         font-size: var(--title-footer-576px);
         color: var(--blanco);
     }
+        .litle-photo{
+        width:40%;
+    }
 }
 @media(min-width: 768px){
 /* ------------------------------------ */
-                /*HEADER*/
+                /*HEADER*//* asdasd */
 /* ------------------------------------ */
     .main-header{
         display: flex;
@@ -328,7 +404,18 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
- 
+    .photo-area{
+        width: 100%;
+    }
+    .litle-photo{
+        width: 26%;
+        position: relative;
+        background-color: var(--blanco);
+        margin: 20px 10px;
+    }
+    .litle-photo img{
+        width: 100%;
+    }
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -371,6 +458,13 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*HEADER*/
 /* ------------------------------------ */
+    .main-header{
+        width: 100%;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+    }  
     .logo{
             width: 100px;
         }
@@ -378,10 +472,25 @@ Monserrat: textos secundarios. */
         font-size:var(--text-nave-992px);
         font-weight: 600;
         color: var(--blanco);
+        /* background-color: var(--verde-footer1); */
     }
     /* ------------------------------------ */
                     /*MAIN*/
     /* ------------------------------------ */
+    .area-texto{
+        display: none;
+    }
+    .main-areas{
+        position:relative;
+        top: 0;
+    }
+    .main-img{
+        display: none;
+    }
+    .main-img-1{
+        display: flex;
+    }
+
 }
 @media(min-width: 1200px) {
 /* ------------------------------------ */
@@ -410,7 +519,46 @@ Monserrat: textos secundarios. */
         -moz-transition:transform 1300ms ease-in-out;
         -ms-transition:transform 1300ms ease-in-out;
     }
-}
+
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
+    .main-img-2{
+        display: flex;
+    }
+    .main-img-1{
+        display: none;
+    }
+    .button{
+        font-size: var(--texto-main-button-1200px);
+    }
+    .litle-photo{
+        width: 26%;
+        position: relative;
+        background-color: var(--blanco);
+        margin: 20px 10px;
+    }
+    .litle-photo img{
+        width: 100%;
+    }
+    .litle-photo:hover h3{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        font-size: var(--title-main-photo-1200px);
+    }
+    .title-photo{
+        text-align: center;
+        background-color: var(--mostaza-tralucido);
+        color: var(--blanco);
+        font-size: var(--MV-main-photo-title);
+        padding: 15px  30px;
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        transition: 500ms;
+    }
+}
