@@ -5,83 +5,210 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/199cb6dc3b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-producto.css">
     <title>Con una Pizca de Sal</title>
 </head>
 <body  class="main-body">
-    <header class="main-header"> 
-        <div class="main-logo">
-            <img class="logo" src="images/LOGO_CUPST.png" alt="Logo">
-            <div class="logo-title1">CON UNA<span class="logo-title2"> PIZCA DE SAL</span></div>
-            <div class="nav-iconos">
-                <a href=""><i class="fa-brands fa-tiktok"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
+<header class="main-header"> 
+    <div class="main-logo">
+        <img class="logo" src="images/LOGO_CUPST.png" alt="Logo">
+        <div class="logo-title1">CON UNA<span class="logo-title2"> PIZCA DE SAL</span></div>
+        <div class="nav-iconos">
+            <a href=""><i class="fa-brands fa-tiktok"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <div class="nav-iconos2">
+            <a href="" class="usuario"><i class="fa-solid fa-user"></i></a>
+            <a href="#" class="burger-button"><i class="fas fa-bars"></i></a>
+        </div>
+    </div>
+    <nav class="main-nav">        
+        <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="/product">Pedir Online</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#">Contactos</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="cart-container">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+    </div>
+      
+<section  class="main-main">
+    <nav class="nav-products">
+    <ul class="product-list">
+        <li class="product-item">
+        <a href="#" class="product-title">Productos  <i class="fa-solid fa-angle-right"></i></a>
+        <ul class="submenu-list">
+            <li class="submenu-item"><a href="#" class="submenu-link">Pizzas</a></li>
+            <li class="submenu-item"><a href="#" class="submenu-link">Tartas</a></li>
+            <li class="submenu-item"><a href="#" class="submenu-link">Picadas</a></li>
+            <li class="submenu-item"><a href="#" class="submenu-link">Platos</a></li>
+        </ul>
+        </li>
+    </ul>
+    </nav>
+</section>
+ <section class="grilla-productos">
+    <div class="product-grid">
+        <div class="product">
+          <img src="/images/Picada.jpg" alt="Product 1">
+          <div class="product-details">
+            <h3>Picada</h3>
+            <p>$10.99</p>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+        
+        <div class="product">
+          <img src="/images/Picada_Baires.jpg" alt="Product 2">
+          <div class="product-details">
+            <h3>Picada Baires</h3>
+            <p>$12.99</p>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+        
+        <div class="product">
+          <img src="/images/Picada_Clasica.jpg" alt="Product 3">
+          <div class="product-details">
+            <h3>Picada Clasica</h3>
+            <p>$8.99</p>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+        
+        <div class="product">
+          <img src="/images/Picada_Closeup.jpg" alt="Product 4">
+          <div class="product-details">
+            <h3>Picada Closeup</h3>
+            <p>$15.99</p>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+        <div class="product">
+            <img src="/images/Picada_Closeup2.jpg" alt="Product 9">
+            <div class="product-details">
+              <h3>Picada Closeup2</h3>
+              <p>$9.99</p>
+              <button>Agregar al carrito</button>
             </div>
-            <div class="nav-iconos2">
-                <a href="" class="usuario"><i class="fa-solid fa-user"></i></a>
-                <a href="#" class="burger-button"><i class="fas fa-bars"></i></a>
+          </div>
+        
+        <div class="product">
+          <img src="/images/BB.jpg" alt="Product 5">
+          <div class="product-details">
+            <h3>Pulled pork</h3>
+            <p>$11.99</p>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+        
+        <div class="product">
+          <img src="/images/Pizza.jpg" alt="Product 6">
+          <div class="product-details">
+            <h3>Pizza</h3>
+            <p>$7.99</p>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+        
+        <div class="product">
+          <img src="/images/Tarta_Cebolla.JPG" alt="Product 7">
+          <div class="product-details">
+            <h3>Tarta Cebolla</h3>
+            <p>$9.99</p>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+        
+        <div class="product">
+          <img src="/images/Wok_pollo.jpg" alt="Product 8">
+          <div class="product-details">
+            <h3>Wok de pollo</h3>
+            <p>$13.99</p>
+            <button>Agregar al carrito</button>
+          </div>
+        </div>
+          <div class="product">
+            <img src="/images/Goulash.jpg" alt="Product 10">
+            <div class="product-details">
+              <h3>Goulash</h3>
+              <p>$9.99</p>
+              <button>Agregar al carrito</button>
             </div>
-        </div>
-        <nav class="main-nav">        
-            <ul class="navbar">
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="/product">Pedir Online</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Contactos</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main-body">
-    
-    </main>
-    <footer class="footer">
-      <section class="footer-main">
-        <div class="footer-nav">
-            <h4 class="footer-title">Navegaciones</h4>
-            <ul>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="./view/product.html">Pedir Online</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">Contactos</a></li>
-                <li><a href="#">Suscribite</a></li>
-            </ul>   
-        </div>
-        <div class="footer-info"> 
-            <h4 class="footer-title">Informacion</h4>
-            <h5 class="footer-texto">Telefono: 11-6835-5475</h5>
-            <h5 class="footer-texto">Mail: infopizcadesal@gmail.com</h5>
-            <h5 class="footer-texto">Preguntas frecuentes</h5>
-            <h4 class="footer-title">Medio de Pagos</h4>
-            <div class="footer-icono">
-            <i class="fa-brands fa-cc-visa"></i>
-            <i class="fa-brands fa-cc-mastercard"></i>
-            <i class="fa-solid fa-money-bill-wave"></i>
-            <i class="fa-solid fa-money-bill-transfer"></i>
-            <i class="fa-brands fa-bitcoin"></i>
+          </div>
+          <div class="product">
+            <img src="/images/Dulce.jpg" alt="Product 11">
+            <div class="product-details">
+              <h3>Dulces</h3>
+              <p>$9.99</p>
+              <button>Agregar al carrito</button>
             </div>
-        </div>
-        <div class="footer-entrega"> 
-        <h4 class="footer-texto">Zonas de entrega</h4>
-        <div class="footer-texto-entrega">Zona norte<br>
-            Caba (corredor norte)</div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15166.461204346939!2d-58.39073055006472!3d-34.6602152815044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sit!4v1675511733226!5m2!1ses!2sit" width="220" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </section>
-      <div class="footer-copyright">
-        <p> Copyright © 2023 | Todos los derechos reservados |</p>
+          </div>
+          <div class="product">
+            <img src="/images/Carne.jpg" alt="Product 12">
+            <div class="product-details">
+              <h3>Viandas</h3>
+              <p>$9.99</p>
+              <button>Agregar al carrito</button>
+            </div>
+          </div>
       </div>
-      <section class="footer-social">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa fa-whatsapp"></i>
-          <i class="fa-brands fa-tiktok"></i><i class="fa-brands fa-youtube"></i>
-      </section>
-    </footer>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
-        <i class="fa fa-whatsapp my-float"></i>
-    </body>
-    </html>
+ </section>
+    <footer class="footer">
+        <section class="footer-main">
+          <div class="footer-nav">
+              <h4 class="footer-title">Navegaciones</h4>
+              <ul>
+                  <li><a href="#">Nosotros</a></li>
+                  <li><a href="#">Menu</a></li>
+                  <li><a href="#">Pedir Online</a></li>
+                  <li><a href="#">Eventos</a></li>
+                  <li><a href="#">Contactos</a></li>
+                  <li><a href="#">Suscribite</a></li>
+              </ul>   
+          </div>
+          <div class="footer-info"> 
+              <h4 class="footer-title">Informacion</h4>
+              <h5 class="footer-texto">Telefono: 11-6835-5475</h5>
+              <h5 class="footer-texto">Mail: infopizcadesal@gmail.com</h5>
+              <h5 class="footer-texto">Preguntas frecuentes</h5>
+              <h4 class="footer-title">Medio de Pagos</h4>
+              <div class="footer-icono">
+              <i class="fa-brands fa-cc-visa"></i>
+              <i class="fa-brands fa-cc-mastercard"></i>
+              <i class="fa-solid fa-money-bill-wave"></i>
+              <i class="fa-solid fa-money-bill-transfer"></i>
+              <i class="fa-brands fa-bitcoin"></i>
+              </div>
+          </div>
+          <div class="footer-entrega"> 
+          <h4 class="footer-texto">Zonas de entrega</h4>
+          <div class="footer-texto-entrega">Zona norte<br>
+              Caba (corredor norte)</div>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15166.461204346939!2d-58.39073055006472!3d-34.6602152815044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sit!4v1675511733226!5m2!1ses!2sit" width="220" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </section>
+        <div class="footer-copyright">
+          <p> Copyright © 2023 | Todos los derechos reservados |</p>
+        </div>
+        <section class="footer-social">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa fa-whatsapp"></i>
+            <i class="fa-brands fa-tiktok"></i><i class="fa-brands fa-youtube"></i>
+        </section>
+      </footer>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://api.whatsapp.com/send?phone=51955081075&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Varela%202." class="float" target="_blank">
+          <i class="fa fa-whatsapp my-float"></i>
+</body>
+</html>

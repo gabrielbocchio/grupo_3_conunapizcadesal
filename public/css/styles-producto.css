@@ -140,82 +140,164 @@ Monserrat: textos secundarios. */
                 /*MAIN*/
 /* ------------------------------------ */
 
-.main-body {
-    background: var(--blanco);
-    
-}
-.main-areas{
+/* -- CARRITO AL CUAL SE PUSHEAN ARTICULOS */
+
+.cart-icon i {
+    font-size: 30px;
+    color: #333; 
+    cursor: pointer; 
+  }
+
+.cart-icon {
+    position: fixed;
+    top: 160px;
+    left: 27px;
+    z-index: 2000;
+  }
+.cart-count {
+    position: absolute;
+    bottom: -10px;
+    right: -15px;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 50%;
+  }
+  .cart-container {
+    position: fixed;
+    top: 150px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #FAA916;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+
+/* TODO ESTO ES LA BARRITA DE ARRIBA,*/
+.main-main{
+    padding: 10px;
+}  
+
+.nav-products {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
     position: relative;
-}
-.area-texto{
     width: 100%;
-    background-color: var(--mostaza);
-    box-shadow: 0 0 8px var(--verde-nav-footer);
+    margin:0 auto;
     text-align: center;
-    font-size: var(--MF-main-area-texto);
-    color: var(--blanco);
-    padding: 5px 0;
-    position: absolute;
-    top: 0;
+    font-size: 14px;
+    padding: 5px;
+  }
+  
+  .product-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .product-item {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .product-title {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    left:30%;
+    transform: translateX(-50%);
+    font-size: 16px;
 
-}
-.main-areas img{
-    width: 100%;
-}
-.main-img-1{
-    display: none;
-}
-.main-img-2{
-    display: none;
-}
-.main-button{
-    width: 100%;
+  }
+  
+  .product-title:hover {
+    background-color: #555;
+  }
+  
+  .submenu-list {
     position: absolute;
-    bottom: 0;
-}
-.button{
+    top: -50%;
+    left: 50%;
+    display: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #4b4a4a;
     width:100%;
-    background-color: var(--mostaza);
-    font-size: var(--MF-main-button);
-    color: var(--blanco);
-    padding: 5px 0;
-    border: 0;
-    box-shadow: 2px 2px 8px var(--verde-nav-footer);
-
-}
-.photo-area{
-    width: 80%;
-    margin: auto;
+    opacity: 1;
+  }
+  
+  .submenu-item {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .submenu-link {
+    display: flex;
+    padding: 10px 30px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .submenu-link:hover {
+    background-color: #555;
+  }
+  
+  .product-item:hover > .submenu-list {
+    display: block;
+    position: absolute;
+  }
+  /* ACA TERMINA LA BARRITA PRODUCTOS ESA PORONGA */
+/* aca empieza el main grilla producto */
+.product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .product {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  }
+  
+  .product img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .product-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .product-details h3 {
+    font-size: 16px;
+    margin-bottom: 5px
 }
-.litle-photo{
-    width:90%;
-    position: relative;
-    margin: auto;
-    margin: 5px;
-}
-.litle-photo img{
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 0 8px var(--verde-nav-footer);
-}
+.product button{
+    background: var(--verde);
+    border: none;
+    padding: 5px;
+    font-weight:bold;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 
-.title-photo{
-    text-align: center;
-    font-size: var(--MF-main-photo-title);
-    position: absolute;
-    background-color: var(--mostaza-tralucido);
-    color: var(--blanco);
-    bottom:5px;
-    border-radius: 0 0 15px 15px ;
-    width: 100%;
-    text-align: center;
-    padding: 15px 10px;
 }
-
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -340,13 +422,10 @@ Monserrat: textos secundarios. */
         font-size: var(--title-footer-576px);
         color: var(--blanco);
     }
-        .litle-photo{
-        width:40%;
-    }
 }
 @media(min-width: 768px){
 /* ------------------------------------ */
-                /*HEADER*//* asdasd */
+                /*HEADER*/
 /* ------------------------------------ */
     .main-header{
         display: flex;
@@ -404,18 +483,7 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
-    .photo-area{
-        width: 100%;
-    }
-    .litle-photo{
-        width: 26%;
-        position: relative;
-        background-color: var(--blanco);
-        margin: 20px 10px;
-    }
-    .litle-photo img{
-        width: 100%;
-    }
+ 
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -458,13 +526,6 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*HEADER*/
 /* ------------------------------------ */
-    .main-header{
-        width: 100%;
-        background-color: transparent;
-        position: absolute;
-        top: 0;
-        z-index: 100;
-    }  
     .logo{
             width: 100px;
         }
@@ -472,25 +533,10 @@ Monserrat: textos secundarios. */
         font-size:var(--text-nave-992px);
         font-weight: 600;
         color: var(--blanco);
-        /* background-color: var(--verde-footer1); */
     }
     /* ------------------------------------ */
                     /*MAIN*/
     /* ------------------------------------ */
-    .area-texto{
-        display: none;
-    }
-    .main-areas{
-        position:relative;
-        top: 0;
-    }
-    .main-img{
-        display: none;
-    }
-    .main-img-1{
-        display: flex;
-    }
-
 }
 @media(min-width: 1200px) {
 /* ------------------------------------ */
@@ -519,46 +565,7 @@ Monserrat: textos secundarios. */
         -moz-transition:transform 1300ms ease-in-out;
         -ms-transition:transform 1300ms ease-in-out;
     }
-
+}
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
-    .main-img-2{
-        display: flex;
-    }
-    .main-img-1{
-        display: none;
-    }
-    .button{
-        font-size: var(--texto-main-button-1200px);
-    }
-    .litle-photo{
-        width: 26%;
-        position: relative;
-        background-color: var(--blanco);
-        margin: 20px 10px;
-    }
-    .litle-photo img{
-        width: 100%;
-    }
-    .litle-photo:hover h3{
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 15px;
-        font-size: var(--title-main-photo-1200px);
-    }
-    .title-photo{
-        text-align: center;
-        background-color: var(--mostaza-tralucido);
-        color: var(--blanco);
-        font-size: var(--MV-main-photo-title);
-        padding: 15px  30px;
-        width: 100%;
-        position: absolute;
-        bottom: 5px;
-        left: 0;
-        transition: 500ms;
-    }
-}
