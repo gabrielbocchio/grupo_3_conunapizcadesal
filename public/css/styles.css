@@ -135,6 +135,22 @@ Monserrat: textos secundarios. */
     background: var(--negro);
     background: var(--gradiente);
 }
+.float{
+	position:fixed;
+	width:60px;
+	bottom:10%;
+    right:2.4%;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:45px;
+	box-shadow: 2px 2px 3px #999;
+    z-index:100;
+}
+.my-float{
+	margin-top:8px;
+}
 
 /* ------------------------------------ */
                 /*MAIN*/
@@ -281,6 +297,9 @@ Monserrat: textos secundarios. */
     padding: 15px;
     color: var(--blanco);
     background-color:var(--verde-nav-footer);
+}
+.footer-social a{
+    color: white;
 }
 /* BOTONCITO DEL WHATSAP */
 .float{

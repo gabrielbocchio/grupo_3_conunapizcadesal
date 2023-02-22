@@ -12,8 +12,11 @@ app.listen(3000,()=> console.log('Servidor corriendo en el puerto 3000'));
 app.get('/', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./view/home.html'))
 })
-app.get('/product', (req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./view/product.html'))
+app.get('/productDetail', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./view/productDetail.html'))
+})
+app.get('/productCart', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./view/productCart.html'))
 })
 app.get('/login', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./view/login.html'))

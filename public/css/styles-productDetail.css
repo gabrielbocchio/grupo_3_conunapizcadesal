@@ -63,6 +63,7 @@ Monserrat: textos secundarios. */
 .main-header{
     background-color: var(--verde-nav-footer);
     padding: 10px;
+    padding-bottom: 20px;
 }
 .main-logo{
     display: flex;
@@ -143,16 +144,15 @@ Monserrat: textos secundarios. */
 /* -- CARRITO AL CUAL SE PUSHEAN ARTICULOS */
 
 .cart-icon i {
-    font-size: 30px;
+    font-size: 35px;
     color: #333; 
     cursor: pointer; 
   }
 
 .cart-icon {
-    position: fixed;
-    top: 160px;
-    left: 27px;
+    position: absolute;
     z-index: 2000;
+
   }
 .cart-count {
     position: absolute;
@@ -166,10 +166,10 @@ Monserrat: textos secundarios. */
   }
   .cart-container {
     position: fixed;
-    top: 150px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
+    right: 3%;
+    bottom: 22%;
+    width: 60px;
+    height: 60px;
     background-color: #FAA916;
     border-radius: 50%;
     display: flex;
@@ -178,126 +178,138 @@ Monserrat: textos secundarios. */
     z-index: 999;
   }
 
-/* TODO ESTO ES LA BARRITA DE ARRIBA,*/
-.main-main{
-    padding: 10px;
-}  
-
-.nav-products {
-    font-family: Arial, sans-serif;
-    background-color: #333;
-    color: #fff;
-    position: relative;
-    width: 100%;
-    margin:0 auto;
-    text-align: center;
-    font-size: 14px;
-    padding: 5px;
-  }
-  
-  .product-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .product-item {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .product-title {
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-    left:30%;
-    transform: translateX(-50%);
-    font-size: 16px;
-
-  }
-  
-  .product-title:hover {
-    background-color: #555;
-  }
-  
-  .submenu-list {
-    position: absolute;
-    top: -50%;
-    left: 50%;
-    display: none;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    background-color: #4b4a4a;
-    width:100%;
-    opacity: 1;
-  }
-  
-  .submenu-item {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .submenu-link {
+.navbar-product {
     display: flex;
-    padding: 10px 30px;
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .submenu-link:hover {
-    background-color: #555;
-  }
-  
-  .product-item:hover > .submenu-list {
-    display: block;
-    position: absolute;
-  }
-  /* ACA TERMINA LA BARRITA PRODUCTOS ESA PORONGA */
-/* aca empieza el main grilla producto */
-.product-grid {
+    justify-content: space-evenly;
+    background-color: #FAA916;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.navbar-product li {
+    list-style: none;
+    
+}
+.navbar-product a{
+    text-decoration:none;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+}
+
+
+
+.cantidad-compra {
+    font-weight: bold;
+    color: var(--verde-nav-footer);
+    padding-left: 3px;
+}
+
+.productos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 10px;
-  }
-  
-  .product {
-    width: calc(50% - 10px);
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    background-color: #f9f9f9;
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  }
-  
-  .product img {
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  .product-details {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .product-details h3 {
-    font-size: 16px;
-    margin-bottom: 5px
+    justify-content: space-around;
 }
-.product button{
-    background: var(--verde);
+.articulo-producto {
+    display: flex;
+    flex-direction: column;
     border: none;
-    padding: 5px;
-    font-weight:bold;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-
+    padding: 15px;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: auto;
 }
+.articulo-producto img {
+    margin-top: 10px;
+    max-width: 38vw;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.articulo-producto .titulo {
+    font-size: 15px;
+    padding-top: 3px;
+   
+}
+.articulo-producto .precio {
+    font-size: 13px;
+    padding-top: 2px;
+}
+
+.articulo-producto a {
+    text-decoration:none;
+    font-family: 'Bebas Neue', cursive;
+    color: var(--verde-footer1);
+    font-size: 15px;
+    padding-top: 5px;
+}
+
+.fa-solid.fa-circle-plus  {
+    font-size: 15px;
+    padding-left: 5px; 
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+  }
+  
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s;
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+    padding: 20px;
+    background-color: #fff;
+    overflow: auto;
+    border-radius: 5px;
+  }
+
+  .popup-content p{
+    padding-top: 20px;
+  }
+  
+  .close-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+ .finalizar-compra {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+ }
+
+ .boton-finalizar{
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFF;
+    background-color: var(--rojo);
+    border-color: var(--rojo);
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+
+ }
+
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -365,12 +377,15 @@ Monserrat: textos secundarios. */
     color: var(--blanco);
     background-color:var(--verde-nav-footer);
 }
+.footer-social a{
+    color: white;
+}
 /* BOTONCITO DEL WHATSAP */
 .float{
 	position:fixed;
 	width:60px;
 	bottom:10%;
-	right:30px;
+    right:2.4%;
 	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;
@@ -483,7 +498,15 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
- 
+.articulo-producto img {
+    max-width: 25vw;}
+
+.articulo-producto a {
+        font-size: 18px;
+    }
+.boton-finalizar{
+    font-size: 15px;
+ }
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -537,6 +560,13 @@ Monserrat: textos secundarios. */
     /* ------------------------------------ */
                     /*MAIN*/
     /* ------------------------------------ */
+    .navbar-product a{
+        font-size: 25px;
+    }
+
+    .articulo-producto img {
+        max-width: 20vw;}
+    
 }
 @media(min-width: 1200px) {
 /* ------------------------------------ */
@@ -569,3 +599,17 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
+
+.cart-container {
+    position: fixed;
+    right: 2.5%;
+    bottom: 22%;
+    width: 60px;
+    height: 60px;
+    background-color: #FAA916;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
