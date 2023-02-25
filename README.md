@@ -1,4 +1,8 @@
 # grupo_3_conunapizcadesal
+
+Tablero de trabajo
+https://trello.com/b/J0eyBWmP/dh-grupo-3
+
 Con una Pizca de Sal =
 
 Emprendimiento gastronómico enfocado en la venta de productos
