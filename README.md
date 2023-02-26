@@ -1,8 +1,13 @@
 # grupo_3_conunapizcadesal
 
+Sprint 2: 
 Tablero de trabajo
 https://trello.com/b/J0eyBWmP/dh-grupo-3
 
+Login y register, por una cuestion de funcionalidad elegida, fueron fusionadas en una misma. 
+En login html, tenes la opcion de login y register. 
+
+Sprint 1: 
 Con una Pizca de Sal =
 
 Emprendimiento gastronómico enfocado en la venta de productos
