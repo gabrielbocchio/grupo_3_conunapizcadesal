@@ -12,18 +12,18 @@ app.listen(3000,()=> console.log('Servidor corriendo en el puerto 3000'));
 app.get('/', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./view/home.html'))
 })
-app.get('/login', (req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./view/login.html'))
-})
-app.get('/register', (req,res)=>{
-    res.sendFile(path.resolve(__dirname,'./view/register.html'))
-})
 app.get('/productDetail', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./view/productDetail.html'))
 })
 app.get('/productCart', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./view/productCart.html'))
 })
-//modificacion checkeo de branch//
+app.get('/login', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./view/login.html'))
+})
+app.get('/register', (req,res)=>{
+    res.sendFile(path.resolve(__dirname,'./view/register.html'))
+})
+
 
 

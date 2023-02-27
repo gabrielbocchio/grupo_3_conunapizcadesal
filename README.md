@@ -1,4 +1,13 @@
 # grupo_3_conunapizcadesal
+
+Sprint 2: 
+Tablero de trabajo
+https://trello.com/b/J0eyBWmP/dh-grupo-3
+
+Login y register, por una cuestion de funcionalidad elegida, fueron fusionadas en una misma. 
+En login html, tenes la opcion de login y register. 
+
+Sprint 1: 
 Con una Pizca de Sal =
 
 Emprendimiento gastronómico enfocado en la venta de productos
@@ -50,7 +59,4 @@ Equipo=
 6) Gabriel Bocchio
     Hola! Soy Gabriel Bocchio, tengo 34 años y soy de Rosario, Argentina.
     Éste curso es la primera experiencia con la programación que tengo y espero que sea el comienzo de una futura carrera.
-<<<<<<< HEAD
-=======
     Como paginas que usé para basar mi wireframe es macdonalds por la facilidad y la simpleza en su uso y https://www.ristoranteadhoc.com/en/ por el buen gusto y uso de colores y matices.
->>>>>>> d32d129b648958252b8a639e86033acad781097b
