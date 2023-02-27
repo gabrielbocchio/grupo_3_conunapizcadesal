@@ -1,0 +1,76 @@
+<%- include("./partials/head.ejs")%>
+    <link rel="stylesheet" href="css/styles-productCart.css">
+</head>
+<body  class="main-body">
+<%- include("./partials/header.ejs")%>
+<main class="main-cart">
+    <section class="top">
+    <div class="titulos-detalle">
+        <ul class="detalle-compra">
+            <li class="producto-titulo">Producto</li>
+            <li>Precio</li>
+            <li>Cantidad</li>
+        </ul>
+    </div>
+
+    <div class="compra-producto"> 
+        <div class="detalle-producto">
+            <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+            <img class="producto-img" src="images/Picada_Clasica.jpg" alt="producto">
+            <p> Picada clasica<br>
+                2/4</p>
+        </div>
+        <div class="detalle-producto-precio">
+            <p>$3500</p>
+        </div>
+        <div class="detalle-producto-cantidad">
+            <label for="cantidad"></label>
+            <input type="number" id="cantidad" name="cantidad" min="0" max="100" value="1">
+        </div>
+        </div>
+    <div class="compra-producto"> 
+        <div class="detalle-producto">
+            <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+            <img class="producto-img" src="images/Picada_Baires.jpg" alt="producto">
+            <p> Picada clasica<br> 
+                2/4</p>
+        </div>
+        <div class="detalle-producto-precio">
+            <p>$3500</p>
+        </div>
+        <div class="detalle-producto-cantidad">
+            <label for="cantidad"></label>
+            <input type="number" id="cantidad" name="cantidad" min="0" max="100" value="1">
+        </div>
+        </div>
+    <div class="compra-producto"> 
+        <div class="detalle-producto">
+            <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+            <img class="producto-img" src="images/Picada_Clasica.jpg" alt="producto">
+            <p> Picada clasica<br> 
+                2/4</p>
+        </div>
+        <div class="detalle-producto-precio">
+            <p>$3500</p>
+        </div>
+        <div class="detalle-producto-cantidad">
+            <label for="cantidad"></label>
+            <input type="number" id="cantidad" name="cantidad" min="0" max="100" value="1">
+        </div>
+        </div>
+    </section>
+    <section class="bottom">
+        <h4>Total del carrito</h4>
+        <p> Subtotal: $10500,00.</p>
+        <div class="seguir-finalizar">
+                <a href="/productDetail"><button class="boton-seguir"> Seguir comprando</button></a>
+                <a href=""><button class="boton-finalizar"> Finalizar compra</button></a>   
+        </div>
+    </section>
+</main>
+<%- include("./partials/footer.ejs")%>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://api.whatsapp.com/send?phone=1168355475&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20productos%20." class="float" target="_blank">
+          <i class="fa fa-whatsapp my-float"></i>
+</body>
+</html>

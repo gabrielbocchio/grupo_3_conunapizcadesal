@@ -7,7 +7,6 @@
     "test": "node src/app.js",
     "dev": "nodemon src/app.js",
     "start": "node src/app.js"
-    
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,7 @@
   },
   "homepage": "https://github.com/gabrielbocchio/grupo_3_conunapizcadesal#readme",
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.2"
   },
   "devDependencies": {

@@ -1,0 +1,165 @@
+<%- include("./partials/head.ejs")%>
+    <link rel="stylesheet" href="css/styles-productDetail.css">
+</head>
+<body  class="main-body">
+<%- include("./partials/header.ejs")%>
+<main>
+  <a href="/productCart">
+    <div class="cart-container">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+    </div>
+  </a>
+  
+  <div>
+    <ul class="navbar-product">
+      <li><a href="#">Picadas</a></li>
+      <li><a href="#">Tartas</a></li>
+      <li><a href="#">Pizzas</a></li>
+      <li><a href="#">Platos</a></li>
+      <li><a href="#">Eventos</a></li>
+    </ul>
+  </div>
+
+  <section class="productos">
+    <article class="articulo-producto">
+      <a href="#popupClasica" class="image-link"><img class="producto" src="images/Picada_Clasica.jpg" alt="producto"></a>
+      <p class="titulo"> Picada clasica 2/4</p>
+      <p class="precio"> $3500 </p>
+      <a href="#">Agregar al carrito <i class="fa-solid fa-circle-plus"></i></a>
+      <div id="popupClasica" class="overlay">
+        <div class="popup-content">
+          <h3> Picada clasica 2/4</h3>
+          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
+             queso pategras, queso gouda, salamin picado fino, leverwurst.<br>
+             Incluye tostaditas especiadas.
+          </p>
+          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+      </div>
+    </article>
+    <article class="articulo-producto">
+      <a href="#popupBaires" class="image-link"><img class="producto" src="images/Picada_Baires.jpg" alt="producto"></a>
+      <p class="titulo"> Picada baires 2/4</p>
+      <p class="precio"> $3500 </p>
+      <a href="#">Agregar al carrito <i class="fa-solid fa-circle-plus"></i></a>
+      <div id="popupBaires" class="overlay">
+        <div class="popup-content">
+          <h3> Picada baires 2/4</h3>
+          <p> Jamon cocido, jamon crudo, salame tipo milano, <br>
+              queso pategras, queso con hierbas, queso azul, <br>
+              olivas verdes y negras.<br>
+              Incluye tostaditas especiadas.
+          </p>
+          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+    </article>
+    <article class="articulo-producto">
+      <a href="#popup" class="image-link"><img class="producto" src="images/Picada_Especial.jpeg" alt="producto"></a>
+      <p class="titulo"> Picada especial 2/4</p>
+      <p class="precio"> $3500 </p>
+      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
+      <div id="popup" class="overlay">
+        <div class="popup-content">
+          <h3> Picada especial 2/4</h3>
+          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
+             pategras, queso gouda, queso ahumado, salamin picado fino, <br>
+             leverwurst.<br>
+             Incluye tostaditas especiadas.
+          </p>
+          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+    </article>
+    <article class="articulo-producto">
+      <a href="#popupClasica" class="image-link"><img class="producto" src="images/Picada_Clasica.jpg" alt="producto"></a>
+      <p class="titulo"> Picada clasica 2/4</p>
+      <p class="precio"> $3500 </p>
+      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
+      <div id="popupClasica" class="overlay">
+        <div class="popup-content">
+          <h3> Picada clasica 2/4</h3>
+          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
+             pategras, queso gouda, salamin picado fino, leverwurst.<br>
+             Incluye tostaditas especiadas.
+          </p>
+          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+      </div>
+    </article>
+    <article class="articulo-producto">
+      <a href="#popupBaires" class="image-link"><img class="producto" src="images/Picada_Baires.jpg" alt="producto"></a>
+      <p class="titulo"> Picada baires 2/4</p>
+      <p class="precio"> $3500 </p>
+      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
+      <div id="popupBaires" class="overlay">
+        <div class="popup-content">
+          <h3> Picada baires 2/4</h3>
+          <p> Jamon cocido, jamon crudo, salame tipo milano, <br>
+              queso pategras, queso con hierbas, queso azul, <br>
+              olivas verdes y negras.<br>
+              Incluye tostaditas especiadas.
+          </p>
+          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+    </article>
+    <article class="articulo-producto">
+      <a href="#popupEspecial" class="image-link"><img class="producto" src="images/Picada_Especial.jpeg" alt="producto"></a>
+      <p class="titulo"> Picada especial 2/4</p>
+      <p class="precio"> $3500 </p>
+      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
+      <div id="popupEspecial" class="overlay">
+        <div class="popup-content">
+          <h3> Picada especial 2/4</h3>
+          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
+             pategras, queso gouda, queso ahumado, salamin picado fino, <br>
+             leverwurst.<br>
+             Incluye tostaditas especiadas.
+          </p>
+          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+    </article>
+    <article class="articulo-producto">
+      <a href="#popupClasica" class="image-link"><img class="producto" src="images/Picada_Clasica.jpg" alt="producto"></a>
+      <p class="titulo"> Picada clasica 2/4</p>
+      <p class="precio"> $3500 </p>
+      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
+      <div id="popupClasica" class="overlay">
+        <div class="popup-content">
+          <h3> Picada clasica 2/4</h3>
+          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
+             pategras, queso gouda, salamin picado fino, leverwurst.<br>
+             Incluye tostaditas especiadas.
+          </p>
+          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+      </div>
+    </article>
+    <article class="articulo-producto">
+      <a href="#popupClasica" class="image-link"><img class="producto" src="images/Picada_Clasica.jpg" alt="producto"></a>
+      <p class="titulo"> Picada clasica 2/4</p>
+      <p class="precio"> $3500 </p>
+      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
+      <div id="popupClasica" class="overlay">
+        <div class="popup-content">
+          <h3> Picada clasica 2/4</h3>
+          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
+             pategras, queso gouda, salamin picado fino, leverwurst.<br>
+             Incluye tostaditas especiadas.
+          </p>
+          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+        </div>
+      </div>
+    </article>
+  </section>
+  <div class="finalizar-compra">
+    <a href="/productCart"><button class="boton-finalizar"> Ir al carrito</button></a>
+  </div>
+</main>
+<%- include("./partials/footer.ejs")%>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://api.whatsapp.com/send?phone=1168355475&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20productos%20." class="float" target="_blank">
+          <i class="fa fa-whatsapp my-float"></i>
+</body>
+</html>
