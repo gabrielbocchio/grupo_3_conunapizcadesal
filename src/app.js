@@ -6,10 +6,10 @@ const path = require ('path')
 const app = express();
 
 /* routes */
-const userRoutes = require("../routes/userRoutes");
-const productRoutes = require("../routes/productRoutes");
-const mainRoutes = require("../routes/mainRoutes");
-const carritoRoutes = require("../routes/carritoRoutes");
+const userRoutes = require("./routes/userRoutes");
+const productRoutes = require("./routes/productRoutes");
+const mainRoutes = require("./routes/mainRoutes");
+const carritoRoutes = require("./routes/carritoRoutes");
 
 /* carpeta archivos publicos */
 const publicPath = path.resolve(__dirname, '../public');
@@ -24,7 +24,7 @@ app.set("views", "./src/views"); // define la ubicacion de la carpeta vistas
 
 /* llamado de rutas!! */
 app.use('/', mainRoutes);
-app.use('/productDetail', productRoutes);
+app.use('/producto', productRoutes);
 app.use('/login', userRoutes);
 app.use('/productCart', carritoRoutes);
 
