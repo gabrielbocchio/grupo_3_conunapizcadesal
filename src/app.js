@@ -24,7 +24,7 @@ app.set("views", "./src/views"); // define la ubicacion de la carpeta vistas
 
 /* llamado de rutas!! */
 app.use('/', mainRoutes);
-app.use('/producto', productRoutes);
+app.use('/productDetail', productRoutes);
 app.use('/login', userRoutes);
 app.use('/productCart', carritoRoutes);
 
