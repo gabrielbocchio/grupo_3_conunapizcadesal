@@ -79,7 +79,7 @@ Monserrat: textos secundarios. */
 }
 .logo{
     width: 80px;
-    animation: rotar 1400ms 2 alternate;
+    animation: rotar 1400ms 2 alternate; 
 }
 
 .logo-title1{
