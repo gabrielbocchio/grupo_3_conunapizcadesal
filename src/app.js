@@ -20,7 +20,7 @@ app.listen(3000,()=> console.log('Servidor corriendo en el puerto 3000'));
 
 // ************ Template Engine ************
 app.set("view engine", "ejs"); // motor de vistas
-app.set("views", "./src/views"); // define la ubicacion de la carpeta vistas
+app.set("views", "../src/views"); // define la ubicacion de la carpeta vistas
 
 /* llamado de rutas!! */
 app.use('/', mainRoutes);
