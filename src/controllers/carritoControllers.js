@@ -1,7 +1,7 @@
 const carrito={
 
     carrito: (req,res)=> {
-        return res.render("productCart");
+        return res.render("carrito/productCart");
     },
 }
 

@@ -1,7 +1,7 @@
-const login={
+const users={
 
     login: (req,res)=> {
-        return res.render("login");
+        return res.render("users/login");
     },
 /*     register: (req,res)=> {
         return res.render("login");
@@ -9,5 +9,4 @@ const login={
 
 }
 
-
-module.exports=login;
+module.exports=users;

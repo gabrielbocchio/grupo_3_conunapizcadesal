@@ -1,10 +1,8 @@
 const productos={
     agregarProdu: (req,res)=> {
-        return res.render("productDetail");
+        return res.render("product/productDetail");
     },
-     carrito: (req,res)=> {
-        return res.render("productCart");
-    }, 
+
 
 }
 

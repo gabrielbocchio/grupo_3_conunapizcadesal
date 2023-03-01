@@ -1,13 +1,13 @@
 const main ={
 
     index: (req,res)=> {
-        return res.render("home");
+        return res.render("main/home");
     },
      quiensomos: (req,res)=> {
-        return res.render("quiensomos");
+        return res.render("main/quiensomos");
     }, 
     eventos: (req,res)=> {
-        return res.render("eventos");
+        return res.render("main/eventos");
     }, 
 
 }
