@@ -414,3 +414,62 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
+/*codigo que saque de AI*/
+.producto {
+    width: 350px;
+    height: 470px;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .producto img {
+    width: 275px;
+    height: 275px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .producto h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  
+  .producto span {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .producto button {
+    display: block;
+    width: 230px;
+    height: 40px;
+    margin: 20px auto 0;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.2em;
+  }
+/* A VER QUE ONDA */
+
+.producto button {
+  /* código anterior... */
+  transition: background-color 0.2s ease-in-out;
+}
+
+.producto button:hover {
+  background-color: #FAA916;
+}
+/* probando bordes redondeados y sombreado */
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  

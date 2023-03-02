@@ -21,7 +21,6 @@ app.get('/login', (req,res)=>{
 app.get('/register', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./view/register.html'))
 })
-<<<<<<< HEAD
 app.get('/productDetail', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./view/productDetail.html'))
 })
@@ -29,8 +28,5 @@ app.get('/productCart', (req,res)=>{
     res.sendFile(path.resolve(__dirname,'./view/productCart.html'))
 })
 //modificacion checkeo de branch//
-=======
-
->>>>>>> 5e230b6665615ec4e7a718db80277c561f658494
 
 
