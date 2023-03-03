@@ -8,7 +8,7 @@ const path = require ('path')
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 const mainRoutes = require("./routes/mainRoutes");
-const carritoRoutes = require("./routes/carritoRoutes");
+
 
 /* carpeta archivos publicos */
 const publicPath = path.resolve(__dirname, '../public');
@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'));// define la ubicacion de la car
 app.use('/', mainRoutes);
 app.use('/productDetail', productRoutes);
 app.use('/login', userRoutes);
-app.use('/productCart', carritoRoutes);
+
 
 //estos prox 2 son para el metodo POST, para que pueda leer req.body (req.body en POST es el 'req.query' del get)
 app.use(express.urlencoded({ extended:false }));
