@@ -1,0 +1,39 @@
+<%- include("../partials/head.ejs")%>
+	<link rel="stylesheet" href="/css/styles-editar-productos.css">
+</head>
+<body>
+<%- include("../partials/header.ejs")%>
+<h3 style="text-align: center;">Buscar</h3>
+<form action="/search" method="GET">
+<input type="text" name="search">
+<input type="submit" value="search">
+</form>
+
+     <h1>Eliminar PRODUCTOS</h1>
+
+     <% for (let i = 0; i < productos.length; i++) { %>
+     <article class="articulo-producto">
+        <p class="imagen"><%= productos[i].imagen %></p>
+        <p class="titulo"><%= productos[i].nombre %></p>
+        <p class="categoria">Categoria : <%= productos[i].categoria %></p>
+        <p class="precio">Precio : $<%= productos[i].precio %></p>
+        <p class="popup-content">Descripcion: <%= productos[i].descripcion %></p>
+
+        <div class="admin-admin">
+            <div class="botones-admin">
+              <form method="POST" action="/productDetail/delete-producto">
+                <input type="hidden" name="nombre" value="<%= productos[i].nombre %>">
+                <button type="submit" class="boton-admin boton-delete">Delete</button>
+              </form>
+<!--               <form method="POST" action="/editar/<%= productos[i].nombre %>?_method=PUT">
+                <button type="submit" class="boton-admin boton-edit">Edit</button>
+              </form> -->
+            </div>
+          </div>
+     </li>
+        <% } %>
+      </article>
+
+</body>
+<%- include("../partials/footer.ejs")%>
+</html>

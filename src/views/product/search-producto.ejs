@@ -1,0 +1,27 @@
+<%- include("../partials/head.ejs")%>
+	<link rel="stylesheet" href="/css/styles-editar-productos.css">
+</head>
+<body>
+<%- include("../partials/header.ejs")%>
+     <!--  //-----------------------// -->
+
+     <h1>LISTA DE PRODUCTOS</h1>
+     <ul>
+         <% for (let i = 0; i < productoResults.length; i++) { %>
+             <li class="cuerpo-body-centrar">
+                 <a href="/detail/<%= productoResults[i].nombre %>"><%= productoResults[i].nombre %></a>
+                 <br>
+                 Categoría: <%= productoResults[i].categoria %><br>
+                 Descripción: <%= productoResults[i].descripcion %><br>
+                 Precio: <%= productoResults[i].precio %><br>
+                 Imagen: <%= productoResults[i].imagen %>
+             </li>
+         <% } %>
+     </ul>
+     <h2 style="text-align:center;">Buscar</h2>
+     <form action="/productDetail/search-producto" method="GET">
+         <input type="text" name="search">
+         <input type="submit" value="search">
+     </form>
+<%- include("../partials/footer.ejs")%>
+</html>

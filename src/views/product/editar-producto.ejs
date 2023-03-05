@@ -1,0 +1,29 @@
+<%- include("../partials/head.ejs")%>
+<link rel="stylesheet" href="/css/styles-editar-productos.css">
+</head>
+<body>
+<%- include("../partials/header.ejs")%>
+<h3 style="text-align: center;">Buscar</h3>
+<form action="/search" method="GET">
+<input type="text" name="search">
+<input type="submit" value="search">
+</form>
+
+<h1>Editar PRODUCTOS</h1>
+
+<% for (let i = 0; i < productos.length; i++) { %>
+<article class="articulo-producto">
+    <form action="/productDetail/editar-producto<%= productos[i].id %>" method="POST">
+        <p class="imagen"><input type="text" name="imagen" value="<%= productos[i].imagen %>"></p>
+        <p class="titulo"><input type="text" name="nombre" value="<%= productos[i].nombre %>"></p>
+        <p class="categoria">Categoria : <input type="text" name="categoria" value="<%= productos[i].categoria %>"></p>
+        <p class="descripcion">Descripcion : <input type="text" name="descripcion" value="<%= productos[i].descripcion %>"></p>
+        <p class="precio">Precio : $<input type="number" name="precio" value="<%= productos[i].precio %>"></p>
+        <input type="submit" value="EDIT">
+    </form>
+</article>
+<% } %>
+
+</body>
+<%- include("../partials/footer.ejs")%>
+</html>

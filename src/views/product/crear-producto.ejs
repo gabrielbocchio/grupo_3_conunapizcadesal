@@ -1,0 +1,27 @@
+<%- include("../partials/head.ejs")%>
+	<link rel="stylesheet" href="/css/styles-crear-productos.css">
+</head>
+<body>
+<%- include("../partials/header.ejs")%>
+ 	<h1>Crear Producto</h1>
+	<form method="POST" action="/productDetail/crear-producto">
+		<label for="nombre">Nombre:</label>
+		<input type="text" name="nombre">
+
+        <label for="categoria">Categoria:</label>
+		<input type="text" name="categoria">
+		
+		<label for="descripcion">Descripción:</label>
+		<textarea  name="descripcion"></textarea>
+		
+		<label for="precio">Precio:</label>
+		<input type="number" name="precio">
+		
+ 		<label for="imagen">Imagen:</label>
+		<input type="file" name="imagen" accept="image/*">
+
+		<input type="submit" value="Crear Producto">
+	</form>
+</body>
+<%- include("../partials/footer.ejs")%>
+</html>
