@@ -4,7 +4,7 @@
 <body>
 <%- include("../partials/header.ejs")%>
 <h3 style="text-align: center;">Buscar</h3>
-<form action="/search" method="GET">
+<form action="/productDetail/search-producto?search=" method="GET">
 <input type="text" name="search">
 <input type="submit" value="search">
 </form>
@@ -13,10 +13,18 @@
 
 <% for (let i = 0; i < productos.length; i++) { %>
 <article class="articulo-producto">
-    <form action="/productDetail/editar-producto<%= productos[i].id %>" method="POST">
+    <form action="/productDetail/editar-producto/<%= productos[i].id %>?_method=PUT" method="POST">
         <p class="imagen"><input type="text" name="imagen" value="<%= productos[i].imagen %>"></p>
         <p class="titulo"><input type="text" name="nombre" value="<%= productos[i].nombre %>"></p>
-        <p class="categoria">Categoria : <input type="text" name="categoria" value="<%= productos[i].categoria %>"></p>
+        <p class="categoria">Categoria :
+            <select name="categoria">
+                <option value="pizza" <%= productos[i].categoria === 'pizza' ? 'selected' : '' %>>Pizza</option>
+                <option value="tarta" <%= productos[i].categoria === 'tarta' ? 'selected' : '' %>>Tarta</option>
+                <option value="picada" <%= productos[i].categoria === 'picada' ? 'selected' : '' %>>Picada</option>
+                <option value="plato" <%= productos[i].categoria === 'plato' ? 'selected' : '' %>>Plato</option>
+                <option value="evento" <%= productos[i].categoria === 'evento' ? 'selected' : '' %>>Evento</option>
+            </select>
+        </p>
         <p class="descripcion">Descripcion : <input type="text" name="descripcion" value="<%= productos[i].descripcion %>"></p>
         <p class="precio">Precio : $<input type="number" name="precio" value="<%= productos[i].precio %>"></p>
         <input type="submit" value="EDIT">

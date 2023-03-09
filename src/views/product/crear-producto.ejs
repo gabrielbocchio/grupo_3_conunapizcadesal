@@ -8,9 +8,24 @@
 		<label for="nombre">Nombre:</label>
 		<input type="text" name="nombre">
 
-        <label for="categoria">Categoria:</label>
-		<input type="text" name="categoria">
-		
+		<label for="nombre">ID:</label>
+		<input type="text" name="id" value="<%= generarNumeroAleatorio() %>">
+
+		<%
+  function generarNumeroAleatorio() {
+    return Math.floor(Math.random() * 900000) + 100000; // Generar número aleatorio de 6 dígitos
+  }
+%>
+		<label for="categoria">Categoria:</label>
+		<br>
+		<select name="categoria">
+		  <option value="pizza">Pizza</option>
+		  <option value="tarta">Tarta</option>
+		  <option value="picada">Picada</option>
+		  <option value="plato">Plato</option>
+		  <option value="evento">Evento</option>
+		</select>
+		<br>
 		<label for="descripcion">Descripción:</label>
 		<textarea  name="descripcion"></textarea>
 		

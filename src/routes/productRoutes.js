@@ -8,13 +8,17 @@ router.get('/search-producto', productController.buscarProducto);
 
 // main de producto (productDetail)
 router.get('/', productController.produ);
+router.get('/detalle/:category', productController.produCategoria);
+
+// descripcion
+router.get('/productInfo/:id', productController.productInfo);
 
 // carrito
 router.get('/productCart', productController.carrito);
 
 // crear
 router.get('/crear-producto', productController.crearProducto);
-router.post('/crear-producto', productController.guardarProducto)
+router.post('/crear-producto', productController.guardarProducto);
 
 // editar
 router.get('/editar-producto', productController.editarProducto);

@@ -1,0 +1,50 @@
+<%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/styles-productDetail.css">
+</head>
+<body  class="main-body">
+<%- include("../partials/header.ejs")%>
+<main>
+  <a href="/productDetail/productCart">
+    <div class="cart-container">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+          </div>
+    </div>
+  </a>
+  
+  <div>
+    <ul class="navbar-product">
+      <li><a href="/productDetail/detalle/picada">Picada</a></li>
+      <li><a href="/productDetail/detalle/tarta">Tarta</a></li>
+      <li><a href="/productDetail/detalle/pizza">Pizza</a></li>
+      <li><a href="/productDetail/detalle/plato">Plato</a></li>
+      <li><a href="/productDetail/detalle/evento">Evento</a></li>
+  </ul>
+</div>
+
+<section>
+    <article class="articulo-producto">
+        <a href="#" class="image-link"><img class="producto" src="images/Picada_Clasica.jpg" alt="producto"></a>
+        <p class="titulo"><%= comida.nombre %></p>
+        <p class="precio"><%= comida.precio %></p>
+        <p class="titulo"><%= comida.descripcion %></p>
+        <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
+      </article>
+
+</section>
+
+<div class="finalizar-compra">
+    <a href="/productDetail/productCart"><button class="boton-finalizar"> Ir al carrito</button></a>
+  </div>
+
+  <div class="finalizar-compra">
+    <a href="/productDetail"><button class="boton-finalizar"> Volver a los productos </button></a>
+  </div>
+
+<%- include("../partials/footer.ejs")%>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+      <a href="https://api.whatsapp.com/send?phone=1168355475&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20productos%20." class="float" target="_blank">
+          <i class="fa fa-whatsapp my-float"></i>
+</body>
+</html>

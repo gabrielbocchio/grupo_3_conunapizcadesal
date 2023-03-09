@@ -198,6 +198,9 @@ Monserrat: textos secundarios. */
     box-shadow: 2px 2px 8px var(--verde-nav-footer);
 
 }
+.button:hover {
+    cursor: pointer;
+  }
 .photo-area{
     width: 80%;
     margin: auto;

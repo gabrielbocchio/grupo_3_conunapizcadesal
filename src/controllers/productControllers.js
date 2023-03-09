@@ -5,8 +5,34 @@ const productos={
 
 // main de producto (productDetail)
     produ: (req,res)=> {
-        return res.render("product/productDetail");
+        const productos = require("../productos.json"); 
+        return res.render("product/productDetail", { productos: productos });
     },
+    produCategoria: (req, res) => {
+        const category = req.params.category;
+        const productos = require("../productos.json");
+        let productosFiltrados = [];
+    // aca filtra por categoria y renderiza a la pagina 
+        if (category) {
+          productosFiltrados = productos.filter(
+            (producto) => producto.categoria === category
+          );
+        } else {
+          productosFiltrados = productos;
+        }
+    
+        return res.render("product/productDetail", {  productos : productosFiltrados });
+      },
+      productInfo: (req, res) => {
+        const info= req.params.id;
+        const productos = require("../productos.json");
+        const comida = productos.find(comida => comida.id == info)
+      /*   if (info) { */
+            return res.render("product/productInfo", { comida : comida})
+      /*   }  */
+    
+
+      },
 /* ---------------------------------------------------------------- */
 // carrito
     carrito: (req,res)=> {
@@ -21,6 +47,7 @@ const productos={
     guardarProducto:(req,res)=> {
         let producto = {
             nombre: req.body.nombre,
+            id: req.body.id,
             categoria: req.body.categoria,
             descripcion: req.body.descripcion,
             precio: req.body.precio,

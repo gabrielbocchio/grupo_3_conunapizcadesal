@@ -1,5 +1,5 @@
 <%- include("../partials/head.ejs")%>
-    <link rel="stylesheet" href="css/styles-productDetail.css">
+    <link rel="stylesheet" href="/css/styles-productDetail.css">
 </head>
 <body  class="main-body">
 <%- include("../partials/header.ejs")%>
@@ -15,16 +15,40 @@
   
   <div>
     <ul class="navbar-product">
-      <li><a href="#">Picadas</a></li>
-      <li><a href="#">Tartas</a></li>
-      <li><a href="#">Pizzas</a></li>
-      <li><a href="#">Platos</a></li>
-      <li><a href="#">Eventos</a></li>
-    </ul>
-  </div>
+      <li><a href="/productDetail/detalle/picada">Picada</a></li>
+      <li><a href="/productDetail/detalle/tarta">Tarta</a></li>
+      <li><a href="/productDetail/detalle/pizza">Pizza</a></li>
+      <li><a href="/productDetail/detalle/plato">Plato</a></li>
+      <li><a href="/productDetail/detalle/evento">Evento</a></li>
+  </ul>
+</div>
 
+  <!-- -------------- -->
   <section class="productos">
-    <article class="articulo-producto">
+    <% if (productos.length > 0) { %>
+      <% productos.forEach(producto => { %>
+        <article class="articulo-producto">
+          <a href="/productDetail/productInfo/<%= producto.id %>" class="image-link"><img class="producto" src="<%= producto.imagen %>" alt="producto"></a>
+          <p class="titulo"><%= producto.nombre %></p>
+          <p class="precio">$<%= producto.precio %></p>
+          <a href="#">Agregar al carrito <i class="fa-solid fa-circle-plus"></i></a>
+          <div id="popupClasica" class="overlay">
+            <div class="popup-content">
+              <h3><%= producto.nombre %></h3>
+              <p><%= producto.descripcion %></p>
+              <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
+            </div>
+          </div>
+        </article>
+      <% }) %>
+    <% } else { %>
+      <p>No se encontraron productos</p>
+    <% } %>
+  </section>
+  
+    
+    <!-- -------------- -->
+   <!--  <article class="articulo-producto">
       <a href="#popupClasica" class="image-link"><img class="producto" src="images/Picada_Clasica.jpg" alt="producto"></a>
       <p class="titulo"> Picada clasica 2/4</p>
       <p class="precio"> $3500 </p>
@@ -151,7 +175,7 @@
           <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
         </div>
       </div>
-    </article>
+    </article> -->
   </section>
   <div class="finalizar-compra">
     <a href="/productDetail/productCart"><button class="boton-finalizar"> Ir al carrito</button></a>
