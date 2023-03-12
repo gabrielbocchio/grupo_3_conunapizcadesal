@@ -41,6 +41,19 @@
   <div class="finalizar-compra">
     <a href="/productDetail"><button class="boton-finalizar"> Volver a los productos </button></a>
   </div>
+  
+
+  <form action="/productDetail/delete-producto/<%= comida.id  %>?_method=DELETE" method="POST">
+    <div class="finalizar-compra">
+      <button class="boton-finalizar" type="submit"> ELIMINAR PRODUCTO </button>
+    </div>
+  </form>
+
+  <form action="/productDetail/editar-producto/<%= comida.id  %>" method="GET">
+    <div class="finalizar-compra">
+      <a href="/productDetail/editar-producto/<%= comida.id %>" class="boton-finalizar">EDITAR PRODUCTO</a>
+    </div>
+  </form>
 
 <%- include("../partials/footer.ejs")%>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

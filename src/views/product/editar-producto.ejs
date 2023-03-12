@@ -9,29 +9,32 @@
 <input type="submit" value="search">
 </form>
 
-<h1>Editar PRODUCTOS</h1>
 
-<% for (let i = 0; i < productos.length; i++) { %>
-<article class="articulo-producto">
-    <form action="/productDetail/editar-producto/<%= productos[i].id %>?_method=PUT" method="POST">
-        <p class="imagen"><input type="text" name="imagen" value="<%= productos[i].imagen %>"></p>
-        <p class="titulo"><input type="text" name="nombre" value="<%= productos[i].nombre %>"></p>
-        <p class="categoria">Categoria :
-            <select name="categoria">
-                <option value="pizza" <%= productos[i].categoria === 'pizza' ? 'selected' : '' %>>Pizza</option>
-                <option value="tarta" <%= productos[i].categoria === 'tarta' ? 'selected' : '' %>>Tarta</option>
-                <option value="picada" <%= productos[i].categoria === 'picada' ? 'selected' : '' %>>Picada</option>
-                <option value="plato" <%= productos[i].categoria === 'plato' ? 'selected' : '' %>>Plato</option>
-                <option value="evento" <%= productos[i].categoria === 'evento' ? 'selected' : '' %>>Evento</option>
-            </select>
-        </p>
-        <p class="descripcion">Descripcion : <input type="text" name="descripcion" value="<%= productos[i].descripcion %>"></p>
-        <p class="precio">Precio : $<input type="number" name="precio" value="<%= productos[i].precio %>"></p>
-        <input type="submit" value="EDIT">
-    </form>
+<h1>Editar <%= producto.nombre  %></h1>
+<article class="articulo-producto"></article>
+<form action="/productDetail/editar-producto/<%= producto.id %>?_method=PUT" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    
+    <p class="titulo">Nombre :<input type="text" name="nombre" value="<%= producto.nombre %>"></p>
+
+    <p class="precio">Precio : $<input type="number" name="precio" value="<%= producto.precio %>"></p>
+
+    <p class="categoria">Categoria :
+        <select name="categoria">
+            <option value="pizza" <%= producto.categoria === 'pizza' ? 'selected' : '' %>>Pizza</option>
+            <option value="tarta" <%= producto.categoria === 'tarta' ? 'selected' : '' %>>Tarta</option>
+            <option value="picada" <%= producto.categoria === 'picada' ? 'selected' : '' %>>Picada</option>
+            <option value="plato" <%= producto.categoria === 'plato' ? 'selected' : '' %>>Plato</option>
+            <option value="evento" <%= producto.categoria === 'evento' ? 'selected' : '' %>>Evento</option>
+        </select>
+    </p>
+    <p class="descripcion">Descripcion : <input type="text" name="descripcion" value="<%= producto.descripcion %>"></p>
+
+    <p class="imagen"><input type="text" name="imagen" value="<%= producto.imagen %>"></p>
+
+    <input type="submit" value="EDIT">
+</form>
 </article>
-<% } %>
-
 </body>
 <%- include("../partials/footer.ejs")%>
 </html>

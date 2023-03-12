@@ -1,1 +1,106 @@
-[{"id":"1","nombre":"pizza de cebolla","categoria":"pizza","descripcion":"larala","precio":"500","imagen":""},{"id":"2","nombre":"tarta de humita","categoria":"tarta","descripcion":"tarta de humita queso cebolla bla bla","precio":"400","imagen":""},{"id":"3","nombre":"cochinita pibil","categoria":"evento","descripcion":"cochinita para 30 personas","precio":"60000","imagen":""},{"nombre":"hamburguesa vergana","id":"5","categoria":"picada","descripcion":"hamburrrrrrrrrrrrrrr","precio":"500","imagen":""},{"nombre":"hamburguesa de pollo","id":"648171","categoria":"plato","descripcion":"sarasa","precio":"400","imagen":""},{"nombre":"tarta de acelga","id":"114460","categoria":"tarta","descripcion":"tarta de acelga para 4 personas","precio":"500","imagen":""},{"nombre":"tarta de zanahoria y choclo","id":"704199","categoria":"tarta","descripcion":"tarta de zanahoria y choclo bien copada para 5 personas","precio":"132","imagen":""}]
+[
+  {
+    "id": "1",
+    "nombre": "pizza de cebolla",
+    "categoria": "pizza",
+    "descripcion": "larala",
+    "precio": "500",
+    "imagen": ""
+  },
+  {
+    "id": "2",
+    "nombre": "tarta de humita",
+    "categoria": "tarta",
+    "descripcion": "tarta de humita queso cebolla bla bla",
+    "precio": "400",
+    "imagen": ""
+  },
+  {
+    "nombre": "hamburguesa de pollo",
+    "id": "648171",
+    "categoria": "plato",
+    "descripcion": "sarasa",
+    "precio": "400",
+    "imagen": ""
+  },
+  {
+    "id": "114460",
+    "nombre": "tarta de acelga",
+    "categoria": "picada",
+    "descripcion": "tarta de acelga para 4 personas",
+    "precio": "500",
+    "imagen": ""
+  },
+  {
+    "id": "704199",
+    "nombre": "tarta de zanahoria y choclo",
+    "categoria": "tarta",
+    "descripcion": "tarta de zanahoria y choclo bien copada para 8 personas",
+    "precio": "132",
+    "imagen": ""
+  },
+  {
+    "nombre": "tarta de zucchini",
+    "id": "515408",
+    "categoria": "tarta",
+    "descripcion": "tarta para 2 personas con ensalada",
+    "precio": "400",
+    "imagen": ""
+  },
+  {
+    "nombre": "tarta de choclo",
+    "id": "829560",
+    "categoria": "tarta",
+    "descripcion": "asdasdasddsasdadsaasd asdsad  asdas as das dasdas ads asd asd 3 dewa dewa dea dea dea",
+    "precio": "400",
+    "imagen": ""
+  },
+  {
+    "id": "930989",
+    "nombre": "hamburguesa VEGANA",
+    "categoria": "plato",
+    "descripcion": "hamburguesa de quinoa",
+    "precio": "5",
+    "imagen": ""
+  },
+  {
+    "nombre": "puchero vegano",
+    "id": "599753",
+    "categoria": "plato",
+    "descripcion": "solo verdura y caldo",
+    "precio": "500",
+    "imagen": ""
+  },
+  {
+    "nombre": "hamburguesa de pollo",
+    "id": "872225",
+    "categoria": "plato",
+    "descripcion": "asdasddsaasdsad ads asd as",
+    "precio": "1",
+    "imagen": ""
+  },
+  {
+    "id": "792642",
+    "nombre": "picada clasica",
+    "categoria": "picada",
+    "descripcion": "asdads dassad dasdasasd",
+    "precio": "400004",
+    "imagen": ""
+  },
+  {
+    "id": "638895",
+    "nombre": "picada closeupp",
+    "categoria": "picada",
+    "descripcion": "asdads dsadasasd ",
+    "precio": "500",
+    "imagen": ""
+  },
+  {
+    "nombre": "sanguche de gato",
+    "id": "813258",
+    "categoria": "plato",
+    "descripcion": "asddas adsdsadas dsadas",
+    "precio": "500",
+    "imagen": ""
+  }
+]

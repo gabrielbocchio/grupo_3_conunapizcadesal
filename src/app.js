@@ -3,10 +3,13 @@ const express = require("express");
 const app = express();
 // Path : poder unificar las rutas dentros de los distintos sistemas operartivos
 const path = require ('path')
+//pasar como metodo el paquete instalado para usar el metodo PUT (npm install method-override --save))
+const methodOverride = require("method-override");
 
 //estos prox 2 son para el metodo POST, para que pueda leer req.body (req.body en POST es el 'req.query' del get)
 app.use(express.urlencoded({ extended:false }));
 app.use(express.json());
+
 
 // Importar los distintos enrutadores
 const userRoutes = require("./routes/userRoutes");
@@ -18,6 +21,9 @@ const mainRoutes = require("./routes/mainRoutes");
 const publicPath = path.resolve(__dirname, '../public');
 app.use(express.static(publicPath));
 
+//pasar como metodo el paquete instalado para usar el metodo PUT (npm install method-override --save))
+
+app.use(methodOverride("_method"))
 
 // -- Template Engine --
 app.set("view engine", "ejs"); // motor de vistas
@@ -28,9 +34,6 @@ app.use('/', mainRoutes);
 app.use('/productDetail', productRoutes);
 app.use('/login', userRoutes);
 
-//pasar como metodo el paquete instalado para usar el metodo PUT (npm install method-override --save))
-const methodOverride = require("method-override");
-app.use(methodOverride("_method"))
 
 // error 404 tiene q ir siempre al final, clave
 app.use((req,res, next)=> {
