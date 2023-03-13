@@ -202,15 +202,15 @@ Monserrat: textos secundarios. */
     cursor: pointer;
   }
 .photo-area{
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 20px;
 }
 .litle-photo{
-    width:90%;
+    width:30%;
     position: relative;
     margin: auto;
     margin: 5px;
@@ -232,6 +232,43 @@ Monserrat: textos secundarios. */
     width: 100%;
     text-align: center;
     padding: 15px 10px;
+}
+
+.nosotros {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left:5px ;
+    padding-right: 5px;
+    
+}
+.nosotros h1 {
+    padding-bottom: 5px;
+    font-size: 20px
+}
+.nosotros p {
+    font-size: 10px;
+}
+
+.eventos {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left:3px ;
+    padding-right: 3px;
+    
+}
+
+.eventos h1 i {
+    padding-right: 10px;
+
+}
+.eventos h1 {
+    padding-bottom: 5px;
+    font-size: 20px
+}
+.eventos p {
+    font-size: 10px;
 }
 
 /* ------------------------------------ */
@@ -353,6 +390,23 @@ Monserrat: textos secundarios. */
         font-size: 25px;
     }
 /* ------------------------------------ */
+                /*MAIN*/
+/* ------------------------------------ */
+    .nosotros h1 {
+        padding-bottom: 5px;
+        font-size: 20px
+    }
+    .nosotros p {
+        font-size: 15px;
+    }
+    .eventos h1 {
+        padding-bottom: 5px;
+        font-size: 20px
+    }
+    .eventos p {
+        font-size: 15px;
+    }
+/* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
     .footer-copyright{
@@ -436,6 +490,24 @@ Monserrat: textos secundarios. */
     }
     .litle-photo img{
         width: 100%;
+    }
+
+    .nosotros h1 {
+    padding-bottom: 8px;
+    font-size: 25px
+    }
+    .nosotros p {
+    font-size: 18px;
+    padding-bottom: 8px;
+    }
+
+    .eventos h1 {
+        padding-bottom: 8px;
+        font-size: 25px
+    }
+    .eventos p {
+        font-size: 18px;
+        padding-bottom: 8px;
     }
 /* ------------------------------------ */
                 /*FOOTER*/
