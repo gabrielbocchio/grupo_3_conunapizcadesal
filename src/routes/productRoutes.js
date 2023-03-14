@@ -6,13 +6,13 @@ const productController = require("../controllers/productControllers");
 // buscar
 router.get('/search-producto/:id?', productController.buscarProducto);
 
-// main de producto (productDetail)
+// todos los productos (productDetail)
 router.get('/', productController.produ);
 
 //filtro x categoria
 router.get('/detalle/:category', productController.produCategoria);
 
-// descripcion
+// descripcion por producto 
 router.get('/productInfo/:id', productController.productInfo);
 
 // carrito
