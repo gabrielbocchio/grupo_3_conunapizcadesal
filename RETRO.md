@@ -1,5 +1,11 @@
+RETRO SPRINT 3:
+Quedamos muy satisfechos con lo hecho en el sprint 2 donde ya hemos podido darle nuestro formato a la pagina usando lo dado en las clases. Ya llevamos un poco mas de tiempo trabajando juntos y podemos mas o menos reconocer las fortalezas de cada uno, cosa que es clave al momento de decidir quien hace que cosa.
+Tenemos reuniones semanales en las cuales vemos entre todos que fue lo que hicimos en la semana y los pasos a seguir para la proxima semana.
+Nuestro Trello (https://trello.com/b/J0eyBWmP/dh-grupo-3) está actualizado y nos ayuda a llevar las cosas al dia y a organizarnos mejor
 
+----------------------------------------------------------------------
 
+RETRO SPRINT 2:
 Sobre el primer sprint podemos destacar como primer punto la modalidad de trabajo grupal que decidimos por consenso general, consiste en que cada uno de los seis del grupo haga el entregable, o lo que pueda hacer, luego en una reunión semanal cada uno muestra lo que hizo y al final de la reunión elegimos entre todos quedarnos con uno, o con un mix, pero destacamos lo que nos gustó de cada entrega individual. De este modo nos ayuda a todos a aprender y a hacer todo, nos motivamos entre todos a realizar estas reuniones y mediante el dialogo razonamos que cosas de cada uno se mantienen en el archivo original. Luego dedicamos algún día en juntar el código y luego, pushearlo. De esta manera, seleccionamos 3 wireframes y se realizo una fusion, para llegar a una idea final que estabamos buscando. 
 Nos parece la metodología correcta ya que cada uno tiene un background distinto y de este modo todos aportamos algo, aprendemos de lo que hizo el otro y nos quedamos con una pagina de un modo democrático y consensuado.
 Tenemos buen dialogo, respeto y buena predisposición por parte de todos los integrantes del grupo.
