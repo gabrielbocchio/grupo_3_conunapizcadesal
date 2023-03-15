@@ -1,7 +1,8 @@
 RETRO SPRINT 3:
 Quedamos muy satisfechos con lo hecho en el sprint 2 donde ya hemos podido darle nuestro formato a la pagina usando lo dado en las clases. Ya llevamos un poco mas de tiempo trabajando juntos y podemos mas o menos reconocer las fortalezas de cada uno, cosa que es clave al momento de decidir quien hace que cosa.
-Tenemos reuniones semanales en las cuales vemos entre todos que fue lo que hicimos en la semana y los pasos a seguir para la proxima semana.
-Nuestro Trello (https://trello.com/b/J0eyBWmP/dh-grupo-3) está actualizado y nos ayuda a llevar las cosas al dia y a organizarnos mejor
+Tenemos reuniones semanales (que funcionan como dailys) en las cuales vemos entre todos en donde estamos, lo que hay que hacer, que problemas tenemos.
+Nuestro Trello (https://trello.com/b/J0eyBWmP/dh-grupo-3) está actualizado y nos ayuda a llevar las cosas al dia y a organizarnos mejor.
+
 
 ----------------------------------------------------------------------
 

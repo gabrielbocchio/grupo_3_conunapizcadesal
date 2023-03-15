@@ -25,7 +25,7 @@
   },
   {
     "id": "114460",
-    "nombre": "tarta de acelgarra",
+    "nombre": "tarta de acelga",
     "categoria": "picada",
     "descripcion": "tarta de acelga para 4 personas",
     "precio": "500",
@@ -97,7 +97,7 @@
   },
   {
     "id": "813258",
-    "nombre": "sanguche de gate",
+    "nombre": "sanguche de gat0",
     "categoria": "plato",
     "descripcion": "asddas adsdsadas dsadas",
     "precio": "500",
@@ -105,7 +105,7 @@
   },
   {
     "id": "419488",
-    "nombre": "un perro jeje",
+    "nombre": "un perro caniche",
     "categoria": "plato",
     "descripcion": "asddasads",
     "precio": "123",
@@ -133,6 +133,14 @@
     "categoria": "pizza",
     "descripcion": "asdads",
     "precio": "123",
+    "imagen": ""
+  },
+  {
+    "nombre": "plato para evento",
+    "id": "509260",
+    "categoria": "evento",
+    "descripcion": "asddassda",
+    "precio": "500",
     "imagen": ""
   }
 ]
