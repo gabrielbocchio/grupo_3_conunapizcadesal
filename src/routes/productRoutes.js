@@ -1,8 +1,26 @@
-const express = require("express");
+// ************ Require's ************
+const express = require('express');
 const router = express.Router();
+const path = require("path");
+const multer = require("multer");
 
+// ************ Controller Require ************
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, "public/images");
+    },
+    filename: function (req, file, cb) {
+    cb (null, file.fieldname + '-'+ Date.now() + path.extname(file.originalname))
+}
+
+});
+
+const upload = multer({ storage: storage });
+// ************************
 const productController = require("../controllers/productControllers");
 
+
+// ************************
 // buscar
 router.get('/search-producto/:id?', productController.buscarProducto);
 
@@ -20,11 +38,11 @@ router.get('/productCart', productController.carrito);
 
 // crear
 router.get('/crear-producto', productController.crearProducto);
-router.post('/', productController.guardarProducto);
+router.post('/',upload.single('imagen') ,productController.guardarProducto);
 
 // editar
-router.get('/editar-producto/:id?', productController.editarProducto);
-router.put('/editar-producto/:id', productController.productoEditado);
+router.get('/editar-producto/:id', productController.editarProducto);
+router.put('/editar-producto/:id', upload.single('imagen') ,productController.productoEditado);
 
 // eliminar
 router.delete('/delete-producto/:id', productController.productoEliminado);

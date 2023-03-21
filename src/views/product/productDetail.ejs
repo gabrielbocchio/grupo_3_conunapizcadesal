@@ -29,7 +29,7 @@
     <% if (productos.length > 0) { %>
       <% productos.forEach(producto => { %>
         <article class="articulo-producto">
-          <a href="/productDetail/productInfo/<%= producto.id %>" class="image-link"><img class="producto" src="<%= producto.imagen %>" alt="producto"></a>
+          <a href="/productDetail/productInfo/<%= producto.id %>" class="image-link"><img class="producto" src="/images/<%= producto.imagen %>" alt="producto"></a>
           <p class="titulo"><%= producto.nombre %></p>
           <p class="precio">$<%= producto.precio %></p>
           <a href="#">Agregar al carrito <i class="fa-solid fa-circle-plus"></i></a>

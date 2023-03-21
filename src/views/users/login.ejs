@@ -1,5 +1,5 @@
 <%- include("../partials/head.ejs")%>
-    <link rel="stylesheet" href="css/styles-login.css">
+    <link rel="stylesheet" href="../css/styles-login.css">
 </head>
 <body  class="main-body">
 <%- include("../partials/header.ejs")%>
@@ -8,7 +8,6 @@
         <form action="">
             <div class="login-html">
                 <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
-                <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign-in</label>
                 <div class="login-form">
                     <div class="sign-in-htm">
                         <div class="group">
@@ -30,35 +29,12 @@
                         <div class="foot-lnk">
                             <a href="#forgot">Olvidaste tu contraseña?</a>
                         </div>
-                    </div>
-                    <div class="sign-up-htm">
-                        <div class="group">
-                            <label for="user" class="label">Usuario</label>
-                            <input id="user" type="text" class="input">
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">Contraseña</label>
-                            <input id="pass" type="password" class="input" data-type="password">
-                        </div>
-                        <div class="group">
-                            <label for="pass" class="label">Repeti la contraseña</label>
-                            <input id="pass" type="password" class="input" data-type="password">
-                        </div>
-                        <div class="group">
-                            <div class="group">
-                            <label for="pass" class="label">Email</label>
-                            <input id="pass" type="text" class="input">
-                        </div>
-                        <div class="group">
-                            <label for="avatars" class="label">Imagen de perfil</label>
-                            <input id="avatars" type="file" class="input">
-                            </div>
-                            <input type="submit" class="button" value="Registrate">
-                        </div>
-                        <div class="hr"></div>
                         <div class="foot-lnk">
-                            <label for="tab-1">Ya tenés tu cuenta?</a>
+                            <a href="/users/signin" id="tab-1">Ya tenés tu cuenta?</a>
                         </div>
+                        
+                    </div>
+                    
                     </div>
                 </div>
             </div>
