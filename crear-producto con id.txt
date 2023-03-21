@@ -1,0 +1,147 @@
+  
+  crear producto:
+  <%- include("../partials/head.ejs")%>
+    <link rel="stylesheet" href="/css/styles-crear-productos.css">
+  </head>
+  <body>
+  <%- include("../partials/header.ejs")%>
+    <h1>Crear Producto</h1>
+    <form method="POST" action="/productDetail" enctype="multipart/form-data">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre">
+
+      <label for="nombre">ID:</label>
+      <input type="text" name="id" value="<%= generarNumeroAleatorio() %>">
+
+      <%
+    function generarNumeroAleatorio() {
+      return Math.floor(Math.random() * 900000) + 100000; // Generar número aleatorio de 6 dígitos
+    }
+  %>
+      <label for="categoria">Categoria:</label>
+      <br>
+      <select name="categoria">
+        <option value="pizza">Pizza</option>
+        <option value="tarta">Tarta</option>
+        <option value="picada">Picada</option>
+        <option value="plato">Plato</option>
+        <option value="evento">Evento</option>
+      </select>
+      <br>
+      <label for="descripcion">Descripción:</label>
+      <textarea  name="descripcion"></textarea>
+      
+      <label for="precio">Precio:</label>
+      <input type="number" name="precio">
+      
+      <label for="imagen">Imagen:</label>
+      <input type="file" name="imagen">
+
+      <input type="submit" value="Crear Producto">
+    </form>
+  </body>
+  <%- include("../partials/footer.ejs")%>
+  </html>
+
+
+-------------
+storage:
+        let producto = {
+          nombre: req.body.nombre,
+          id: req.body.id,
+          categoria: req.body.categoria,
+          descripcion: req.body.descripcion,
+          precio: req.body.precio,
+          imagen: req.body.imagen
+        };
+    
+        // Esto es para leer el archivo
+        let archivoProducto = fs.readFileSync(path.join(__dirname, "../database/productos.json"), "utf-8");
+        let productos;
+        if (archivoProducto == "") {
+          productos = [];
+        } else {
+          // Hacer un parse para descomprimir el json y tener el array
+          productos = JSON.parse(archivoProducto);
+        }
+        // Aplicar código para hacer lo que se necesita
+        productos.push(producto);
+        // Convertir el arreglo de productos a formato JSON
+        productosJSON = JSON.stringify(productos);
+        // Escribir el archivo con los nuevos datos
+        fs.writeFileSync(path.join(__dirname, "../database/productos.json"), productosJSON);
+    
+        res.redirect("/productDetail");
+
+
+
+---- editarProducto controllers:
+
+      editarProducto: (req, res) => {
+        // Obtener el ID del producto a editar de la ruta
+        const id = req.params.id;
+    
+        // Leer los productos desde el archivo
+        let archivoJSON = fs.readFileSync(path.join(__dirname, "../database/productos.json"), "utf-8");
+        let productos = JSON.parse(archivoJSON);
+    
+        // Encontrar el producto con el ID especificado
+        let producto = productos.find((p) => p.id === id);
+    
+        // Pasar el producto a la vista
+        return res.render("product/editar-producto", { producto });
+      },
+
+
+-- delete:
+ productoEliminado: (req, res) => {
+        // Lee el archivo productos.json y conviértelo en un array de objetos JSON.
+        const productosFilePath = path.resolve(__dirname, '../database/productos.json');
+        const productosRawData = fs.readFileSync(productosFilePath);
+        const productos = JSON.parse(productosRawData);
+    
+        // Encuentra el índice del producto que desea eliminar.
+        const productoId = req.params.id;
+        const productoIndex = productos.findIndex((producto) => producto.id === productoId);
+    
+        // Elimina el producto del array usando el índice encontrado.
+        productos.splice(productoIndex, 1);
+    
+        // Guarda el array actualizado en el archivo productos.json.
+        fs.writeFileSync(productosFilePath, JSON.stringify(productos));
+    
+        // Redirige a la página principal de productos.
+        res.redirect('/productDetail');
+      },
+
+
+____
+  productoEditado: (req, res) => {
+        // Obtener el id del producto
+        const idProducto = req.params.id;
+        // Crear un nuevo producto usando los valores que nos da el req.body
+        const nuevoProducto = {
+          id: idProducto,
+          nombre: req.body.nombre,
+          categoria: req.body.categoria,
+          descripcion: req.body.descripcion,
+          precio: req.body.precio,
+          imagen: req.body.imagen
+        };
+    
+        // Leer el archivo JSON
+        const archivoJSON = fs.readFileSync(path.join(__dirname, "../database/productos.json"), "utf-8");
+        let productos = JSON.parse(archivoJSON);
+    
+        // Verificar si el ID del producto existe en el archivo
+        const indexProducto = productos.findIndex((producto) => producto.id === idProducto);
+        if (indexProducto < 0) {
+          return res.status(404).send("Producto no encontrado");
+        }
+        // Actualizar el producto
+        productos[indexProducto] = nuevoProducto;
+        // Guardar los cambios en el archivo JSON
+        fs.writeFileSync(path.join(__dirname, "../database/productos.json"), JSON.stringify(productos, null, 2));
+    
+        res.redirect("/productDetail");
+         };

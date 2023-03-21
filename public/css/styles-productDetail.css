@@ -565,7 +565,8 @@ Monserrat: textos secundarios. */
     }
 
     .articulo-producto img {
-        max-width: 20vw;}
+        max-width: 12vw;
+        }
     
 }
 @media(min-width: 1200px) {

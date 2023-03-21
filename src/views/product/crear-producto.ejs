@@ -4,18 +4,10 @@
 <body>
 <%- include("../partials/header.ejs")%>
  	<h1>Crear Producto</h1>
-	<form method="POST" action="/productDetail">
+	<form method="POST" action="/productDetail" enctype="multipart/form-data">
 		<label for="nombre">Nombre:</label>
 		<input type="text" name="nombre">
 
-		<label for="nombre">ID:</label>
-		<input type="text" name="id" value="<%= generarNumeroAleatorio() %>">
-
-		<%
-  function generarNumeroAleatorio() {
-    return Math.floor(Math.random() * 900000) + 100000; // Generar número aleatorio de 6 dígitos
-  }
-%>
 		<label for="categoria">Categoria:</label>
 		<br>
 		<select name="categoria">
@@ -31,9 +23,9 @@
 		
 		<label for="precio">Precio:</label>
 		<input type="number" name="precio">
-		
+ 		
  		<label for="imagen">Imagen:</label>
-		<input type="file" name="imagen" accept="image/*">
+		<input type="file" name="imagen">
 
 		<input type="submit" value="Crear Producto">
 	</form>

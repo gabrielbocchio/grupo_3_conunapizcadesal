@@ -12,7 +12,7 @@
 
 <h1>Editar <%= producto.nombre  %></h1>
 <article class="articulo-producto"></article>
-<form action="/productDetail/editar-producto/<%= producto.id %>?_method=PUT" method="POST">
+<form action="/productDetail/editar-producto/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="_method" value="PUT">
     
     <p class="titulo">Nombre :<input type="text" name="nombre" value="<%= producto.nombre %>"></p>
@@ -30,7 +30,7 @@
     </p>
     <p class="descripcion">Descripcion : <input type="text" name="descripcion" value="<%= producto.descripcion %>"></p>
 
-    <p class="imagen"><input type="text" name="imagen" value="<%= producto.imagen %>"></p>
+    <p class="imagen"><input type="file" name="imagen" value="<%= producto.imagen %>"></p>
 
     <input type="submit" value="EDIT">
 </form>

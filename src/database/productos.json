@@ -1,146 +1,130 @@
 [
-  {
-    "id": "1",
-    "nombre": "pizza de cebolla",
-    "categoria": "pizza",
-    "descripcion": "larala",
-    "precio": "500",
-    "imagen": ""
-  },
-  {
-    "id": "2",
-    "nombre": "tarta de humita",
-    "categoria": "tarta",
-    "descripcion": "tarta de humita queso cebolla bla bla",
-    "precio": "400",
-    "imagen": ""
-  },
-  {
-    "nombre": "hamburguesa de pollo",
-    "id": "648171",
-    "categoria": "plato",
-    "descripcion": "sarasa",
-    "precio": "400",
-    "imagen": ""
-  },
-  {
-    "id": "114460",
-    "nombre": "tarta de acelga",
-    "categoria": "picada",
-    "descripcion": "tarta de acelga para 4 personas",
-    "precio": "500",
-    "imagen": ""
-  },
-  {
-    "id": "704199",
-    "nombre": "tarta de zanahoria y choclo",
-    "categoria": "tarta",
-    "descripcion": "tarta de zanahoria y choclo bien copada para 8 personas",
-    "precio": "132",
-    "imagen": ""
-  },
-  {
-    "id": "515408",
-    "nombre": "tarta de zucchine",
-    "categoria": "tarta",
-    "descripcion": "tarta para 2 personas con ensalada",
-    "precio": "400",
-    "imagen": ""
-  },
-  {
-    "nombre": "tarta de choclo",
-    "id": "829560",
-    "categoria": "tarta",
-    "descripcion": "asdasdasddsasdadsaasd asdsad  asdas as das dasdas ads asd asd 3 dewa dewa dea dea dea",
-    "precio": "400",
-    "imagen": ""
-  },
-  {
-    "id": "930989",
-    "nombre": "hamburguesa VEGANA",
-    "categoria": "plato",
-    "descripcion": "hamburguesa de quinoa",
-    "precio": "5",
-    "imagen": ""
-  },
-  {
-    "nombre": "puchero vegano",
-    "id": "599753",
-    "categoria": "plato",
-    "descripcion": "solo verdura y caldo",
-    "precio": "500",
-    "imagen": ""
-  },
-  {
-    "nombre": "hamburguesa de pollo",
-    "id": "872225",
-    "categoria": "plato",
-    "descripcion": "asdasddsaasdsad ads asd as",
-    "precio": "1",
-    "imagen": ""
-  },
-  {
-    "id": "792642",
-    "nombre": "picada clasica",
-    "categoria": "picada",
-    "descripcion": "asdads dassad dasdasasd",
-    "precio": "400004",
-    "imagen": ""
-  },
-  {
-    "id": "638895",
-    "nombre": "picada closeup",
-    "categoria": "picada",
-    "descripcion": "asdads dsadasasd ",
-    "precio": "500",
-    "imagen": ""
-  },
-  {
-    "id": "813258",
-    "nombre": "sanguche de gat0",
-    "categoria": "plato",
-    "descripcion": "asddas adsdsadas dsadas",
-    "precio": "500",
-    "imagen": ""
-  },
-  {
-    "id": "419488",
-    "nombre": "un perro caniche",
-    "categoria": "plato",
-    "descripcion": "asddasads",
-    "precio": "123",
-    "imagen": ""
-  },
-  {
-    "id": "250859",
-    "nombre": "prueba dios por favar",
-    "categoria": "pizza",
-    "descripcion": "adsad",
-    "precio": "500",
-    "imagen": ""
-  },
-  {
-    "id": "724191",
-    "nombre": "dios jesuss mar",
-    "categoria": "pizza",
-    "descripcion": "adsads",
-    "precio": "13",
-    "imagen": ""
-  },
-  {
-    "id": "639486",
-    "nombre": "sarrrrrrrrrrrrrrrrr",
-    "categoria": "pizza",
-    "descripcion": "asdads",
-    "precio": "123",
-    "imagen": ""
-  },
-  {
-    "nombre": "plato para evento",
-    "id": "509260",
-    "categoria": "evento",
-    "descripcion": "asddassda",
-    "precio": "500",
-    "imagen": ""
-  }
+ {
+  "id": 1,
+  "nombre": "a",
+  "categoria": "pizza",
+  "descripcion": "asdds",
+  "precio": 345,
+  "imagen": "imagen-1679363058479.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "a",
+  "categoria": "pizza",
+  "descripcion": "adsads",
+  "precio": 23423,
+  "imagen": "default-image.png"
+ },
+ {
+  "id": 6,
+  "nombre": "una poronga",
+  "categoria": "plato",
+  "descripcion": "asdsad",
+  "precio": 500,
+  "imagen": "default-image.png"
+ },
+ {
+  "id": 7,
+  "nombre": "sadsad",
+  "categoria": "picada",
+  "descripcion": "asddsa",
+  "precio": 1234,
+  "imagen": "imagen-1679360523561.jpg"
+ },
+ {
+  "nombre": "asdads",
+  "id": 8,
+  "categoria": "pizza",
+  "descripcion": "asdasd",
+  "precio": 23423,
+  "imagen": "imagen-1679361265022.png"
+ },
+ {
+  "nombre": "asddas",
+  "id": 9,
+  "categoria": "picada",
+  "descripcion": "asddas",
+  "precio": 32234,
+  "imagen": "imagen-1679361280854.jpg"
+ },
+ {
+  "nombre": "adsdas",
+  "id": 13,
+  "categoria": "pizza",
+  "descripcion": "adsdas",
+  "precio": 345534,
+  "imagen": "imagen-1679362097075.jpeg"
+ },
+ {
+  "id": 14,
+  "nombre": "asdads",
+  "categoria": "pizza",
+  "descripcion": "asdasd",
+  "precio": 432423,
+  "imagen": "imagen-1679363717726.jpg"
+ },
+ {
+  "nombre": "asd",
+  "id": 15,
+  "categoria": "pizza",
+  "descripcion": "asd",
+  "precio": 234,
+  "imagen": "imagen-1679362634157.JPG"
+ },
+ {
+  "nombre": "asddsaasd",
+  "id": 16,
+  "categoria": "pizza",
+  "descripcion": "asf",
+  "precio": 234,
+  "imagen": "imagen-1679362689162.JPG"
+ },
+ {
+  "nombre": "sdsffdsfsd",
+  "id": 17,
+  "categoria": "pizza",
+  "descripcion": "fssfdfds",
+  "precio": 456,
+  "imagen": "default-image.png"
+ },
+ {
+  "nombre": "dsdsfdsf",
+  "id": 18,
+  "categoria": "pizza",
+  "descripcion": "sffdsfds",
+  "precio": 4554,
+  "imagen": "imagen-1679362846172.jpeg"
+ },
+ {
+  "nombre": "asdasddas",
+  "id": 19,
+  "categoria": "pizza",
+  "descripcion": "adsdasdas",
+  "precio": 345453354,
+  "imagen": "imagen-1679363046918.jpg"
+ },
+ {
+  "nombre": "asas",
+  "id": 20,
+  "categoria": "pizza",
+  "descripcion": "saaa",
+  "precio": 333,
+  "imagen": "imagen-1679363271018.jpeg"
+ },
+ {
+  "nombre": "asd",
+  "id": 21,
+  "categoria": "pizza",
+  "descripcion": "asd",
+  "precio": 33,
+  "imagen": "default-image.png"
+ },
+ {
+  "nombre": "sarasita",
+  "id": 22,
+  "categoria": "evento",
+  "descripcion": "adsdas",
+  "precio": 4545,
+  "imagen": "imagen-1679363758333.jpg"
+ }
 ]
