@@ -21,7 +21,7 @@
   "categoria": "plato",
   "descripcion": "asdsad",
   "precio": 500,
-  "imagen": "imagen-1679361289887.jpg"
+  "imagen": "default-image.png"
  },
  {
   "id": 7,
@@ -56,12 +56,12 @@
   "imagen": "imagen-1679362097075.jpeg"
  },
  {
-  "nombre": "asdads",
   "id": 14,
+  "nombre": "asdads",
   "categoria": "pizza",
   "descripcion": "asdasd",
   "precio": 432423,
-  "imagen": "default-image.png"
+  "imagen": "imagen-1679363717726.jpg"
  },
  {
   "nombre": "asd",
@@ -110,5 +110,21 @@
   "descripcion": "saaa",
   "precio": 333,
   "imagen": "imagen-1679363271018.jpeg"
+ },
+ {
+  "nombre": "asd",
+  "id": 21,
+  "categoria": "pizza",
+  "descripcion": "asd",
+  "precio": 33,
+  "imagen": "default-image.png"
+ },
+ {
+  "nombre": "sarasita",
+  "id": 22,
+  "categoria": "evento",
+  "descripcion": "adsdas",
+  "precio": 4545,
+  "imagen": "imagen-1679363758333.jpg"
  }
 ]
