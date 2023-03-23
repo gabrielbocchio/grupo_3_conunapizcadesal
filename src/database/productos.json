@@ -8,20 +8,12 @@
   "imagen": "imagen-1679363058479.jpg"
  },
  {
-  "id": 5,
-  "nombre": "a",
-  "categoria": "pizza",
-  "descripcion": "adsads",
-  "precio": 23423,
-  "imagen": "default-image.png"
- },
- {
   "id": 6,
-  "nombre": "una poronga",
+  "nombre": "una papa hervida",
   "categoria": "plato",
   "descripcion": "asdsad",
   "precio": 500,
-  "imagen": "default-image.png"
+  "imagen": "imagen-1679412743345.jpeg"
  },
  {
   "id": 7,
@@ -32,14 +24,6 @@
   "imagen": "imagen-1679360523561.jpg"
  },
  {
-  "nombre": "asdads",
-  "id": 8,
-  "categoria": "pizza",
-  "descripcion": "asdasd",
-  "precio": 23423,
-  "imagen": "imagen-1679361265022.png"
- },
- {
   "nombre": "asddas",
   "id": 9,
   "categoria": "picada",
@@ -48,20 +32,12 @@
   "imagen": "imagen-1679361280854.jpg"
  },
  {
-  "nombre": "adsdas",
   "id": 13,
+  "nombre": "a",
   "categoria": "pizza",
   "descripcion": "adsdas",
   "precio": 345534,
-  "imagen": "imagen-1679362097075.jpeg"
- },
- {
-  "id": 14,
-  "nombre": "asdads",
-  "categoria": "pizza",
-  "descripcion": "asdasd",
-  "precio": 432423,
-  "imagen": "imagen-1679363717726.jpg"
+  "imagen": "imagen-1679568793117.jpg"
  },
  {
   "nombre": "asd",
@@ -72,12 +48,12 @@
   "imagen": "imagen-1679362634157.JPG"
  },
  {
-  "nombre": "asddsaasd",
   "id": 16,
+  "nombre": "e",
   "categoria": "pizza",
   "descripcion": "asf",
   "precio": 234,
-  "imagen": "imagen-1679362689162.JPG"
+  "imagen": "default-image.png"
  },
  {
   "nombre": "sdsffdsfsd",
@@ -88,12 +64,12 @@
   "imagen": "default-image.png"
  },
  {
-  "nombre": "dsdsfdsf",
   "id": 18,
+  "nombre": "d",
   "categoria": "pizza",
   "descripcion": "sffdsfds",
   "precio": 4554,
-  "imagen": "imagen-1679362846172.jpeg"
+  "imagen": "imagen-1679398300836.png"
  },
  {
   "nombre": "asdasddas",
@@ -126,5 +102,77 @@
   "descripcion": "adsdas",
   "precio": 4545,
   "imagen": "imagen-1679363758333.jpg"
+ },
+ {
+  "id": 23,
+  "nombre": "a",
+  "categoria": "pizza",
+  "descripcion": "asdsda",
+  "precio": 345,
+  "imagen": "imagen-1679398436528.jpg"
+ },
+ {
+  "nombre": "adsasdasd",
+  "id": 24,
+  "categoria": "pizza",
+  "descripcion": "asdads",
+  "precio": 56434536,
+  "imagen": "imagen-1679398284393.jpg"
+ },
+ {
+  "nombre": "asddasasdf",
+  "id": 25,
+  "categoria": "pizza",
+  "descripcion": "dsfsfd",
+  "precio": 3456,
+  "imagen": "imagen-1679398352573.jpeg"
+ },
+ {
+  "nombre": "grggg",
+  "id": 26,
+  "categoria": "pizza",
+  "descripcion": "sfsfdsdf",
+  "precio": 34243,
+  "imagen": "imagen-1679398411954.jpg"
+ },
+ {
+  "nombre": "asddasadsasd",
+  "id": 28,
+  "categoria": "pizza",
+  "descripcion": "asdadsasd",
+  "precio": 45654564,
+  "imagen": "imagen-1679398552325.png"
+ },
+ {
+  "id": 29,
+  "nombre": "e",
+  "categoria": "pizza",
+  "descripcion": "asddasasd",
+  "precio": 65476547,
+  "imagen": "imagen-1679398961321.jpg"
+ },
+ {
+  "nombre": "aaaa",
+  "id": 30,
+  "categoria": "pizza",
+  "descripcion": "asdads",
+  "precio": 666,
+  "imagen": "imagen-1679398656659.jpg"
+ },
+ {
+  "id": 31,
+  "nombre": "f",
+  "categoria": "pizza",
+  "descripcion": "asddasads",
+  "precio": 4325,
+  "imagen": "default-image.png"
+ },
+ {
+  "nombre": "asd",
+  "id": 32,
+  "categoria": "tarta",
+  "descripcion": "asdasd",
+  "precio": 123,
+  "imagen": "imagen-1679568396907.jpeg"
  }
 ]

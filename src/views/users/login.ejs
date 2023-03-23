@@ -5,7 +5,7 @@
 <%- include("../partials/header.ejs")%>
 <main class="main-login">
     <div class="login-wrap">
-        <form action="">
+        <form method="POST" action="/users/login" enctype="multipart/form-data">
             <div class="login-html">
                 <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
                 <div class="login-form">
@@ -28,9 +28,12 @@
                         <div class="hr"></div>
                         <div class="foot-lnk">
                             <a href="#forgot">Olvidaste tu contraseña?</a>
+                            <br>
+                            <br>
+                            <br>
                         </div>
                         <div class="foot-lnk">
-                            <a href="/users/signin" id="tab-1">Ya tenés tu cuenta?</a>
+                            <a href="/users/signin" id="tab-1">No tenés tu cuenta? Creala!</a>
                         </div>
                         
                     </div>
