@@ -210,7 +210,7 @@ Monserrat: textos secundarios. */
     margin-top: 20px;
 }
 .litle-photo{
-    width:30%;
+    width:40%;
     position: relative;
     margin: auto;
     margin: 5px;
@@ -483,7 +483,7 @@ Monserrat: textos secundarios. */
         width: 100%;
     }
     .litle-photo{
-        width: 26%;
+        width: 40%;
         position: relative;
         background-color: var(--blanco);
         margin: 20px 10px;
@@ -584,6 +584,13 @@ Monserrat: textos secundarios. */
         display: flex;
     }
 
+    .litle-photo{
+        width: 40%;
+        position: relative;
+        background-color: var(--blanco);
+        margin: 20px 10px;
+    }
+
 }
 @media(min-width: 1200px) {
 /* ------------------------------------ */
@@ -626,7 +633,7 @@ Monserrat: textos secundarios. */
         font-size: var(--texto-main-button-1200px);
     }
     .litle-photo{
-        width: 26%;
+        width: 22%;
         position: relative;
         background-color: var(--blanco);
         margin: 20px 10px;

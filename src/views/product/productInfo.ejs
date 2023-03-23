@@ -19,7 +19,6 @@
       <li><a href="/productDetail/detalle/tarta">Tarta</a></li>
       <li><a href="/productDetail/detalle/pizza">Pizza</a></li>
       <li><a href="/productDetail/detalle/plato">Plato</a></li>
-      <li><a href="/productDetail/detalle/evento">Evento</a></li>
   </ul>
 </div>
 
@@ -27,7 +26,7 @@
     <article class="articulo-producto">
         <a href="#" class="image-link"><img class="producto" src="/images/<%= comida.imagen %>"  alt="producto"></a>
         <p class="titulo"><%= comida.nombre %></p>
-        <p class="precio"><%= comida.precio %></p>
+        <p class="precio">$<%= comida.precio %></p>
         <p class="titulo"><%= comida.descripcion %></p>
         <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
       </article>
