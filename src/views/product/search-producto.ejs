@@ -4,6 +4,11 @@
 <body>
 <%- include("../partials/header.ejs")%>
      <!--  //-----------------------// -->
+     <h2 style="text-align:center;">Buscar</h2>
+     <form action="/productDetail/search-producto" method="GET">
+        <input type="text" name="search">
+        <input type="submit" value="search">
+    </form>
 
      <h1>LISTA DE PRODUCTOS</h1>
      <ul>
@@ -18,11 +23,6 @@
              </article>
          <% } %>
      </ul>
-     <h2 style="text-align:center;">Buscar</h2>
-     <form action="/productDetail/search-producto" method="GET">
-        <input type="text" name="search">
-        <input type="submit" value="search">
-    </form>
 <%- include("../partials/footer.ejs")%>
 </html>
 

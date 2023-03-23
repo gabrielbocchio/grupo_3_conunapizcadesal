@@ -1,0 +1,38 @@
+[
+ {
+  "id": 1,
+  "nombre": "a",
+  "apellido": "pizza",
+  "email": "asdds",
+  "password": 345,
+  "repeatpassword": 345,
+  "imagen": "imagen-1679363058479.jpg"
+ },
+ {
+  "nombre": "olaf",
+  "apellido": "olafolaf",
+  "id": 2,
+  "email": "olaf@olaf.com",
+  "password": "olaf",
+  "repeatpassword": "olaf",
+  "imagen": "avatars-1679567679836.jpeg"
+ },
+ {
+  "nombre": "gabriel",
+  "apellido": "gabriel",
+  "id": 3,
+  "email": "gabriel@a.com",
+  "password": "gabriel",
+  "repeatpassword": "gabriel",
+  "imagen": "avatars-1679567765017.png"
+ },
+ {
+  "nombre": "asd",
+  "apellido": "asd",
+  "id": 4,
+  "email": "asd@asd.com",
+  "password": "asd",
+  "repeatpassword": "asd",
+  "imagen": "avatars-1679568812555.jpg"
+ }
+]
