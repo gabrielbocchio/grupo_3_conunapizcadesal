@@ -43,5 +43,14 @@
   "password": "12345",
   "repeatpassword": "12345",
   "imagen": "avatars-1679569394847.png"
+ },
+ {
+  "nombre": "olaf",
+  "apellido": "Lengyel",
+  "id": 6,
+  "email": "oolaf-@hotmail.com",
+  "password": "12345",
+  "repeatpassword": "12345",
+  "imagen": "avatars-1679573254949.jpg"
  }
 ]

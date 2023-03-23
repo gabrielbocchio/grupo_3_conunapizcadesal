@@ -70,5 +70,13 @@
   "descripcion": "Bondiola braseada para eventos.Delivery o catering presencial.",
   "precio": 1700,
   "imagen": "imagen-1679571723775.jpg"
+ },
+ {
+  "id": 10,
+  "nombre": "Picada Baires",
+  "categoria": "picada",
+  "descripcion": "Picada baires",
+  "precio": 6000,
+  "imagen": "imagen-1679573208931.JPG"
  }
 ]
