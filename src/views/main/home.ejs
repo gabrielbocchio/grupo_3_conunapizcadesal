@@ -6,7 +6,9 @@
     <main class="main-body">
         <section class="main-section">
             <article class="main-areas">
-                <a href="/login"><h4 class="area-texto">Creá tu cuenta y tené 20% descuento</h4></a>
+                <% if (!locals.userLogged) { %>
+                <a href="/users/signin"><h4 class="area-texto">Creá tu cuenta y tené 20% descuento</h4></a>
+                <% } %>
                 <img class="main-img" src="images/Picada_XL.jpeg" alt="foto-picada">
                 <img class="main-img-1" src="images/Picada_XL_1.png" alt="foto-picada">
                 <img class="main-img-2" src="images/Picada_XL_2.jpg" alt="foto-picada">
@@ -14,6 +16,12 @@
                     <a href="/productDetail"><button class="button"><i class="fa-solid fa-cart-shopping"></i>  Queres comer  rico?</button></a>
                 </div>
             </article >
+            <div>
+                <% if (locals.userLogged) { %>
+                    <div class="saludo-usuario">Hola <span style="text-transform: capitalize;"><%= userLogged.firstname %> </span>, Bienvenido!</div>
+                   <% } %>
+                </div>
+            
             <article class="photo-area">
                 <div class="litle-photo">
                     <a href="/productDetail/detalle/picada"><img src="images/Picada.jpg" alt=""></a>

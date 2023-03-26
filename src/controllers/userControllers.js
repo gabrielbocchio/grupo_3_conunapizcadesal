@@ -1,22 +1,16 @@
 const fs = require("fs");
 const path = require("path");
+const bcryptjs = require("bcryptjs");
 const usuariosFilePath = path.join(__dirname, "../database/users.json");
 const { validationResult } = require('express-validator');
+const User = require("../models/User");
 
 const users={
-/* -- renderizo el get del log-in -- */
-    login: (req,res)=> {
-        return res.render("users/login");
-    },
-/* -- renderizo el get del sign-in -- */
-     signin: (req,res)=> {
+    /* -- renderizo el get del sign-in -- */
+    signin: (req,res)=> {
         return res.render("users/signin");
     }, 
-
-    processLogin: (req,res)=> {
-        return res.send("probando el post che");
-    },
-
+    
     /* creacion de usuario y pusheo a json, pasado con validaciones */
     processSignin: (req,res)=> {
         
@@ -25,34 +19,80 @@ const users={
             return res.render('users/signin', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
-            });
+            }); 
         }
-        const users = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
+        let userInDB = User.findByField("email", req.body.email);
+        if(userInDB){
+            return res.render('users/signin', {
+                errors: {
+                    email: {
+                        msg: "Este email ya está registrado"
+                    }
+                },
+                oldData: req.body
+            }); 
+        };
+        let userToCreate = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password , 10),
+            repeatpassword: bcryptjs.hashSync(req.body.repeatpassword , 10),
+            avatars: req.file ? req.file.filename : "default-image.png"
+        }
+        let userCreated = User.create(userToCreate);
+        return res.redirect("/users/login");
         
-        let usuario = {
-            nombre: req.body.firstname,
-            apellido: req.body.lastname,
-            id: users[users.length - 1].id + 1,
-            email: req.body.email,
-            password: req.body.password,
-            repeatpassword: req.body.repeatpassword,
-            imagen: req.file ? req.file.filename : "default-image.png"
-          };
-  
-        // Aplicar código para hacer lo que se necesita
-         users.push(usuario);
-        // Convertir el arreglo de productos a formato JSON
-        let usersJSON = JSON.stringify(users, null, " ");
-        // Escribir el archivo con los nuevos datos
-        fs.writeFileSync(usuariosFilePath, usersJSON);
-
-
-		return res.redirect("/");
-
     }, 
+    /* -- renderizo el get del log-in -- */
+    login: (req,res)=> {
+            return res.render("users/login");
+        },
+    
+    processLogin: (req,res)=> {
+        let userToLogin = User.findByField("email", req.body.email);  
+        if(userToLogin){
+            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if(isOkThePassword){
+                delete userToLogin.password;
+                delete userToLogin.repeatpassword;
+                req.session.userLogged = userToLogin;
 
+                if(req.body.remember_user){
+                    res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2})
+                }
+                    return res.redirect('/')
+                }
+                return res.render('users/login', {
+                    errors: {
+                        email: {
+                         msg: "Las credenciales no son válidas"
+                    }
+                }
+                }); 
+            }
+            return res.render('users/login', {
+            errors: {
+                email: {
+                 msg: "Las credenciales no son válidas"
+            }
+        }
+        }); 
 
+     
+        },
+    profile: (req,res)=>{
+            res.render("users/userProfile", {
+                user: req.session.userLogged
+            })
+        },
+    
+    logout: (req,res)=>{
+            res.clearCookie("userEmail");
+            req.session.destroy();
+            return res.redirect("/");
+        },
 
-}
-
-module.exports=users;
+    
+    
+    }
+    
+    module.exports=users;

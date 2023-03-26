@@ -198,6 +198,16 @@ Monserrat: textos secundarios. */
     box-shadow: 2px 2px 8px var(--verde-nav-footer);
 
 }
+.button-descuento{
+    width:100%;
+    background-color: var(--rojo);
+    font-size: var(--MF-main-button);
+    color: var(--blanco);
+    padding: 5px 0;
+    border: 0;
+    box-shadow: 2px 2px 8px var(--verde-nav-footer);
+
+}
 .button:hover {
     cursor: pointer;
   }
@@ -270,7 +280,15 @@ Monserrat: textos secundarios. */
 .eventos p {
     font-size: 10px;
 }
-
+.saludo-usuario {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 24px;
+    color: #333;
+  }
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -573,6 +591,7 @@ Monserrat: textos secundarios. */
     .area-texto{
         display: none;
     }
+
     .main-areas{
         position:relative;
         top: 0;
@@ -631,6 +650,9 @@ Monserrat: textos secundarios. */
     }
     .button{
         font-size: var(--texto-main-button-1200px);
+    }
+    .button-descuento{
+        font-size: 18px;
     }
     .litle-photo{
         width: 22%;

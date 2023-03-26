@@ -1,0 +1,37 @@
+<%- include("../partials/head.ejs")%>
+	<link rel="stylesheet" href="/css/styles-user-profile.css">
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <!-- Main container -->
+    <div class="user-profile-container">
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Hola <%= user.firstname %></h2>
+                <img src="/images/avatars/<%= user.avatars %>" alt="Avatar de usuario" class="user-avatar" style="width: 200px; height:200px; border-radius: 50%">
+                <div class="email-container">
+                    <div class="user-email"><%= user.email %></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile panel -->
+        <div class="profile-panel">
+            <h3>Cambiar perfil:</h3>
+            <ul>
+                <li><a href="#">Cambiar foto de perfil</a></li>
+                <li><a href="#">Cambiar contraseña</a></li>
+                <li><a href="#">Cambiar correo electrónico</a></li>
+            </ul>
+        </div>
+
+        <!-- Logout button -->
+        <form action="/users/logout" method="GET">
+            <button type="submit" class="logout-btn">Cerrar sesión</button>
+        </form>
+    </div>
+    <!-- //Main container -->
+
+</body>
+<%- include("../partials/footer.ejs")%>
+</html>

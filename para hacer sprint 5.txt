@@ -1,0 +1,2 @@
+Cuando no estas logueado que te muestre un banner en el home que diga "registrate para obtener 20 % descuento o algo asi"
+Cuando estas logueado que te haga un descuento y te muestre un "bienvenido username"
