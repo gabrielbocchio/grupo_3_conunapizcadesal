@@ -79,7 +79,7 @@ Monserrat: textos secundarios. */
 }
 .logo{
     width: 80px;
-    animation: rotar 1400ms 2 alternate; 
+    animation: rotar 1400ms 2 alternate;
 }
 
 .logo-title1{
@@ -135,165 +135,21 @@ Monserrat: textos secundarios. */
     background: var(--negro);
     background: var(--gradiente);
 }
-.float{
-	position:fixed;
-	width:60px;
-	bottom:10%;
-    right:2.4%;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-    font-size:45px;
-	box-shadow: 2px 2px 3px #999;
-    z-index:100;
-}
-.my-float{
-	margin-top:8px;
-}
 
 /* ------------------------------------ */
                 /*MAIN*/
 /* ------------------------------------ */
 
-.main-body {
-    background: var(--blanco);
-}
-.main-areas{
-    position: relative;
-}
-.area-texto{
-    width: 100%;
-    background-color: var(--mostaza);
-    box-shadow: 0 0 8px var(--verde-nav-footer);
-    text-align: center;
-    font-size: var(--MF-main-area-texto);
-    color: var(--blanco);
-    padding: 5px 0;
-    position: absolute;
-    top: 0;
+/* -- CARRITO AL CUAL SE PUSHEAN ARTICULOS */
 
-}
-.main-areas img{
-    width: 100%;
-}
-.main-img-1{
-    display: none;
-}
-.main-img-2{
-    display: none;
-}
-.main-button{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-}
-.button{
-    width:100%;
-    background-color: var(--mostaza);
-    font-size: var(--MF-main-button);
-    color: var(--blanco);
-    padding: 5px 0;
-    border: 0;
-    box-shadow: 2px 2px 8px var(--verde-nav-footer);
-
-}
-.button-descuento{
-    width:100%;
-    background-color: var(--rojo);
-    font-size: var(--MF-main-button);
-    color: var(--blanco);
-    padding: 5px 0;
-    border: 0;
-    box-shadow: 2px 2px 8px var(--verde-nav-footer);
-
-}
-.button:hover {
-    cursor: pointer;
-  }
-.photo-area{
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 20px;
-}
-.litle-photo{
-    width:40%;
-    position: relative;
-    margin: auto;
-    margin: 5px;
-}
-.litle-photo img{
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 0 8px var(--verde-nav-footer);
+.main-cart {
+   /* max-width: 80%; */
+   margin: auto;
+   padding-bottom: 50px;
+   
+   /* border: 1px green dashed; */
 }
 
-.title-photo{
-    text-align: center;
-    font-size: var(--MF-main-photo-title);
-    position: absolute;
-    background-color: var(--mostaza-tralucido);
-    color: var(--blanco);
-    bottom:5px;
-    border-radius: 0 0 15px 15px ;
-    width: 100%;
-    text-align: center;
-    padding: 15px 10px;
-}
-
-.nosotros {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    padding-left:5px ;
-    padding-right: 5px;
-    
-}
-.nosotros h1 {
-    padding-bottom: 5px;
-    font-size: 20px
-}
-.nosotros p {
-    font-size: 10px;
-}
-
-.eventos {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    padding-left:3px ;
-    padding-right: 3px;
-    
-}
-
-.eventos h1 i {
-    padding-right: 10px;
-
-}
-.eventos h1 {
-    padding-bottom: 5px;
-    font-size: 20px
-}
-.eventos p {
-    font-size: 10px;
-}
-.saludo-usuario {
-    text-align: center;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: 0px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #333;
-
-  }
-
-  .mensaje-usuario {
-    display: none;
-  }
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -413,33 +269,10 @@ Monserrat: textos secundarios. */
         font-size: 25px;
     }
 /* ------------------------------------ */
-                /*MAIN*/
+                /*Main*/
 /* ------------------------------------ */
-    .nosotros h1 {
-        padding-bottom: 5px;
-        font-size: 20px
-    }
-    .nosotros p {
-        font-size: 15px;
-    }
-    .eventos h1 {
-        padding-bottom: 5px;
-        font-size: 20px
-    }
-    .eventos p {
-        font-size: 15px;
-    }
 
-    .saludo-usuario {
-        text-align: center;
-        padding: 10px;
-        background-color: #f0f0f0;
-        border: 0px solid #ccc;
-        border-radius: 5px;
-        font-size: 16px;
-        color: #333;
-    
-      }
+
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -449,13 +282,10 @@ Monserrat: textos secundarios. */
         font-size: var(--title-footer-576px);
         color: var(--blanco);
     }
-        .litle-photo{
-        width:40%;
-    }
 }
 @media(min-width: 768px){
 /* ------------------------------------ */
-                /*HEADER*//* asdasd */
+                /*HEADER*/
 /* ------------------------------------ */
     .main-header{
         display: flex;
@@ -510,50 +340,12 @@ Monserrat: textos secundarios. */
         text-decoration:none;
         font-size: 14px;
     } 
+
+ /* ------------------------------------ */
+                /*Main*/
 /* ------------------------------------ */
-                /*MAIN*/
-/* ------------------------------------ */
-    .photo-area{
-        width: 100%;
-    }
-    .litle-photo{
-        width: 40%;
-        position: relative;
-        background-color: var(--blanco);
-        margin: 20px 10px;
-    }
-    .litle-photo img{
-        width: 100%;
-    }
 
-    .nosotros h1 {
-    padding-bottom: 8px;
-    font-size: 25px
-    }
-    .nosotros p {
-    font-size: 18px;
-    padding-bottom: 8px;
-    }
 
-    .eventos h1 {
-        padding-bottom: 8px;
-        font-size: 25px
-    }
-    .eventos p {
-        font-size: 18px;
-        padding-bottom: 8px;
-    }
-
-    .saludo-usuario {
-        text-align: center;
-        padding: 10px;
-        background-color: #f0f0f0;
-        border: 0px solid #ccc;
-        border-radius: 5px;
-        font-size: 18px;
-        color: #333;
-    
-      }
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */
@@ -596,13 +388,6 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*HEADER*/
 /* ------------------------------------ */
-    .main-header{
-        width: 100%;
-        background-color: transparent;
-        position: absolute;
-        top: 0;
-        z-index: 100;
-    }  
     .logo{
             width: 100px;
         }
@@ -610,43 +395,17 @@ Monserrat: textos secundarios. */
         font-size:var(--text-nave-992px);
         font-weight: 600;
         color: var(--blanco);
-        /* background-color: var(--verde-footer1); */
     }
     /* ------------------------------------ */
                     /*MAIN*/
     /* ------------------------------------ */
-    .area-texto{
-        display: none;
-    }
 
-    .main-areas{
-        position:relative;
-        top: 0;
+    .contacto-imagen img {
+        width: 100%;
     }
-    .main-img{
-        display: none;
-    }
-    .main-img-1{
-        display: flex;
-    }
-
-    .litle-photo{
-        width: 40%;
-        position: relative;
-        background-color: var(--blanco);
-        margin: 20px 10px;
-    }
-    .mensaje-usuario {
-        display: flex;
-        justify-content: center;
-        background-color: var(--rojo);
-        padding: 7px 0 7px 0;
-    }
-
-    .mensaje-usuario a {
-        text-decoration: none;
-        color: var(--blanco);
-    }
+/* ------------------------------------ */
+                /*Main*/
+/* ------------------------------------ */
 
 }
 @media(min-width: 1200px) {
@@ -677,48 +436,35 @@ Monserrat: textos secundarios. */
         -ms-transition:transform 1300ms ease-in-out;
     }
 
-/* ------------------------------------ */
-                /*MAIN*/
-/* ------------------------------------ */
-    .main-img-2{
-        display: flex;
+    .detalle-producto a{
+        padding-right: 6px;
+        color: #000000;
+        font-size: 10px;
     }
-    .main-img-1{
-        display: none;
+    .detalle-producto img{
+        width: 110px;
+        height: 110px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
-    .button{
-        font-size: var(--texto-main-button-1200px);
+    .detalle-producto p{
+        padding-left: 6px;
+        font-size: 15px;
     }
-    .button-descuento{
-        font-size: 18px;
+    
+    .detalle-producto-precio p{
+        padding-right: 0px;
+        font-weight: bold;
+        font-size: 16px;
     }
-    .litle-photo{
-        width: 22%;
-        position: relative;
-        background-color: var(--blanco);
-        margin: 20px 10px;
+    
+    .detalle-producto-cantidad {
+        padding-right: 120px;
+        
+    
     }
-    .litle-photo img{
-        width: 100%;
-    }
-    .litle-photo:hover h3{
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 15px;
-        font-size: var(--title-main-photo-1200px);
-    }
-    .title-photo{
-        text-align: center;
-        background-color: var(--mostaza-tralucido);
-        color: var(--blanco);
-        font-size: var(--MV-main-photo-title);
-        padding: 15px  30px;
-        width: 100%;
-        position: absolute;
-        bottom: 5px;
-        left: 0;
-        transition: 500ms;
+    .detalle-producto-cantidad input{
+        width: 42px;
+        
+        
     }
 }

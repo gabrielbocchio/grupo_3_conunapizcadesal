@@ -150,6 +150,12 @@ Monserrat: textos secundarios. */
    /* border: 1px green dashed; */
 }
 
+.evento-imagen img {
+    width: 100%;
+    
+}
+
+
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */

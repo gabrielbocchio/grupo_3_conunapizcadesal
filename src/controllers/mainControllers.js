@@ -12,6 +12,10 @@ const main ={
     eventos: (req,res)=> {
         return res.render("main/eventos");
     }, 
+    contacto: (req,res)=> {
+        return res.render("main/contacto");
+    }, 
+
 
 }
 

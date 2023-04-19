@@ -21,6 +21,11 @@
                     <div class="saludo-usuario">Hola <span style="text-transform: capitalize;"><%= userLogged.firstname %> </span>, Bienvenido!</div>
                    <% } %>
                 </div>
+                <div>
+                <% if (!locals.userLogged) { %>
+                    <div class="mensaje-usuario"> <a href="/users/signin"> Creá tu cuenta y recibí los mejores decuentos </a></div>
+                   <% } %>
+                </div>
             
             <article class="photo-area">
                 <div class="litle-photo">

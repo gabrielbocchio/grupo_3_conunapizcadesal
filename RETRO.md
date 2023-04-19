@@ -1,3 +1,12 @@
+RETRO SPRINT 5:
+Estamos muy conformes con lo hecho en el sprint 4. El crud, funciona correctamente y nos permite crear, editar, borrar, cualquier producto del JSON.
+Tenemos reuniones semanales (que funcionan como weeklies) en las cuales vemos entre todos en donde estamos, lo que hay que hacer, que problemas tenemos.
+Estamos muy conformes con esta modalidad de trabajo, ya que cada uno puede practicar por su cuenta, explayarse a su gusto y, cuando nos juntamos, tomamos lo mejor de cada uno y lo representamos en la pagina. 
+Nuestro Trello (https://trello.com/b/J0eyBWmP/dh-grupo-3) está actualizado y nos ayuda a llevar las cosas al dia y a organizarnos mejor.
+
+
+----------------------------------------------------------------------
+
 RETRO SPRINT 4:
 Quedamos muy contentos con lo hecho en el sprint 3. La modularizacion y el uso de ejs,  funciona correctamente y nos ayuda a poder diferenciar las distintas funcionalidades para poder aplicar CRUD.
 Tenemos reuniones semanales (que funcionan como weeklies) en las cuales vemos entre todos en donde estamos, lo que hay que hacer, que problemas tenemos.

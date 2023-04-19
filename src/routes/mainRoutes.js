@@ -13,6 +13,8 @@ router.get('/quien-somos', mainController.quiensomos);
 
 /* agrego una nueva url, parto agregando aca este reglon list, dps voy a mainController y creo list dentro del objeto literal controller, dps creo el EJS con el nombre que le di en el objetyo literal */
 router.get('/eventos', mainController.eventos);
+router.get('/contacto', mainController.contacto);
+
 
 
 
