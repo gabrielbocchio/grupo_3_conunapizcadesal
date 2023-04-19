@@ -88,14 +88,5 @@
     "password": "$2a$10$nJSQwfY.uPKo5VI0F.9E3unJrqu4KXdqNEWo8.ciAYjNhSzr53xga",
     "repeatpassword": "$2a$10$KK4JfTIbmg/ofTlJOtDueOOL790iO4tCqHQuF0uZA2PQHZzpJ7aMS",
     "avatars": "avatars-1679956287108.jpg"
-  },
-  {
-    "id": 11,
-    "firstname": "olaf",
-    "lastname": "Lengyel",
-    "email": "a2@a.com",
-    "password": "$2a$10$fxr8z5s6fqEocWyEd4L47ulfKqpctrIxFUqvnzfWME2LRrWuwcQza",
-    "repeatpassword": "$2a$10$69YWKSzgrP/Lw7NEbDCf0uwqHV9CO7OrU2wNECWyFxBPAaUHVF4OC",
-    "avatars": "avatars-1681947706750.jpeg"
   }
 ]
