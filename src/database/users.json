@@ -79,14 +79,5 @@
     "password": "$2a$10$qpLE18x8vlSd/Yx3uCEG8.RiPO4aqe11LrGN2mchfXRqokaEMgrNa",
     "repeatpassword": "$2a$10$yW36KLKmPiUY1zbxp5fbA.tFXl6a5wNRB7pEjsx41mE1kB6RxbKlu",
     "avatars": "avatars-1679843287096.png"
-  },
-  {
-    "id": 10,
-    "firstname": "pepe",
-    "lastname": "pepe",
-    "email": "pepe@a.com",
-    "password": "$2a$10$nJSQwfY.uPKo5VI0F.9E3unJrqu4KXdqNEWo8.ciAYjNhSzr53xga",
-    "repeatpassword": "$2a$10$KK4JfTIbmg/ofTlJOtDueOOL790iO4tCqHQuF0uZA2PQHZzpJ7aMS",
-    "avatars": "avatars-1679956287108.jpg"
   }
 ]
