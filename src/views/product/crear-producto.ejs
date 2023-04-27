@@ -5,23 +5,24 @@
 <%- include("../partials/header.ejs")%>
  	<h1>Crear Producto</h1>
 	<form method="POST" action="/productDetail" enctype="multipart/form-data">
-		<label for="nombre">Nombre:</label>
-		<input type="text" name="nombre">
+		<label for="name">Nombre:</label>
+		<input type="text" name="name">
 
 		<label for="categoria">Categoria:</label>
 		<br>
-		<select name="categoria">
-		  <option value="pizza">Pizza</option>
-		  <option value="tarta">Tarta</option>
-		  <option value="picada">Picada</option>
-		  <option value="plato">Plato</option>
-		</select>
+		<select name="category" >
+			<% for (let i =0; i< category.length; i ++) { %>
+				<option value="<%= category[i].id%>">
+					<%=category[i].name%>
+				</option>
+		<% } %>
+ 	</select>
 		<br>
-		<label for="descripcion">Descripción:</label>
-		<textarea  name="descripcion"></textarea>
+		<label for="description">Descripción:</label>
+		<textarea  name="description"></textarea>
 		
-		<label for="precio">Precio:</label>
-		<input type="number" name="precio">
+		<label for="price">Precio:</label>
+		<input type="number" name="price">
  		
  		<label for="imagen">Imagen:</label>
 		<input type="file" name="imagen">
