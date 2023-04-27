@@ -1,84 +1,102 @@
-const fs = require("fs");
-const path = require("path");
+let db = require ("../database/models");
 const bcryptjs = require("bcryptjs");
-const usuariosFilePath = path.join(__dirname, "../database/users.json");
 const { validationResult } = require('express-validator');
-const User = require("../models/User");
 
-const users={
+
+const userControllers={
     /* -- renderizo el get del sign-in -- */
     signin: (req,res)=> {
         return res.render("users/signin");
     }, 
     
     /* creacion de usuario y pusheo a json, pasado con validaciones */
-    processSignin: (req,res)=> {
-        
+    processSignin: (req, res) => {
         const resultValidation = validationResult(req);
+    
         if (resultValidation.errors.length > 0) {
-            return res.render('users/signin', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            }); 
+          return res.render('users/signin', {
+            errors: resultValidation.mapped(),
+            oldData: req.body
+          });
         }
-        let userInDB = User.findByField("email", req.body.email);
-        if(userInDB){
-            return res.render('users/signin', {
+    
+        db.Users.findOne({ where: { email: req.body.email } })
+          .then((userInDB) => {
+            if (userInDB) {
+              return res.render('users/signin', {
                 errors: {
-                    email: {
-                        msg: "Este email ya está registrado"
-                    }
+                  email: {
+                    msg: "Este email ya está registrado"
+                  }
                 },
                 oldData: req.body
-            }); 
-        };
-        let userToCreate = {
-            ...req.body,
-            password: bcryptjs.hashSync(req.body.password , 10),
-            repeatpassword: bcryptjs.hashSync(req.body.repeatpassword , 10),
-            avatars: req.file ? req.file.filename : "default-image.png"
-        }
-        let userCreated = User.create(userToCreate);
-        return res.redirect("/users/login");
-        
-    }, 
+              });
+            }
+    
+            const userToCreate = {
+              firstname: req.body.firstname,
+              lastname: req.body.lastname,
+              email: req.body.email,
+              password: bcryptjs.hashSync(req.body.password, 10),
+              avatars: req.file ? req.file.filename : "default-image.png"
+            };
+    
+            db.Users.create(userToCreate)
+              .then((userCreated) => {
+                return res.redirect("/users/login");
+              })
+              .catch((error) => {
+                console.log(error);
+              });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }, 
     /* -- renderizo el get del log-in -- */
     login: (req,res)=> {
             return res.render("users/login");
         },
-    
-    processLogin: (req,res)=> {
-        let userToLogin = User.findByField("email", req.body.email);  
-        if(userToLogin){
-            let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
-            if(isOkThePassword){
-                delete userToLogin.password;
-                delete userToLogin.repeatpassword;
-                req.session.userLogged = userToLogin; //aca declara por primera vez el req.session.userLogged
 
-                if(req.body.remember_user){
-                    res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2})
-                }
-                    return res.redirect('/')
-                }
-                return res.render('users/login', {
-                    errors: {
-                        email: {
-                         msg: "Las credenciales no son válidas"
+        processLogin: (req, res) => {
+            db.Users.findOne({ where: { email: req.body.email } })
+              .then((userToLogin) => {
+                if (userToLogin) {
+                  const isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        
+                  if (isOkThePassword) {
+                    delete userToLogin.password;
+                    req.session.userLogged = userToLogin;
+        
+                    if (req.body.remember_user) {
+                      res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2 })
                     }
+        
+                    return res.redirect('/');
+                  }
+        
+                  return res.render('users/login', {
+                    errors: {
+                      email: {
+                        msg: "Las credenciales no son válidas"
+                      }
+                    }
+                  });
                 }
-                }); 
-            }
-            return res.render('users/login', {
-            errors: {
-                email: {
-                 msg: "Las credenciales no son válidas"
-            }
-        }
-        }); 
-
-     
-        },
+        
+                return res.render('users/login', {
+                  errors: {
+                    email: {
+                      msg: "Las credenciales no son válidas"
+                    }
+                  }
+                });
+              })
+              .catch((error) => {
+                console.log(error);
+              });
+          },
+    
     profile: (req,res)=>{
             res.render("users/userProfile", {
                 user: req.session.userLogged
@@ -95,4 +113,4 @@ const users={
     
     }
     
-    module.exports=users;
+    module.exports=userControllers;
