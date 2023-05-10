@@ -159,6 +159,7 @@ h2 {
     font-size: 30px;
     margin-bottom: 10px;
     color: #333;
+    text-align: center;
 }
 .user-avatar {
     display: block;
@@ -188,6 +189,7 @@ h2 {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-bottom: 30px;
 }
 .logout-btn:hover {
     background-color: #286090;
@@ -208,6 +210,7 @@ h2 {
     margin: 0;
     padding: 0;
 }
+
 .profile-panel li {
     margin-bottom: 10px;
 }
@@ -222,6 +225,98 @@ h2 {
     transition: background-color 0.3s;
     width: 200px;
 }
+
+/* Estilos para la vista 1 */
+.change-profile-picture-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
+    margin-top: 30px
+  }
+  
+  .change-profile-picture-form .form-label {
+    margin-bottom: 12px;
+  }
+  
+  .change-profile-picture-form input[type="file"] {
+    margin-bottom: 24px;
+  }
+  
+  .change-profile-picture-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .change-profile-picture-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+
+  }
+  
+  /* Estilos para la vista 2 */
+  .change-password-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f2f2f2;
+    margin-top: 30px
+  }
+  .text-danger{
+    padding: 5px;
+    text-align: center;
+    color: #96031A;
+
+}
+
+.is-invalid {
+	/* background: rgba(245, 134, 134, 0.76); */
+    background: rgba(252, 252, 252, 0.76);
+    border: 2px rgba(252, 3, 3, 0.76) solid;
+	color:rgb(0, 0, 0);
+	display:block;
+
+  }
+  
+  .change-password-form .form-label {
+    margin-bottom: 12px;
+  }
+  
+  .change-password-form input[type="password"] {
+    margin-bottom: 24px;
+    padding: 4px;
+    font-size: 16px;
+  }
+  
+  .change-password-form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .change-password-form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
 .profile-panel a:hover {
     background-color: #286090;
 }

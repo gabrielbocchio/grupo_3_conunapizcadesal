@@ -1,0 +1,26 @@
+<%- include("../partials/head.ejs")%>
+	<link rel="stylesheet" href="/css/styles-user-profile.css">
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+    <!-- Main container -->
+    <form action="/users/editavatar" method="POST" enctype="multipart/form-data" class="change-profile-picture-form">
+        <label for="avatar" class="form-label">Nueva imagen de perfil:</label>
+        <input type="file" name="avatars" id="avatars" class="form-input">
+        
+        <button type="submit" class="form-button">Aceptar cambios</button>
+    </form>
+
+    <form action="/users/profile" method="GET">
+        <button class="logout-btn">Volver a perfil</button>
+    </form>
+        <!-- Logout button -->
+        <form action="/users/logout" method="GET">
+            <button type="submit" class="logout-btn">Cerrar sesión</button>
+        </form>
+    </div>
+    <!-- //Main container -->
+
+</body>
+<%- include("../partials/footer.ejs")%>
+</html>

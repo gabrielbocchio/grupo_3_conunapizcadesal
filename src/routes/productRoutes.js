@@ -22,7 +22,7 @@ const productController = require("../controllers/productControllers");
 
 // ************************
 // buscar
-router.get('/search-producto/:id?', productController.buscarProducto);
+router.get('/search-producto/:search?', productController.buscarProducto);
 
 // todos los productos (productDetail)
 router.get('/', productController.produ);

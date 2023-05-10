@@ -1,7 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 const productosFilePath = path.join(__dirname, "../database/productos.json");
-let db= require ("../database/models")
+let db= require ("../database/models");
+const Op = db.Sequelize.Op;
 
 const productos={
 /* ---------------------------------------------------------------- */
@@ -110,16 +111,18 @@ const productos={
     
       /* ---------------------------------------------------------------- */
       // buscar
-      buscarProducto: (req, res) => {
-
-        // esto es para leer el archivo y dejar siempre arriba 
-        const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
-
-       let search = req.query.search;
-       let productoResults = productos.filter(producto => producto.nombre.toLowerCase().includes(search));	
-
-       res.render("product/search-producto",{productoResults: productoResults,search})
-      },
+      buscarProducto: (req, res)=>{
+        const search = req.query.search;
+        db.Product.findAll({
+          where: {
+            name: {
+              [Op.like]: '%' + search + '%'
+            }            
+          }
+        }).then(function(productos) {
+          res.render('product/search-producto', { productoResults: productos });
+        });
     }
-    
+
+  }
     module.exports = productos;

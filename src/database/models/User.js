@@ -23,7 +23,7 @@ module.exports = function (sequelize, dataTypes){
             allowNull: false
         },
         avatars: {
-            type: dataTypes.STRING //aca se pone string de multer
+            type: dataTypes.BLOB
         },
         address: {
             type:dataTypes.STRING

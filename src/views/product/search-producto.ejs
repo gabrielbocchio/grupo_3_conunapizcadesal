@@ -6,24 +6,23 @@
      <!--  //-----------------------// -->
      <h2 style="text-align:center;">Buscar</h2>
      <form action="/productDetail/search-producto" method="GET">
-        <input type="text" name="search">
-        <input type="submit" value="search">
-    </form>
-
+       <input type="text" name="search">
+       <input type="submit" value="search">
+     </form>
      <h1>LISTA DE PRODUCTOS</h1>
      <ul>
-         <% for (let i = 0; i < productoResults.length; i++) { %>
-             <article class="articulo-producto">
-                <p class="titulo"><a href="/productDetail/productInfo/<%= productoResults[i].id %>"><%= productoResults[i].nombre %></a></p>
-
-                 <p class="titulo">Categoría: <%= productoResults[i].categoria %></p>
-                 <p class="titulo">Descripción: <%= productoResults[i].descripcion %></p>
-                 <p class="precio">Precio: <%= productoResults[i].precio %><br></p>
-                 <p class="producto">Imagen: <%= productoResults[i].imagen %></p>
-             </article>
-         <% } %>
+       <% for (let i = 0; i < productoResults.length; i++) { %>
+       <article class="articulo-producto">
+         <p class="titulo"><a href="/productDetail/productInfo/<%= productoResults[i].id %>"><%= productoResults[i].name %></a></p>
+         <p class="titulo">Descripción: <%= productoResults[i].description %></p>
+         <p class="precio">Precio: <%= productoResults[i].price %><br></p>
+         <p class="producto"><img src="/images/<%= productoResults[i].imagen %>"></p>
+       </article>
+       <% } %>
      </ul>
-<%- include("../partials/footer.ejs")%>
+     <%- include("../partials/footer.ejs")%>
+
+     <img src="" alt="">
 </html>
 
 <!--      
