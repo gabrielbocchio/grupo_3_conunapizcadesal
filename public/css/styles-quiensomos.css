@@ -112,14 +112,68 @@ Monserrat: textos secundarios. */
     font-size: var(--MF-button-nav);
     color:  var(--blanco);
     margin-right: 5px;
+    margin-right: 30px;
 }
 
 .burger-button{
     color: var(--blanco);
-    padding: 10px 10px 10px 0;
-    text-align: center;
+/*     padding: 10px 10px 10px 0;
+    text-align: center; */
     font-size: var(--MF-button-nav);
+    vertical-align: top;
+    width: 40px;
+    cursor: pointer;
+
 }
+.icono-menu{
+    margin: 40px 50px;
+    position: relative;
+    z-index: 10;
+}
+.cont-menu{
+    background-color: #2E8780;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    width: 150px;
+    height: 150px;
+    position:absolute;
+    top: 70px;
+    right: 20px;
+    display: none; 
+    z-index: 5; 
+    transition: all .5 ease; 
+
+}
+.active{
+    display: block; 
+    z-index: 15;
+}
+
+.opacity{
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all .5 ease;
+    z-index: 4; 
+}
+
+.cont-menu ul{
+    padding: 12px 12px 15px 12px;
+    list-style: none;
+}
+.cont-menu ul li a{
+    color: white;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 6px 9px;
+    cursor:pointer;
+    text-align: center
+    
+}
+.cont-menu ul li:hover{
+    background-color: rgb(118, 196, 179);
+    color: rgb(42,42,42);
+}
+
 .main-nav{
     display: none;
     transition: 0.2s;
@@ -383,7 +437,9 @@ ul li{
     .usuario{
         display: flex;
     }
-    
+    .cont-menu{
+        display: none;
+    }
     .burger-button{
         display: none;
     }

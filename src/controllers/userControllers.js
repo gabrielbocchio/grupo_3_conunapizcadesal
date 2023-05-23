@@ -40,7 +40,9 @@ const userControllers={
             password: bcryptjs.hashSync(req.body.password, 10),
             avatars: req.file ? req.file.filename : "default-image.png"
           };
-          req.session.userLogged = userToCreate;
+          
+          // esto queda comentado porque si se loguea automaticamente hay un error de undefined del ID con el cual la primera vez que se loguea no lo encuentra y no se puede modificar
+           /* req.session.userLogged = userToCreate */;
   
           db.Users.create(userToCreate)
             .then((userCreated) => {
@@ -107,14 +109,12 @@ const userControllers={
         
         profile: (req, res) => {
           const user = req.session.userLogged;
-          
-          if (req.file) {
+        /*   if (req.file) {
             user.avatars = req.file.filename;
-            req.session.userLogged = user;
+            req.session.userLogged = user; 
           } else if (!user.avatars) {
             user.avatars = "default-image.png";
-          }
-        
+          } */
           res.render("users/userProfile", { user });
         },
     
@@ -150,6 +150,15 @@ const userControllers={
             }
     
             const hashedPassword = bcryptjs.hashSync(newPassword, 10);
+            if (!newPassword || newPassword.trim() === "") {
+              return res.render("users/change-password", {
+                errors: {
+                  password: {
+                    msg: "La nueva contraseña no puede estar vacía"
+                  }
+                }
+              });
+            }
     
             db.Users.update({ password: hashedPassword }, { where: { id: userId } })
               .then(() => {
@@ -172,7 +181,7 @@ const userControllers={
       
         if (!req.file) {
           return res.redirect('/users/profile');
-        }
+        } 
       
         db.Users.update ({
           avatars:req.file.filename,
@@ -190,7 +199,6 @@ const userControllers={
         });
       },
 
-    
     
     }
     

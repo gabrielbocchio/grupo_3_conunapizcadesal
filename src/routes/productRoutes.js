@@ -35,6 +35,7 @@ router.get('/productInfo/:id', productController.productInfo);
 
 // carrito
 router.get('/productCart', productController.carrito);
+router.post('/productCart', productController.processCarrito);
 
 // crear
 router.get('/crear-producto', productController.crearProducto);

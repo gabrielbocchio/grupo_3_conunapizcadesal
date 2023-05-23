@@ -1,16 +1,18 @@
 <%- include("../partials/head.ejs")%>
     <link rel="stylesheet" href="/css/styles-productDetail.css">
+    <script src="/js/productDetail.js"></script>
 </head>
 <body  class="main-body">
 
 <%- include("../partials/header.ejs")%>
 <main>
   <a href="/productDetail/productCart">
-    <div class="cart-container">
+    <div class="cart-container" id="carrito">
         <div class="cart-icon">
             <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">0</span>
+            <span class="cart-count" type="number">0</span>
           </div>
+          
     </div>
   </a>
   
@@ -23,159 +25,38 @@
   </ul>
 </div>
 
-  <!-- -------------- -->
-  <section class="productos">
-    <% if (productos.length > 0) { %>
-      <% productos.forEach(producto => { %>
-        <article class="articulo-producto">
-          <a href="/productDetail/productInfo/<%= producto.id %>" class="image-link"><img class="producto" src="/images/<%= producto.imagen %>" alt="producto"></a>
-          <p class="titulo"><%= producto.name %></p>
-          <p class="precio">$<%= producto.price %></p>
-          <a href="#">Agregar al carrito <i class="fa-solid fa-circle-plus"></i></a>
-          <div id="popupClasica" class="overlay">
-            <div class="popup-content">
-              <h3><%= producto.name %></h3>
-              <p><%= producto.description %></p>
-              <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
-            </div>
+<section class="productos" id="lista-productos">
+  <% if (productos.length > 0) { %>
+    <% productos.forEach(producto => { %>
+      <article class="articulo-producto" id="div-producto-gral">
+        <a href="#" class="image-link"><img class="producto" src="/images/<%= producto.imagen %>" alt="producto" id="imagen-producto"></a>
+        <p class="titulo"><%= producto.name %></p>
+        <p class="precio">$<%= producto.price %></p>
+        <a href="#" class="agregar-carrito" data-id="<%= producto.id %>">Agregar al carrito <i class="fa-solid fa-circle-plus"></i></a>
+        <div class="modal modal-producto">
+          <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            <h2><%= producto.name %></h2>
+            <p style="margin: 17px 0 17px 0"><%= producto.description %></p>
+            <h3 >€ <%= producto.price %></h3>
+            <p> <img src="/images/<%= producto.imagen %>" style="margin: 20px; width: 100%;"></p>
+            <div class="cantidad-container">
+              <label for="cantidad" style="margin-right: 10px">Cantidad:</label>
+							<button class="cantidad-btn minus-btn">-</button>
+							<input type="number" class="cantidad-input" value=1 min=1 max=10>
+							<button class="cantidad-btn plus-btn">+</button>
+						  </div>
+            <!-- cdad nueva -->
+            <button class="agregar-carrito-modal">Agregar al carrito</button>
           </div>
-        </article>
-      <% }) %>
-    <% } else { %>
-      <p>No se encontraron productos</p>
-    <% } %>
-  </section>
+        </div>
+      </article>
+    <% }) %>
+  <% } else { %>
+    <p>No se encontraron productos</p>
+  <% } %>
+</section>
   
-    
-    <!-- -------------- -->
-   <!--  <article class="articulo-producto">
-      <a href="#popupClasica" class="image-link"><img class="producto" src="images/Picada_Clasica.jpg" alt="producto"></a>
-      <p class="titulo"> Picada clasica 2/4</p>
-      <p class="precio"> $3500 </p>
-      <a href="#">Agregar al carrito <i class="fa-solid fa-circle-plus"></i></a>
-      <div id="popupClasica" class="overlay">
-        <div class="popup-content">
-          <h3> Picada clasica 2/4</h3>
-          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
-             queso pategras, queso gouda, salamin picado fino, leverwurst.<br>
-             Incluye tostaditas especiadas.
-          </p>
-          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
-        </div>
-      </div>
-    </article>
-    <article class="articulo-producto">
-      <a href="#popupBaires" class="image-link"><img class="producto" src="images/Picada_Baires.jpg" alt="producto"></a>
-      <p class="titulo"> Picada baires 2/4</p>
-      <p class="precio"> $3500 </p>
-      <a href="#">Agregar al carrito <i class="fa-solid fa-circle-plus"></i></a>
-      <div id="popupBaires" class="overlay">
-        <div class="popup-content">
-          <h3> Picada baires 2/4</h3>
-          <p> Jamon cocido, jamon crudo, salame tipo milano, <br>
-              queso pategras, queso con hierbas, queso azul, <br>
-              olivas verdes y negras.<br>
-              Incluye tostaditas especiadas.
-          </p>
-          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
-        </div>
-    </article>
-    <article class="articulo-producto">
-      <a href="#popup" class="image-link"><img class="producto" src="images/Picada_Especial.jpeg" alt="producto"></a>
-      <p class="titulo"> Picada especial 2/4</p>
-      <p class="precio"> $3500 </p>
-      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
-      <div id="popup" class="overlay">
-        <div class="popup-content">
-          <h3> Picada especial 2/4</h3>
-          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
-             pategras, queso gouda, queso ahumado, salamin picado fino, <br>
-             leverwurst.<br>
-             Incluye tostaditas especiadas.
-          </p>
-          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
-        </div>
-    </article>
-    <article class="articulo-producto">
-      <a href="#popupClasica" class="image-link"><img class="producto" src="images/Picada_Clasica.jpg" alt="producto"></a>
-      <p class="titulo"> Picada clasica 2/4</p>
-      <p class="precio"> $3500 </p>
-      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
-      <div id="popupClasica" class="overlay">
-        <div class="popup-content">
-          <h3> Picada clasica 2/4</h3>
-          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
-             pategras, queso gouda, salamin picado fino, leverwurst.<br>
-             Incluye tostaditas especiadas.
-          </p>
-          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
-        </div>
-      </div>
-    </article>
-    <article class="articulo-producto">
-      <a href="#popupBaires" class="image-link"><img class="producto" src="images/Picada_Baires.jpg" alt="producto"></a>
-      <p class="titulo"> Picada baires 2/4</p>
-      <p class="precio"> $3500 </p>
-      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
-      <div id="popupBaires" class="overlay">
-        <div class="popup-content">
-          <h3> Picada baires 2/4</h3>
-          <p> Jamon cocido, jamon crudo, salame tipo milano, <br>
-              queso pategras, queso con hierbas, queso azul, <br>
-              olivas verdes y negras.<br>
-              Incluye tostaditas especiadas.
-          </p>
-          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
-        </div>
-    </article>
-    <article class="articulo-producto">
-      <a href="#popupEspecial" class="image-link"><img class="producto" src="images/Picada_Especial.jpeg" alt="producto"></a>
-      <p class="titulo"> Picada especial 2/4</p>
-      <p class="precio"> $3500 </p>
-      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
-      <div id="popupEspecial" class="overlay">
-        <div class="popup-content">
-          <h3> Picada especial 2/4</h3>
-          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
-             pategras, queso gouda, queso ahumado, salamin picado fino, <br>
-             leverwurst.<br>
-             Incluye tostaditas especiadas.
-          </p>
-          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
-        </div>
-    </article>
-    <article class="articulo-producto">
-      <a href="#popupClasica" class="image-link"><img class="producto" src="images/Picada_Clasica.jpg" alt="producto"></a>
-      <p class="titulo"> Picada clasica 2/4</p>
-      <p class="precio"> $3500 </p>
-      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
-      <div id="popupClasica" class="overlay">
-        <div class="popup-content">
-          <h3> Picada clasica 2/4</h3>
-          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
-             pategras, queso gouda, salamin picado fino, leverwurst.<br>
-             Incluye tostaditas especiadas.
-          </p>
-          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
-        </div>
-      </div>
-    </article>
-    <article class="articulo-producto">
-      <a href="#popupClasica" class="image-link"><img class="producto" src="images/Picada_Clasica.jpg" alt="producto"></a>
-      <p class="titulo"> Picada clasica 2/4</p>
-      <p class="precio"> $3500 </p>
-      <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
-      <div id="popupClasica" class="overlay">
-        <div class="popup-content">
-          <h3> Picada clasica 2/4</h3>
-          <p>Jamon crudo, jamon cocido, bondiola, queso brie, <br> 
-             pategras, queso gouda, salamin picado fino, leverwurst.<br>
-             Incluye tostaditas especiadas.
-          </p>
-          <a href="#cerrar" class="close-link"><i class="fa-solid fa-xmark"></i></a>
-        </div>
-      </div>
-    </article> -->
   </section>
   <div class="finalizar-compra">
     <a href="/productDetail/productCart"><button class="boton-finalizar"> Ir al carrito</button></a>
@@ -183,12 +64,6 @@
   <div class="finalizar-compra">
     <a href="/productDetail/crear-producto"><button class="boton-finalizar"> AGREGAR PRODUCTOS (solo admin)</button></a>
   </div>
-<!--   <div class="finalizar-compra">
-    <a href="/productDetail/editar-producto"><button class="boton-finalizar"> EDITAR PRODUCTOS (solo admin)</button></a>
-  </div> -->
-<!--   <div class="finalizar-compra">
-    <a href="/productDetail/delete-producto"><button class="boton-finalizar"> ELIMINAR PRODUCTOS (solo admin)</button></a>
-  </div>  -->
   <div class="finalizar-compra">
     <a href="/productDetail/search-producto"><button class="boton-finalizar"> BUSCAR PRODUCTOS (solo admin)</button></a>
   </div>

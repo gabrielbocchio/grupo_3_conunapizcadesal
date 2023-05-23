@@ -112,14 +112,9 @@ Monserrat: textos secundarios. */
     font-size: var(--MF-button-nav);
     color:  var(--blanco);
     margin-right: 5px;
+    margin-top: 30px;
 }
 
-.burger-button{
-    color: var(--blanco);
-    padding: 10px 10px 10px 0;
-    text-align: center;
-    font-size: var(--MF-button-nav);
-}
 .main-nav{
     display: none;
     transition: 0.2s;
@@ -129,14 +124,14 @@ Monserrat: textos secundarios. */
     color: var(--blanco);
     padding: 8px;
     border-radius: 5px;
-
+    
 }
 .main-body{
     background: var(--negro);
     background: var(--gradiente);
 }
 .float{
-	position:fixed;
+    position:fixed;
 	width:60px;
 	bottom:10%;
     right:2.4%;
@@ -149,7 +144,66 @@ Monserrat: textos secundarios. */
     z-index:100;
 }
 .my-float{
-	margin-top:8px;
+    margin-top:8px;
+}
+
+.burger-button{
+    color: var(--blanco);
+/*     padding: 10px 10px 10px 0;
+    text-align: center; */
+    font-size: var(--MF-button-nav);
+    vertical-align: top;
+    width: 40px;
+    cursor: pointer;
+
+}
+.icono-menu{
+    margin: 40px 50px;
+    position: relative;
+    z-index: 10;
+}
+.cont-menu{
+    background-color: #2E8780;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    width: 150px;
+    height: 150px;
+    position:absolute;
+    top: 85px;
+    right: 20px;
+    display: none; 
+    z-index: 5; 
+    transition: all .5 ease; 
+
+}
+.active{
+    display: block; 
+    z-index: 15;
+}
+
+.opacity{
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all .5 ease;
+    z-index: 4; 
+}
+
+.cont-menu ul{
+    padding: 12px 12px 15px 12px;
+    list-style: none;
+}
+.cont-menu ul li a{
+    color: white;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 6px 9px;
+    cursor:pointer;
+    text-align: center
+    
+}
+.cont-menu ul li:hover{
+    background-color: rgb(118, 196, 179);
+    color: rgb(42,42,42);
 }
 
 /* ------------------------------------ */
@@ -208,9 +262,9 @@ Monserrat: textos secundarios. */
     box-shadow: 2px 2px 8px var(--verde-nav-footer);
 
 }
-.button:hover {
+ .button:hover {
     cursor: pointer;
-  }
+  } 
 .photo-area{
     width: 90%;
     margin: auto;
@@ -392,12 +446,12 @@ Monserrat: textos secundarios. */
         font-size: 30px;
         margin-right: 5px;
     }
-    .burger-button{
+     .burger-button{
         color: var(--blanco);
         padding: 10px;
         text-align: center;
         font-size: 30px;
-    }
+    } 
     .logo-title1{
         font-size: var(--title-nav-576px);
     }
@@ -481,7 +535,9 @@ Monserrat: textos secundarios. */
     .usuario{
         display: flex;
     }
-    
+    .cont-menu{
+        display: none;
+    }
     .burger-button{
         display: none;
     }

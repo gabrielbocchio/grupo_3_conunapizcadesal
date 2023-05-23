@@ -4,6 +4,7 @@ const productosFilePath = path.join(__dirname, "../database/productos.json");
 let db= require ("../database/models");
 const Op = db.Sequelize.Op;
 
+
 const productos={
 /* ---------------------------------------------------------------- */
 // main de producto (productDetail), muestra todo el listado de productos desde el json
@@ -36,8 +37,18 @@ const productos={
 /* ---------------------------------------------------------------- */
 // carrito
     carrito: (req, res) => {
-        return res.render("product/productCart");
+       db.Product.findAll()
+          .then (function(productos){
+              res.render ("product/productCart", {productos:productos})
+          }) 
     },
+    processCarrito: (req, res) => {
+      db.Product.findAll()
+         .then (function(productos){
+             res.render ("product/productCart", {productos:productos})
+         }) 
+   },
+
 /* ---------------------------------------------------------------- */
 // crear
     // simplemente renderiza la pagina de creacion de producto
