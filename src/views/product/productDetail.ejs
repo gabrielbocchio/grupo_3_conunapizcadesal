@@ -50,6 +50,7 @@
             <button class="agregar-carrito-modal">Agregar al carrito</button>
           </div>
         </div>
+        <a href ="/productDetail/productInfo/<%= producto.id%> "><i class="fa-solid fa-pen-to-square"></i></a>
       </article>
     <% }) %>
   <% } else { %>
@@ -57,16 +58,17 @@
   <% } %>
 </section>
   
-  </section>
-  <div class="finalizar-compra">
-    <a href="/productDetail/productCart"><button class="boton-finalizar"> Ir al carrito</button></a>
-  </div>
+<div class="finalizar-compra">
+  <a href="/productDetail/productCart"><button class="boton-finalizar"> Ir al carrito</button></a>
+</div>
+<div style="display:flex ; justify-content:center">
   <div class="finalizar-compra">
     <a href="/productDetail/crear-producto"><button class="boton-finalizar"> AGREGAR PRODUCTOS (solo admin)</button></a>
   </div>
   <div class="finalizar-compra">
     <a href="/productDetail/search-producto"><button class="boton-finalizar"> BUSCAR PRODUCTOS (solo admin)</button></a>
   </div>
+</div>
 </main>
 <%- include("../partials/footer.ejs")%>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

@@ -28,15 +28,13 @@
         <p class="titulo"><%= comida.name %></p>
         <p class="precio">$<%= comida.price %></p>
         <p class="titulo"><%= comida.description %></p>
-        <a href="#">Agregar al carrito<i class="fa-solid fa-circle-plus"></i></a>
+        
+        
       </article>
 
 </section>
 
-<div class="finalizar-compra">
-    <a href="/productDetail/productCart"><button class="boton-finalizar"> Ir al carrito</button></a>
-  </div>
-
+<div style="display:flex ; justify-content:center">
   <div class="finalizar-compra">
     <a href="/productDetail"><button class="boton-finalizar"> Volver a los productos </button></a>
   </div>
@@ -53,7 +51,7 @@
       <a href="/productDetail/editar-producto/<%= comida.id %>" class="boton-finalizar">EDITAR PRODUCTO</a>
     </div>
   </form>
-
+</div>
 <%- include("../partials/footer.ejs")%>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
       <a href="https://api.whatsapp.com/send?phone=1168355475&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20productos%20." class="float" target="_blank">

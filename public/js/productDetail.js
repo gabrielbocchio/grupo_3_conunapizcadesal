@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
             productos.forEach(producto => {
               html += "<div class='compra-producto' data-producto-id='" + producto.id + "'>";
               html += "<div class='detalle-producto'>";
-              html += "<a class='close-link'><i class='fa-solid fa-xmark'></i></a>";
+              html += "<a class='close-link' style= 'font-size: 40px' ><i class='fa-solid fa-xmark'></i></a>";
               html += "<img class='producto-img' src='/images/" + producto.foto + "' alt='producto'>";
               html += "<p style='margin: 0 20% 0 10px'>" + producto.nombre + "</p>";
               html += "<div class='detalle-producto-precio'>";
