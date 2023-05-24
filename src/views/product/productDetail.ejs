@@ -50,24 +50,31 @@
             <button class="agregar-carrito-modal">Agregar al carrito</button>
           </div>
         </div>
-        <a href ="/productDetail/productInfo/<%= producto.id%> "><i class="fa-solid fa-pen-to-square"></i></a>
+        <% if (locals.userLogged && locals.userLogged.email == "admin@admin.com") { %>
+          <a href="/productDetail/productInfo/<%= producto.id %>"><i class="fa-solid fa-pen-to-square"></i></a>
+        <% } %>
+        
       </article>
-    <% }) %>
-  <% } else { %>
+      <% }) %>
+      <% } else { %>
     <p>No se encontraron productos</p>
   <% } %>
 </section>
-  
+
 <div class="finalizar-compra">
   <a href="/productDetail/productCart"><button class="boton-finalizar"> Ir al carrito</button></a>
 </div>
 <div style="display:flex ; justify-content:center">
   <div class="finalizar-compra">
+    <% if (locals.userLogged && locals.userLogged.email == "admin@admin.com") { %>
     <a href="/productDetail/crear-producto"><button class="boton-finalizar"> AGREGAR PRODUCTOS (solo admin)</button></a>
   </div>
+  <% } %>
   <div class="finalizar-compra">
+    <% if (locals.userLogged && locals.userLogged.email == "admin@admin.com") { %>
     <a href="/productDetail/search-producto"><button class="boton-finalizar"> BUSCAR PRODUCTOS (solo admin)</button></a>
   </div>
+  <% } %>
 </div>
 </main>
 <%- include("../partials/footer.ejs")%>

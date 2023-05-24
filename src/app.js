@@ -5,8 +5,9 @@ const session = require("express-session");
 const path = require ('path')
 const methodOverride = require("method-override");
 const publicPath = path.resolve(__dirname, '../public');
-const cookies = require("cookie-parser")
-const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware")
+const cookies = require("cookie-parser");
+const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+
 
 app.use(session({
     secret: "Shh",
@@ -15,6 +16,7 @@ app.use(session({
 }));
 app.use(cookies());
 app.use(userLoggedMiddleware);
+
 app.use(express.urlencoded({ extended:false }));
 app.use(express.json());
 app.use(express.static(publicPath));
