@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
             productos.forEach(producto => {
               html += "<div class='compra-producto' data-producto-id='" + producto.id + "'>";
               html += "<div class='detalle-producto'>";
-              html += "<a class='close-link' style='font-size: 20px'><i class='fa-solid fa-xmark'></i></a>";
+              html += "<a class='close-link' style= 'font-size: 25px' ><i class='fa-solid fa-xmark'></i></a>";
               html += "<img class='producto-img' src='/images/" + producto.foto + "' alt='producto'>";
               html += "<p style='margin: 0 20% 0 10px'>" + producto.nombre + "</p>";
               html += "<div class='detalle-producto-precio'>";
@@ -148,8 +148,10 @@ document.addEventListener('DOMContentLoaded', function() {
           const botonCerrarProducto = document.querySelectorAll(".close-link");
             botonCerrarProducto.forEach(function(boton) {
               boton.addEventListener("click", function() {
-                // aca hay que encontrar la forma de pasarle por key el que corresponda.. seguro va closest y bue, encontrarle el nombre de la key que pertenece
-                localStorage.removeItem("producto-pizza");
+                const compraProducto = boton.closest(".compra-producto");
+                const nombreProducto = compraProducto.querySelector("p").textContent;
+
+                localStorage.removeItem("producto-" + nombreProducto);
                 location.reload();
               });
             });
