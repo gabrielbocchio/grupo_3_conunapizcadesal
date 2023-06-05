@@ -20,6 +20,7 @@ const userControllers={
         });
       }
   
+      //ver dsi esto va aca 
       db.Users.findOne({ where: { email: req.body.email } })
         .then((userInDB) => {
           if (userInDB) {
@@ -80,6 +81,7 @@ const userControllers={
         
                   if (req.body.remember_user) {
                     res.cookie("userEmail", req.body.email, { maxAge: (1000 * 60) * 10 })
+                    
                   }
         
                   return res.redirect('/');

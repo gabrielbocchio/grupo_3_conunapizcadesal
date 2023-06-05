@@ -1,5 +1,6 @@
 <%- include("../partials/head.ejs")%>
 <link rel="stylesheet" href="/css/styles-editar-productos.css">
+<script src="/js/editproductValidations.js"></script>
 </head>
 <body>
 <%- include("../partials/header.ejs")%>
@@ -12,12 +13,14 @@
 
 <h1>Editar <%= product.name  %></h1>
 <article class="articulo-producto"></article>
-<form action="/productDetail/editar-producto/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+<form id="formulario" class="editar" action="/productDetail/editar-producto/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="_method" value="PUT">
     
-    <p class="titulo">Nombre :<input type="text" name="name" value="<%= product.name %>"></p>
+    <p class="titulo">Nombre :<input id="name" type="text" name="name" value="<%= product.name %>"></p>
+    <div id="nameError" class="text-danger"></div>
 
-    <p class="precio">Precio : $<input type="number" name="price" value="<%= product.price %>"></p>
+    <p class="precio">Precio : $<input id="price" type="number" name="price" value="<%= product.price %>"></p>
+    <div id="priceError" class="text-danger"></div>
 
     <select  class="form-select" id="category" name="categoryId" required>
         <% for (let i =0; i< category.length; i ++) { %>
@@ -31,12 +34,14 @@
             <%}%>                    
     <% } %>
       </select>
-    </p>
-    <p class="descripcion">Descripcion : <input type="text" name="description" value="<%= product.description %>"></p>
+    
+    <p class="descripcion">Descripcion : <input id="description" type="text" name="description" value="<%= product.description %>"></p>
+    <div id="descriptionError" class="text-danger"></div>
 
-    <p class="imagen"><input type="file" name="imagen" value="<%= product.imagen %>"></p>
+    <p class="imagen"><input id="imagen" type="file" name="imagen" value="<%= product.imagen %>"></p>
+    <div id="imagenError" class="text-danger"></div>
 
-    <input type="submit" value="EDIT">
+    <input class="button" type="submit" value="EDIT">
 </form>
 </article>
 </body>

@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.4.27-MariaDB, for Win64 (AMD64)
 --
--- Host: 127.0.0.1    Database: pizca_db
+-- Host: 127.0.0.1    Database: pizca_db2
 -- ------------------------------------------------------
 -- Server version	10.4.27-MariaDB
 
@@ -113,7 +113,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `products_ibfk_1` (`categoryId`),
   CONSTRAINT `products_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +122,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (24,'Una heladera','asddsarr',21354,'imagen-1682098584774.jpg',3,NULL),(25,'una cosa','asdasd',234,'imagen-1682157366976.jpg',2,NULL);
+INSERT INTO `products` VALUES (1,'Pizza jamón y morrones ','Pizza invividual de jamon cocido y morrones',1000,'imagen-1685137379357.JPG',4,NULL),(2,'Tarta','Tarta individual de cebolla y queso. Masa 100% casera, sin conservantes. ',1000,'imagen-1685998679243.JPG',2,NULL),(3,'Bondiola braseada ','Bondiola braseada con cerveza negra y barbacoa. Acompañada de figacitas de manteca y queso crema con verdeo. ',2000,'imagen-1685999314814.jpg',3,NULL),(4,'Picada especial 4/8','Picada especial 4/8. \r\nJamon cocido, jamon crudo, bondiola, lomito con hierbas, queso brie, queso danbo, queso pategras, salamin picado fino, leverwurst, olivas verdes y negras. Incluye tostaditas con oregano y aji molido',6200,'imagen-1685137578431.JPG',1,NULL),(41,'Tarta','tarta',1000,'imagen-1685999468280.JPG',1,NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,7 +142,7 @@ CREATE TABLE `users` (
   `avatars` blob DEFAULT NULL,
   `address` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +151,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'','gata','','$2a$10$XixjYsS1K/y8eYKUoyYuHesJZ3arF6cUpqZOWB3es1eqTT1P6RXe.','',NULL),(2,'','gata','tabita@gmail.com','$2a$10$NFzcC.GVP83.Uy2KBKnAreiCk4o0w.vc0nCAkXNfGt2Kh8U7a3Z7.','',NULL),(3,'luz','isabela','luz@gmail.com','$2a$10$BXMbsxuQXZH0.gqiuxxyPuw/0ccUZz6uGgg2tjmiMTYppsFFNpgWu','',NULL),(4,'biribiri','sarasa','biribiri@gmail.com','$2a$10$mPgbdcdyB89CYgvM32wyLed8TKg6GHnI.0ZG5twX0tHsVQD/B3iAy','',NULL),(5,'sarasa','biri','sarasita@gmail.com','$2a$10$ofAcO9peM9RBl7syOHhW.OMpAW7NTz3po4JITXB9U.GBSxkGcXQ36','',NULL),(6,'pinocho','pino','pinocho@gmail.com','$2a$10$3WlNmvAfSK7peWgSCMuWSObK6WBQv1.855/9ORy4Wax8fscGmfTWW','',NULL),(7,'juancito','perez','juancito@gmail.com','$2a$10$M5O4nHMdFM0wmj6Gv72zbecpwMdjlr5YFAgrSdCRfvVIfEnC31xuq','',NULL),(8,'silla','mesa','silla@gmail.com','$2a$10$uP1LQkaog9vOE0.9UyexGe5lAPD9VROjMGFQ5xKfguuVm1umc3Xli','avatars-1681482822461.jpg',NULL),(9,'Leandro','Miguel','leabocchio@gmail.com','$2a$10$M3F2Xc5ttiFmuxkJBuFnReGYlqdXkWKHGRPAh.TicbX0Rqj1Oinnu','avatars-1681557819384.jpg',NULL),(10,'nina','nina','nina@gmail.com','$2a$10$RLuA8K64Pu3rV8T3msXTpu9Y.25yUPVYvlKbjkp7W7JvXXyxa1xXK','avatars-1681666964332.png',NULL),(11,'gabriel','gabriel','gabriel@gmail.com','$2a$10$H6NZtS961NQXF.6H/9TNXOvPHRXnW4nBRmbm/PKuvhrdiA0SWTQhC','avatars-1681672074094.jpg',NULL),(12,'grano','grak','grano@gmail.com','$2a$10$fo3led4XDRJYaI1U5Ra7Ae/c76Nwx.YqtADpdLykq7I19WnYBiWry','avatars-1681673077886.jpg',NULL),(13,'cortina','cort','cortina@gmail.com','$2a$10$F4Ls1ksubsRRqGKGMNV4b.gFdnbVW5.ShySYJz1JoiuEKeuIgVJLe','avatars-1681683644731.jpg',NULL),(14,'rata','rata','rata@gmail.com','$2a$10$PS726lrLNjIjnuMrK1G.eOANP3saOuhkD4a/jqF.lkgBMyxdXEyV6','avatars-1681726514948.JPG',NULL),(15,'roma','roma','roma@gmail.com','$2a$10$5SmAzhKaYPKiGLVNK2D.wur2.0qV54V5M/a1iE8.as1iJxv3S17Ja','avatars-1681831654739.jpg',NULL),(16,'pad','pad','pad@a.com','$2a$10$rTZR08kfLEMz9Cz8p9ARVORKtb/jSJBHbnGb4MYaChlwe.izCZt.i','avatars-1682157077687.png',NULL),(17,'pepepe','pepepe','pepepe@a.com','$2a$10$3W2sFgluvWJRUEjnbrG6S.9VcS2Pfpw4X2AJfQmFhTA22fhGekaBS','avatars-1682179337726.png',NULL);
+INSERT INTO `users` VALUES (1,'Admin','Admin','admin@admin.com','$2a$10$nfkFcNQJvQUDYkX1/c9tU.kUSZCP/nqzRRX.gswDnGGyHoWlLjfk.','avatars-1685999600960.png',NULL),(2,'Prueba','Prueba','prueba@prueba.com','$2a$10$JjkN.D3ySRuUX06xRA/1Zeo1GGDjM3v5MpZzTFT2ANmByvb3veXdG','avatars-1685136798070.jpg',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -164,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-25  3:26:57
+-- Dump completed on 2023-06-05 18:15:06

@@ -195,6 +195,12 @@ body {
 	font-family: Arial, sans-serif;
 	background-color: #f2f2f2;
 }
+.text-danger{
+    padding: 2px;
+    text-align: center;
+    color: rgb(224, 47, 47)
+
+}
 
 h1 {
 	text-align: center;
