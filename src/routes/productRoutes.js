@@ -3,7 +3,8 @@ const express = require('express');
 const router = express.Router();
 const path = require("path");
 const multer = require("multer");
-const adminMiddleware = require("../middlewares/adminMiddleware")
+const adminMiddleware = require("../middlewares/adminMiddleware");
+let db= require ("../database/models");
 
 // ************ Controller Require ************
 const storage = multer.diskStorage({
@@ -27,6 +28,41 @@ router.get('/search-producto/:search?', adminMiddleware, productController.busca
 
 // todos los productos (productDetail)
 router.get('/',productController.produ);
+
+//API
+router.get("/api/products", (req, res) => {
+    db.Product.findAll()
+        .then(products => res.json(products))
+        .catch(error => {
+            res.status(500).json({ error: 'Ha ocurrido un error, intente nuevamente' });
+        });
+});
+//API
+router.get("/api/category", (req, res) => {
+    db.Category.findAll()
+        .then(categories => res.json(categories))
+        .catch(error => {
+            res.status(500).json({ error: 'Ha ocurrido un error, intente nuevamente' });
+        });
+});
+
+
+// api parametrizada
+router.get("/api/products/:id", (req, res) => {
+    const productId = req.params.id;
+
+    db.Product.findByPk(productId)
+        .then(product => {
+            if (product) {
+                res.json(product);
+            } else {
+                res.status(404).json({ error: 'Producto no encontrado' });
+            }
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Ha ocurrido un error, intente nuevamente' });
+        });
+});
 
 //filtro x categoria
 router.get('/detalle/:category', productController.produCategoria);
