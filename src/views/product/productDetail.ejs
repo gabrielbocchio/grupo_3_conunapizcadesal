@@ -34,21 +34,21 @@
         <p class="precio">$<%= producto.price %></p>
         <a href="#" class="agregar-carrito" data-id="<%= producto.id %>">Agregar al carrito <i class="fa-solid fa-circle-plus"></i></a>
         <div class="modal modal-producto">
-          <div class="modal-contenido">
-            <span class="cerrar">&times;</span>
-            <h2><%= producto.name %></h2>
-            <p style="margin: 17px 0 17px 0"><%= producto.description %></p>
-            <h3 >€ <%= producto.price %></h3>
-            <p> <img src="/images/<%= producto.imagen %>" style="margin: 20px; width: 100%;"></p>
-            <div class="cantidad-container">
-              <label for="cantidad" style="margin-right: 10px">Cantidad:</label>
-							<button class="cantidad-btn minus-btn">-</button>
-							<input type="number" class="cantidad-input" value=1 min=1 max=10>
-							<button class="cantidad-btn plus-btn">+</button>
-						  </div>
+                          <div class="modal-contenido">
+                            <span class="cerrar">&times;</span>
+                            <h2><%= producto.name %></h2>
+                            <p style="margin: 17px 0 17px 0"><%= producto.description %></p>
+                            <h3 >€ <%= producto.price %></h3>
+                            <p> <img src="/images/<%= producto.imagen %>" style="margin: 20px; width: 100%;"></p>
+                            <div class="cantidad-container">
+                              <label for="cantidad" style="margin-right: 10px">Cantidad:</label>
+                              <button class="cantidad-btn minus-btn">-</button>
+                              <input type="number" class="cantidad-input" value=1 min=1 max=10>
+                              <button class="cantidad-btn plus-btn">+</button>
+                              </div>
             <!-- cdad nueva -->
-            <button class="agregar-carrito-modal">Agregar al carrito</button>
-          </div>
+                            <button class="agregar-carrito-modal">Agregar al carrito</button>
+                          </div>
         </div>
         <% if (locals.userLogged && locals.userLogged.email == "admin@admin.com") { %>
           <a href="/productDetail/productInfo/<%= producto.id %>"><i class="fa-solid fa-pen-to-square"></i></a>
