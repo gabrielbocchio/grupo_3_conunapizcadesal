@@ -122,7 +122,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Pizza jamón y morrones ','Pizza invividual de jamon cocido y morrones',1000,'imagen-1685137379357.JPG',4,NULL),(2,'Tarta','Tarta individual de cebolla y queso. Masa 100% casera, sin conservantes. ',1000,'imagen-1685998679243.JPG',2,NULL),(3,'Bondiola braseada ','Bondiola braseada con cerveza negra y barbacoa. Acompañada de figacitas de manteca y queso crema con verdeo. ',2000,'imagen-1685999314814.jpg',3,NULL),(4,'Picada especial 4/8','Picada especial 4/8. \r\nJamon cocido, jamon crudo, bondiola, lomito con hierbas, queso brie, queso danbo, queso pategras, salamin picado fino, leverwurst, olivas verdes y negras. Incluye tostaditas con oregano y aji molido',6200,'imagen-1685137578431.JPG',1,NULL),(41,'Tarta','tarta',1000,'imagen-1685999468280.JPG',1,NULL);
+INSERT INTO `products` VALUES (1,'Pizza jamón y morrones ','Pizza invividual de jamon cocido y morrones',1000,'imagen-1685137379357.JPG',4,NULL),(2,'Tarta','Tarta individual de cebolla y queso. Masa 100% casera, sin conservantes. ',1000,'imagen-1685998679243.JPG',2,NULL),(3,'Bondiola braseada ','Bondiola braseada con cerveza negra y barbacoa. Acompañada de figacitas de manteca y queso crema con verdeo. ',2000,'imagen-1685999314814.jpg',3,NULL),(4,'Picada especial 4/8','Picada especial 4/8. \r\nJamon cocido, jamon crudo, bondiola, lomito con hierbas, queso brie, queso danbo, queso pategras, salamin picado fino, leverwurst, olivas verdes y negras. Incluye tostaditas con oregano y aji molido',6200,'imagen-1685137578431.JPG',1,NULL);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
