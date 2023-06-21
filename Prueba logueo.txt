@@ -1,0 +1,19 @@
+/* Usuario Admin */
+
+email:
+admin@admin.com
+
+contraseña:
+admin
+
+
+/* Usuario Invitado */
+
+email:
+prueba@prueba.com
+
+contraseña:
+prueba
+
+
+

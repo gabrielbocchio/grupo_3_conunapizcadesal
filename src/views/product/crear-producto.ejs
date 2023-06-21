@@ -1,12 +1,14 @@
 <%- include("../partials/head.ejs")%>
 	<link rel="stylesheet" href="/css/styles-crear-productos.css">
+	<script src="/js/validationsProduct.js"></script>
 </head>
 <body>
 <%- include("../partials/header.ejs")%>
  	<h1>Crear Producto</h1>
-	<form method="POST" action="/productDetail" enctype="multipart/form-data">
+	<form id="formulario" method="POST" action="/productDetail" enctype="multipart/form-data">
 		<label for="name">Nombre:</label>
-		<input type="text" name="name">
+		<input id="name" type="text" name="name">
+		<div id="nameError" class="text-danger"></div>
 
 		<label for="categoria">Categoria:</label>
 		<br>
@@ -19,15 +21,18 @@
  	</select>
 		<br>
 		<label for="description">Descripción:</label>
-		<textarea  name="description"></textarea>
+		<textarea  id= "description" name="description"></textarea>
+		<div id="descriptionError" class="text-danger"></div>
 		
 		<label for="price">Precio:</label>
-		<input type="number" name="price">
+		<input  id="price" type="number" name="price">
+		<div id="priceError" class="text-danger"></div>
  		
  		<label for="imagen">Imagen:</label>
-		<input type="file" name="imagen">
+		<input id="imagen" type="file" name="imagen">
+		<div id="imagenError" class="text-danger"></div>
 
-		<input type="submit" value="Crear Producto">
+		<input type="submit" class="button" value="Crear Producto">
 	</form>
 </body>
 <%- include("../partials/footer.ejs")%>
