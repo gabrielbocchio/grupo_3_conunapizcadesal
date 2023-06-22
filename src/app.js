@@ -7,6 +7,7 @@ const methodOverride = require("method-override");
 const publicPath = path.resolve(__dirname, '../public');
 const cookies = require("cookie-parser");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+const cors = require('cors');
 
 
 app.use(session({
@@ -16,7 +17,7 @@ app.use(session({
 }));
 app.use(cookies());
 app.use(userLoggedMiddleware);
-
+app.use(cors());
 app.use(express.urlencoded({ extended:false }));
 app.use(express.json());
 app.use(express.static(publicPath));
