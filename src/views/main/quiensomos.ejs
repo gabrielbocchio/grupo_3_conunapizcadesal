@@ -1,35 +1,41 @@
 <%- include("../partials/head.ejs")%>
-	<link rel="stylesheet" href="/css/styles-quiensomos.css">
-</head>
-<body>
-<%- include("../partials/header.ejs")%>
-<main class="main">
-    <section class="about about--us">
-        <h2 class="about__title">Sobre Nosotros</h2>
-        <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus earum obcaecati est consequatur et laborum unde molestias velit! Quod, sequi est? Nostrum neque sequi, magnam recusandae modi itaque adipisci animi.</p>
-        <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus dolorem excepturi est nemo placeat quos, obcaecati, possimus architecto nam expedita illo pariatur quasi quibusdam porro sit ducimus illum voluptates dolorum!</p>
-        <h2 class="about__title">Nuestra historia</h2>
-        <p class="about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus earum obcaecati est consequatur et laborum unde molestias velit! Quod, sequi est? Nostrum neque sequi, magnam recusandae modi itaque adipisci animi.</p>
-    </section>
-    <section class="values our--values">
-        <h2 class="values__title">Nuestros Valores</h2>
-        <ul class="values__list">
-        <li class="values__item">sarosa</li>
-        <li class="values__item">sarisa</li>
-        <li class="values__item">saresa</li>
-        </ul>
-    </section>
-    <section class="team meet--the--team">
-        <h2 class="team__title">Conoce a nuestro chef</h2>
-        <ul class="team__list">
-            <li class="team__member">
-                <img class="team__member-image" src="img/team-member-1.jpg" alt="Equipo 1">
-                <h3 class="team__member-name">Nombre del miembro del equipo 1</h3>
-                <p class="team__member-position">Cargo del miembro del equipo 1</p>
-            </li>
-        </ul>
-    </section>
-</main>
-</body>
-<%- include("../partials/footer.ejs")%>
-</html>
+    <link rel="stylesheet" href="/css/styles-quiensomos.css">
+    </head>
+
+    <body>
+        <%- include("../partials/header.ejs")%>
+            <main class="main">
+                <div class="custom-nosotros">
+                    <section class="about">
+                        <div>   
+                        <h2 class="about__title">¡Bienvenido a "Con una pizca de sal"!</h2>
+                        <p class="about__text"></br>
+
+                            En "Con una pizca de sal", nuestra pasión por la comida se refleja en cada plato que preparamos y en cada servicio que brindamos. </br>
+                            Nuestro equipo está compuesto por apasionados chefs y expertos en gastronomía que se esfuerzan por ofrecerte platos exquisitos y de alta calidad. </br>
+                            Nos esforzamos por brindarte un servicio excepcional, desde el momento en que realizas tu pedido hasta que recibes tus alimentos en la comodidad de tu hogar.</br>
+                            Gracias por elegir "Con una pizca de sal". Esperamos que disfrutes de una experiencia gastronómica única y que te unas a nosotros en este apasionante viaje culinario.
+                            </p>
+                    </section>
+                </br>
+                    <section class="values">
+                        <h2 class="values__title">Nuestros Valores</h2></br>
+                         <p>
+                            <strong>Calidad</strong></br>Brindar alimentos de alta calidad utilizando ingredientes frescos y seleccionados, garantizando estándares de preparación.</br>
+                            <strong>Sabor</strong></br> Ofrecer platos  deliciosos y sabrosos, cuidando la combinación de ingredientes y la técnica culinaria para proporcionar una experiencia gastronómica excepcional.</br>
+                            <strong>Servicio al cliente</strong></br> Priorizar la atención al cliente, brindando un trato amable, eficiente y personalizado.</br>
+                            <strong>Pasion por la gastronomía</strong></br> Transmitir la pasión por la comida y la bebida, mostrando entusiasmo por los sabores, los ingredientes y la cultura culinaria, tanto dentro del equipo de trabajo como hacia los clientes.
+                         </p>
+                    </section>
+                </div>
+                <div class="custom-foto-equipo">
+                    <section class="fotoEquipo">
+                        <img  src="images/fotoChef.jpg" alt="Equipo 1">
+                    </section>
+                </div>
+                </div>
+            </main>
+    </body>
+    <%- include("../partials/footer.ejs")%>
+
+        </html>

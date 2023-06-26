@@ -695,9 +695,19 @@ Monserrat: textos secundarios. */
     .mensaje-usuario {
         display: flex;
         justify-content: center;
+        align-items: center;
         background-color: var(--rojo);
-        padding: 7px 0 7px 0;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        max-width: 420px; /* Cambia el valor según tu preferencia */
+        margin: 0 auto; /* Centra horizontalmente el contenedor */
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
+    
+    
 
     .mensaje-usuario a {
         text-decoration: none;

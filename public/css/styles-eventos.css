@@ -112,9 +112,8 @@ Monserrat: textos secundarios. */
     font-size: var(--MF-button-nav);
     color:  var(--blanco);
     margin-right: 5px;
+    margin-top: 30px;
 }
-
-
 .burger-button{
     color: var(--blanco);
 /*     padding: 10px 10px 10px 0;
@@ -194,21 +193,32 @@ Monserrat: textos secundarios. */
                 /*MAIN*/
 /* ------------------------------------ */
 
-/* -- CARRITO AL CUAL SE PUSHEAN ARTICULOS */
-
-.main-cart {
-   /* max-width: 80%; */
-   margin: auto;
-   padding-bottom: 50px;
-   
-   /* border: 1px green dashed; */
-}
-
-.evento-imagen img {
+.evento-imagen img{
     width: 100%;
-    
+    margin-top: 5px;
+    margin-bottom: 1px;
+ 
 }
-
+.texto {
+    text-align: center;
+    background-color: #FAA916;
+    color: white;
+    margin-bottom: 2px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.texto h2 {
+    font-size: 20px;
+    padding: 5px;
+}
+.texto h3 {
+    font-size: 15px;
+    padding: 5px;
+}
+.texto p {
+    font-size: 13px;
+    padding: 5px;
+}
 
 /* ------------------------------------ */
                 /*FOOTER*/
@@ -308,12 +318,12 @@ Monserrat: textos secundarios. */
         font-size: 30px;
         margin-right: 5px;
     }
-    .burger-button{
+/*     .burger-button{
         color: var(--blanco);
         padding: 10px;
         text-align: center;
         font-size: 30px;
-    }
+    } */
     .logo-title1{
         font-size: var(--title-nav-576px);
     }
@@ -347,67 +357,88 @@ Monserrat: textos secundarios. */
 /* ------------------------------------ */
                 /*HEADER*/
 /* ------------------------------------ */
-    .main-header{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:flex-start;
-        padding: 20px;
-    }
-    .main-logo{
-        justify-content: space-between;
-        width: 100%;
-    }
-    .logo-title1 ,.logo-title2{
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .logo-title1{
-        font-size: var(--title-nav-768px);
-    }
-    .logo-title2{
-        font-size:var(--title2-nav-768px) ;
-    }
+.main-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    padding: 20px;
+}
+.main-logo{
+    justify-content: space-between;
+    width: 100%;
+}
+.logo-title1 ,.logo-title2{
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo-title1{
+    font-size: var(--title-nav-768px);
+}
+.logo-title2{
+    font-size:var(--title2-nav-768px) ;
+}
 
-    .usuario{
-        display: flex;
-    }
-    .cont-menu{
-        display: none;
-    }
-    
-    .burger-button{
-        display: none;
-    }
-    .nav-iconos{
-        display: flex;
-    }
-    .nav-iconos a {
-        font-size: 30px;
-        padding: 10px;
-        text-align: center;
-        font-size: 20px;
-    }
-    .main-nav{
-        width: 100%;
-        display: flex;
-    }
-    .navbar{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        list-style: none;
-        margin-top: 10px;
-    }
-    .navbar a{
-        color:var( --blanco);
-        text-decoration:none;
-        font-size: 14px;
-    } 
+.usuario{
+    display: flex;
+}
+.cont-menu{
+    display: none;
+}
+.burger-button{
+    display: none;
+}
+.nav-iconos{
+    display: flex;
+}
+.nav-iconos a {
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.main-nav{
+    width: 100%;
+    display: flex;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-top: 10px;
+}
+.navbar a{
+    color:var( --blanco);
+    text-decoration:none;
+    font-size: 14px;
+} 
 
  /* ------------------------------------ */
                 /*Main*/
 /* ------------------------------------ */
-
+.evento-imagen img{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 1px;
+ 
+}
+.texto {
+    text-align: center;
+    background-color: #FAA916;
+    color: white;
+}
+.texto h2 {
+    font-size: 22px;
+    padding: 5px;
+}
+.texto h3 {
+    font-size: 18px;
+    padding: 5px;
+}
+.texto p {
+    font-size: 15px;
+    padding: 5px;
+}
 
 /* ------------------------------------ */
                 /*FOOTER*/
@@ -463,11 +494,35 @@ Monserrat: textos secundarios. */
                     /*MAIN*/
     /* ------------------------------------ */
 
-    
+    .contacto-imagen img {
+        width: 100%;
+    }
 /* ------------------------------------ */
                 /*Main*/
 /* ------------------------------------ */
-
+.evento-imagen img{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 1px;
+ 
+}
+.texto {
+    text-align: center;
+    background-color: #FAA916;
+    color: white;
+}
+.texto h2 {
+    font-size: 25px;
+    padding: 5px;
+}
+.texto h3 {
+    font-size: 20px;
+    padding: 5px;
+}
+.texto p {
+    font-size: 18px;
+    padding: 5px;
+}
 }
 @media(min-width: 1200px) {
 /* ------------------------------------ */

@@ -195,13 +195,115 @@ Monserrat: textos secundarios. */
 
 /* -- CARRITO AL CUAL SE PUSHEAN ARTICULOS */
 
-.main-cart {
-   /* max-width: 80%; */
-   margin: auto;
-   padding-bottom: 50px;
-   
-   /* border: 1px green dashed; */
+
+.container-total-contacto{
+    /* display: flex; */
+   /*  justify-content: space-between; */
+    height: 120%;
+    /* margin-top: 10px; */
+    margin-bottom: 10px;
+    background-color: #FAA916;
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
 }
+.custom-contact-text{
+    width: 100%;
+    text-align: center;
+    /* margin-top: 50px; */
+    margin-top: 10px;
+    /* margin-left: 20px; */
+    
+
+}
+
+.custom-contact-text h3{
+    font-size: 40px;
+    color: white;
+    
+
+}
+.custom-contact-text p{
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-weight:600;
+    justify-content: center;
+    
+    
+
+}
+.custom-contact-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .custom-form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .custom-form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .custom-form-group {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .custom-contact-title {
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .custom-submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .custom-submit-button:hover {
+    background-color: #555;
+  }
+  
+  input:focus {
+    background-color: #b3afaf;
+  }
+  
+  textarea:focus {
+    background-color: #b3afaf;
+  }
+  
+  .custom-error-messages {
+    /* Estilos personalizados para los mensajes de error */
+  }
+  
+  .custom-error-message {
+    /* Estilos personalizados para cada mensaje de error */
+  }
 
 /* ------------------------------------ */
                 /*FOOTER*/
@@ -400,7 +502,113 @@ Monserrat: textos secundarios. */
                 /*Main*/
 /* ------------------------------------ */
 
+.container-total-contacto{
+    display: flex;
+    justify-content: space-between;
+    height: 120%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #FAA916;
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.custom-contact-text{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 20px;
+    
 
+}
+
+.custom-contact-text h3{
+    font-size: 50px;
+    color: white;
+    
+
+}
+.custom-contact-text p{
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    font-weight:600;
+    justify-content: center;
+    
+    
+
+}
+.custom-contact-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .custom-form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .custom-form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .custom-form-group {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .custom-contact-title {
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .custom-submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .custom-submit-button:hover {
+    background-color: #555;
+  }
+  
+  input:focus {
+    background-color: #b3afaf;
+  }
+  
+  textarea:focus {
+    background-color: #b3afaf;
+  }
+  
+  .custom-error-messages {
+    /* Estilos personalizados para los mensajes de error */
+  }
+  
+  .custom-error-message {
+    /* Estilos personalizados para cada mensaje de error */
+  }
 /* ------------------------------------ */
                 /*FOOTER*/
 /* ------------------------------------ */

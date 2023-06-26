@@ -112,9 +112,8 @@ Monserrat: textos secundarios. */
     font-size: var(--MF-button-nav);
     color:  var(--blanco);
     margin-right: 5px;
-    margin-right: 30px;
+    margin-top: 30px;
 }
-
 .burger-button{
     color: var(--blanco);
 /*     padding: 10px 10px 10px 0;
@@ -196,84 +195,37 @@ Monserrat: textos secundarios. */
 
 /* -- CARRITO AL CUAL SE PUSHEAN ARTICULOS */
 
-.main {
-    padding: 20px;
-    text-align: center;
-}
-
-.about {
-    margin-bottom: 20px;
-}
-
-.about__title {
-    margin-top: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.about--us .about__title {
-    color: #0088cc;
-}
-
-.about__text {
-    line-height: 1.5;
-}
-
-.values__title {
-    margin-top: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.values__list {
-    margin-top: 0;
-    padding-left: 20px;
-}
-
-.values__item {
-    margin-bottom: 10px;
-}
-
-.team__title {
-    margin-top: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-ul li{
-    list-style-type: none
-}
-.team__list {
-    margin-top: 0;
-    padding-left: 0;
+/* .main{
     display: flex;
-    flex-wrap: wrap;
-    list-style: none;
+} */
+.custom-nosotros{
     text-align: center;
-    justify-content: center;
-}
-
-.team__member {
-    margin-right: 20px;
-    margin-bottom: 20px;
-    max-width: 300px;
-}
-
-.team__member-image {
+    background-color: #FAA916;
+    color: white;
     width: 100%;
-    height: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 30px;
+    line-height: 1.5;
+    z-index: 1;
+    
 }
-
-.team__member-name {
-    margin-top: 10px;
-    margin-bottom: 0;
-    font-size: 18px;
-    font-weight: bold;
+.custom-nosotros p {
+    font-size: 17px;
+    
 }
-
-.team__member-position {
-    margin-top: 5px;
-    margin-bottom: 0;
-    font-size: 14px;
+.custom-foto-equipo{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 5px;
+    
+}
+.fotoEquipo img{
+    width: 100%;
+    margin-top: 0px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+    z-index: 2;
+    border: 3px solid #000000;
 }
 
 /* ------------------------------------ */
@@ -374,12 +326,12 @@ ul li{
         font-size: 30px;
         margin-right: 5px;
     }
-    .burger-button{
+/*     .burger-button{
         color: var(--blanco);
         padding: 10px;
         text-align: center;
         font-size: 30px;
-    }
+    } */
     .logo-title1{
         font-size: var(--title-nav-576px);
     }
@@ -413,66 +365,97 @@ ul li{
 /* ------------------------------------ */
                 /*HEADER*/
 /* ------------------------------------ */
-    .main-header{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:flex-start;
-        padding: 20px;
-    }
-    .main-logo{
-        justify-content: space-between;
-        width: 100%;
-    }
-    .logo-title1 ,.logo-title2{
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .logo-title1{
-        font-size: var(--title-nav-768px);
-    }
-    .logo-title2{
-        font-size:var(--title2-nav-768px) ;
-    }
+.main-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    padding: 20px;
+}
+.main-logo{
+    justify-content: space-between;
+    width: 100%;
+}
+.logo-title1 ,.logo-title2{
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo-title1{
+    font-size: var(--title-nav-768px);
+}
+.logo-title2{
+    font-size:var(--title2-nav-768px) ;
+}
 
-    .usuario{
-        display: flex;
-    }
-    .cont-menu{
-        display: none;
-    }
-    .burger-button{
-        display: none;
-    }
-    .nav-iconos{
-        display: flex;
-    }
-    .nav-iconos a {
-        font-size: 30px;
-        padding: 10px;
-        text-align: center;
-        font-size: 20px;
-    }
-    .main-nav{
-        width: 100%;
-        display: flex;
-    }
-    .navbar{
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        list-style: none;
-        margin-top: 10px;
-    }
-    .navbar a{
-        color:var( --blanco);
-        text-decoration:none;
-        font-size: 14px;
-    } 
-
+.usuario{
+    display: flex;
+}
+.cont-menu{
+    display: none;
+}
+.burger-button{
+    display: none;
+}
+.nav-iconos{
+    display: flex;
+}
+.nav-iconos a {
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+.main-nav{
+    width: 100%;
+    display: flex;
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-top: 10px;
+}
+.navbar a{
+    color:var( --blanco);
+    text-decoration:none;
+    font-size: 14px;
+} 
  /* ------------------------------------ */
                 /*Main*/
 /* ------------------------------------ */
 
+/* .main{
+    display: flex;
+} */
+.custom-nosotros{
+    text-align: center;
+    background-color: #FAA916;
+    color: white;
+    width: 100%;
+   /*  margin-top: 20px;
+    margin-bottom: 20px; */
+    padding: 30px;
+    line-height: 1.5;
+    z-index: 1;
+    
+}
+.custom-nosotros p {
+    font-size: 17px;
+    
+}
+.custom-foto-equipo{
+    height: 100%;
+    width: 100%;
+    padding-bottom: 5px;
+    
+}
+.fotoEquipo img{
+    width: 100%;
+    /* margin-top: 10px; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+    z-index: 2;
+    border: 3px solid #000000;
+}
 
 /* ------------------------------------ */
                 /*FOOTER*/
@@ -528,17 +511,52 @@ ul li{
                     /*MAIN*/
     /* ------------------------------------ */
 
-    
+    .contacto-imagen img {
+        width: 100%;
+    }
+    /* .main{
+        display: flex;
+    } */
+    .custom-nosotros{
+        text-align: center;
+        background-color: #FAA916;
+        color: white;
+        width: 100%;
+        /* margin-top: 20px;
+        margin-bottom: 20px; */
+        padding: 30px;
+        line-height: 1.5;
+        z-index: 1;
+        
+    }
+    .custom-nosotros p {
+        font-size: 17px;
+        
+    }
+    .custom-foto-equipo{
+        height: 100%;
+        width: 100%;
+        padding-bottom: 5px;
+        align-items: center;
+        
+    }
+    .fotoEquipo img{
+        width: 100%;
+        /* margin-top: 10px; */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+        z-index: 2;
+        border: 3px solid #000000;
+    }
 /* ------------------------------------ */
                 /*Main*/
 /* ------------------------------------ */
 
 }
-@media(min-width: 1200px) {
+@media(min-width: 1250px) {
 /* ------------------------------------ */
-                /*HEADER*/
+/*HEADER*/
 /* ------------------------------------ */
-    .logo{
+.logo{
         border-radius: 50%;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -561,7 +579,7 @@ ul li{
         -moz-transition:transform 1300ms ease-in-out;
         -ms-transition:transform 1300ms ease-in-out;
     }
-
+    
     .detalle-producto a{
         padding-right: 6px;
         color: #000000;
@@ -586,11 +604,81 @@ ul li{
     .detalle-producto-cantidad {
         padding-right: 120px;
         
-    
+        
     }
     .detalle-producto-cantidad input{
         width: 42px;
         
         
+    }
+    /* ------------------------------------ */
+                    /*Main*/
+    /* ------------------------------------ */
+  /*   .main{
+        display: flex;
+    } */
+    .custom-nosotros{
+        text-align: center;
+        background-color: #FAA916;
+        color: white;
+        width: 100%;
+       /*  margin-top: 20px;
+        margin-bottom: 20px; */
+        padding: 30px;
+        line-height: 1.5;
+        z-index: 1;
+        
+    }
+    .custom-nosotros p {
+        font-size: 17px;
+        
+    }
+    .custom-foto-equipo{
+        height: 100%;
+        width: 100%;
+        padding-bottom: 5px;
+        
+    }
+    .fotoEquipo img{
+        width: 100%;
+        /* margin-top: 10px; */
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+        z-index: 2;
+        border: 3px solid #000000;
+    }
+}
+@media(min-width: 1350px) {
+   .main{
+        display: flex;
+    }
+
+    .custom-nosotros{
+        text-align: center;
+        background-color: #FAA916;
+        color: white;
+        width: 65%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 30px;
+        line-height: 1.5;
+        z-index: 1;
+        
+    }
+    .custom-nosotros p {
+        font-size: 17px;
+        
+    }
+    .custom-foto-equipo{
+        height: 100%;
+        width: 35%;
+        padding-bottom: 5px;
+        
+    }
+    .fotoEquipo img{
+        width: 100%;
+        margin-top: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 8px;
+        z-index: 2;
+        border: 3px solid #000000;
     }
 }

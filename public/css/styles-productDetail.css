@@ -352,8 +352,10 @@ Monserrat: textos secundarios. */
 .productos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; 
 }
+
+
 .articulo-producto {
     display: flex;
     flex-direction: column;
@@ -363,6 +365,7 @@ Monserrat: textos secundarios. */
     margin-top: 10px;
     margin-bottom: 10px;
     margin: auto;
+    
 }
 .articulo-producto img {
     margin-top: 10px;
@@ -442,6 +445,10 @@ Monserrat: textos secundarios. */
     display: flex;
     justify-content: center;
  }
+ .finalizar-compra a {
+    text-decoration: none;
+}
+
 
  .boton-finalizar{
     border-radius: 6px;
@@ -720,7 +727,7 @@ Monserrat: textos secundarios. */
     }
 
     .articulo-producto img {
-        max-width: 12vw;
+        max-width: 20vw;
         }
         .modal-contenido{
             width: 40%;

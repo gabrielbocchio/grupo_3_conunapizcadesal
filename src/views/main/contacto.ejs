@@ -1,13 +1,38 @@
 <%- include("../partials/head.ejs")%>
 	<link rel="stylesheet" href="/css/styles-contacto.css">
 </head>
-<body>
+<body class="bodyContacto">
 <%- include("../partials/header.ejs")%>
-<article>
-	<div class="contacto-imagen">
-		<img src="images/contacto.png" alt="">
+<div class="container-total-contacto">
+<div class="custom-contact-text">
+	<h3> ¡Contactanos!</h3>
+	<p>
+
+		En Con una pizca de sal, valoramos tus comentarios. </br>
+		Si tienes alguna pregunta o queres dejarnos un mensaje, no dudes en escribirnos. </br>
+		Completa los campos con tu nombre, apellido, dirección de correo electrónico y mensaje, y te responderemos lo antes posible.
+		</p>
+</div>
+<div class="custom-contact-container">
+	<div class="custom-form-container">
+	  <div class="custom-form-row">
+		<div class="custom-form-group">
+		  <label for="custom-nombre">Nombre y Apellido</label>
+		  <input type="text" id="custom-nombre" name="custom-nombre" />
+		</div>
+		<div class="custom-form-group">
+		  <label for="custom-email">Email</label>
+		  <input type="email" id="custom-email" name="custom-email"  />
+		</div>
+	  </div>
+	  <div class="custom-form-group">
+		<label for="custom-mensaje">Mensaje</label>
+		<textarea id="custom-mensaje" name="custom-mensaje" rows="4"></textarea>
+	  </div>
+		   <button class="custom-submit-button">Enviar</button>
 	</div>
-</article>
+  </div>
+</div>
 </body>
 <%- include("../partials/footer.ejs")%>
 </html>
