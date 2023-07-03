@@ -1,0 +1,173 @@
+:root{
+  background: #202020;
+  color: white
+}
+
+.h3form{
+  text-align: center;
+  margin-top: 30px;
+}
+/* Estilos generales del formulario */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 1px solid white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* Estilos de etiquetas */
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Estilos de campos de entrada de texto */
+.form-input {
+  display: block;
+  width: 60%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px auto 40px auto;
+
+
+}
+.botoncito{
+  align-items: center;
+  padding: 5px 8px;
+  cursor: pointer;
+  border: 1px solid #8c5f5f;
+  border-radius: 5px;
+  justify-content: center;
+  background-color: #8c5f5f;
+  border-color: #8c5f5f;
+  color: white;
+  font-size: 18px;
+  box-shadow: rgb(255, 230, 230) 0px 0px 3px 0px;
+  text-decoration: none;
+
+}
+
+.botoncito-volver {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.button-container button:hover {
+  background-color: #343535;
+}
+
+.button-container button:focus {
+ outline: none;
+}
+
+
+/* Estilos de campo de texto grande (textarea) */
+.form-textarea {
+  display: block;
+  width: 60%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilos de campo de selección (select) */
+.form-select {
+  display: block;
+  width: 60%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Estilos de botón */
+.form-button {
+  display: block;
+  width: 60%;
+  padding: 10px;
+  background-color: #757575;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilos de botón al pasar el mouse */
+.form-button:hover {
+  background-color: #2e2e2e;
+}
+
+.product-table{
+  font-size: 18px;
+}
+.nombre-lista{
+  list-style: none;
+  text-decoration: none;
+  color: white;
+
+}
+
+.formulario-detail {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formulario-detail p {
+  margin-bottom: 10px;
+  color: black;
+}
+.formulario-detail h2 {
+ 
+  color: black;
+}
+
+.formulario-detail input[type="text"],
+.formulario-detail select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.formulario-detail input[type="file"] {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.formulario-detail button[type="submit"] {
+  background-color: #8c5f5f;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.formulario-detail button[type="submit"]:hover {
+  background-color: #c6c0c0;
+}
+
+

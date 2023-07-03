@@ -1,0 +1,27 @@
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .category-buttons button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #8c5f5f;
+    color: #fff;
+    border: 1px solid #8c5f5f;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: rgb(255, 230, 230) 0px 0px 4px 0px;
+  }
+  
+  .category-buttons button:hover {
+     background-color: #343535;
+  }
+  
+  .category-buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.5);
+  }

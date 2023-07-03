@@ -1,0 +1,63 @@
+.dashboard {
+
+  margin: 20px;
+   font-family: 'Lato', sans-serif; 
+
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .header img{
+    width: 100px;
+ 
+  }
+
+  .header span{
+    font-size: 18px;
+  }
+
+  .header h2{
+    font-size: 32px;
+    margin-right: auto;
+  }
+  .user-count button {
+    margin-left: 10px;
+  }
+  
+  .user-list {
+    margin-bottom: 20px;
+  }
+  
+  .product-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .product-table th,
+  .product-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .product-table th {
+    font-weight: bold;
+  }
+
+.botonUser{
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  
+}
+
+.botonUser:hover{
+  background-color: #cac9c9;
+}
