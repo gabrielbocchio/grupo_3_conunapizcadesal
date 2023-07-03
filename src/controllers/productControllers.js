@@ -61,6 +61,7 @@ const productos={
 /* --------- */   
 
     guardarProducto: function (req,res) {
+      
       db.Product.create ({
           name: req.body.name, //aca va titulo porque es el nombre del campo del formulario
           categoryId:req.body.category ,

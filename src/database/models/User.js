@@ -23,7 +23,7 @@ module.exports = function (sequelize, dataTypes){
             allowNull: false
         },
         avatars: {
-            type: dataTypes.BLOB
+            type: dataTypes.STRING
         },
         address: {
             type:dataTypes.STRING

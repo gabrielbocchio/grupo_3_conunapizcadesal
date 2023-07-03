@@ -37,6 +37,22 @@ router.get("/api/products", (req, res) => {
             res.status(500).json({ error: 'Ha ocurrido un error, intente nuevamente' });
         });
 });
+
+//api creando
+router.post("/api/products",upload.single('imagen') , (req, res) => {
+
+    db.Product.create ({
+        name: req.body.name, //aca va titulo porque es el nombre del campo del formulario
+        categoryId:req.body.categoryId ,
+        description: req.body.description,
+        price:req.body.price,
+        imagen: req.file ? req.file.filename : "default-image.png",
+    })
+    .then(() => {
+      res.json({ message: 'Producto creado exitosamente' });
+    })
+
+}),
 //API
 router.get("/api/category", (req, res) => {
     db.Category.findAll()
@@ -63,6 +79,44 @@ router.get("/api/products/:id", (req, res) => {
             res.status(500).json({ error: 'Ha ocurrido un error, intente nuevamente' });
         });
 });
+
+//api para actualizar produ
+
+router.put("/api/products/:id", upload.single('imagen'), (req, res) => {
+    const productId = req.params.id;
+
+    const updatedProduct = {
+        name: req.body.name,
+        categoryId: req.body.categoryId,
+        description: req.body.description,
+        price: req.body.price,
+        imagen: req.file ? req.file.filename : "default-image.png",
+    };
+
+    db.Product.update(updatedProduct, { where: { id: productId } })
+        .then(() => {
+            res.json({ message: 'Producto actualizado exitosamente' });
+        })
+        .catch(error => {
+            res.status(500).json({ error: 'Ha ocurrido un error, intente nuevamente' });
+        });
+});
+
+//api, ruta para borrar producto
+router.delete("/api/products/:id", (req, res) => {
+    const productId = req.params.id;
+  
+    db.Product.destroy({ where: { id: productId } })
+      .then(() => {
+        res.json({ message: 'Producto eliminado exitosamente' });
+      })
+      .catch(error => {
+        res.status(500).json({ error: 'Ha ocurrido un error, intente nuevamente' });
+      });
+  });
+
+
+
 
 //filtro x categoria
 router.get('/detalle/:category', productController.produCategoria);
