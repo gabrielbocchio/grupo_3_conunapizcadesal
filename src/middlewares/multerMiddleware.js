@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const multer = require('multer');
 
+//Este se usa unicamente para avatars
 // ************ Controller Require ************
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {

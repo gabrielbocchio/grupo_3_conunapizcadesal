@@ -169,4 +169,13 @@ document.addEventListener('DOMContentLoaded', function() {
       window.location.replace("/");
     });
   }
+
+      fetch('http://localhost:3000/productDetail/productCart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(producto)
+    });
+
 });
